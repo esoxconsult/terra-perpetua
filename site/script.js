@@ -274,17 +274,16 @@
     }
 
     function addGroupToggle(container) {
-        const legend = container.querySelector('legend');
-        const btn = el('button', 'filter-all', 'none');
+        const btn = el('button', 'filter-all', 'select none');
         btn.type = 'button';
         btn.addEventListener('click', () => {
             const boxes = Array.from(container.querySelectorAll('input[type=checkbox]'));
             const allOn = boxes.every(b => b.checked);
             boxes.forEach(b => { b.checked = !allOn; });
-            btn.textContent = allOn ? 'all' : 'none';
+            btn.textContent = allOn ? 'select all' : 'select none';
             updateMap();
         });
-        legend.appendChild(btn);
+        container.appendChild(btn);
     }
 
     function generateFilters() {
@@ -296,7 +295,7 @@
 
         const byCategory = count(s => s.category);
         Object.entries(CATEGORIES).forEach(([key, c]) => {
-            if (byCategory.has(key)) addCheckbox(categoryFilters, 'cat', key, c.label, byCategory.get(key), pinSvg('#4a5a63', c.glyph, 14));
+            if (byCategory.has(key)) addCheckbox(categoryFilters, 'cat', key, c.label, byCategory.get(key), pinSvg('#3c4f58', c.glyph, 14));
         });
 
         const byStatus = count(s => s.status);
@@ -423,7 +422,14 @@
     }
 
     function flyToSite(site) {
-        cluster.zoomToShowLayer(site.marker, () => site.marker.openPopup());
+        const target = Math.max(map.getZoom(), 9);
+        const open = () => cluster.zoomToShowLayer(site.marker, () => site.marker.openPopup());
+        if (map.getZoom() >= target && map.getBounds().contains(site.marker.getLatLng())) {
+            open();
+        } else {
+            map.once('moveend', open);
+            map.flyTo(site.marker.getLatLng(), target, { duration: 1.2 });
+        }
     }
 
     function selectSite(site) {

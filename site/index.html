@@ -20,7 +20,7 @@
     <meta property="og:locale" content="en_GB">
     <meta name="twitter:card" content="summary_large_image">
 
-    <link rel="icon" type="image/svg+xml" href="logos/terra-perpetua-mark.svg">
+    <link rel="icon" type="image/svg+xml" href="logos/terra-perpetua-favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="logos/terra-perpetua-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="logos/terra-perpetua-16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="logos/terra-perpetua-180.png">
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="vendor/leaflet-1.9.4/leaflet.css">
     <link rel="stylesheet" href="vendor/leaflet.markercluster-1.5.3/MarkerCluster.css">
     <link rel="stylesheet" href="vendor/leaflet.markercluster-1.5.3/MarkerCluster.Default.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
     <h1 class="visually-hidden">Terra Perpetua: world map of radioactive waste</h1>
@@ -63,22 +63,35 @@
         <div class="filter-container">
             <div class="search-container">
                 <label for="search-input" class="visually-hidden">Search by name, country or operator</label>
-                <input type="search" id="search-input" placeholder="Search name, country, operator" autocomplete="off"
-                       role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="autocomplete-results">
+                <div class="search-field">
+                    <input type="search" id="search-input" placeholder="Search name, country, operator" autocomplete="off"
+                           role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="autocomplete-results">
+                    <button type="button" id="search-button" aria-label="Search">
+                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+                    </button>
+                </div>
                 <ul id="autocomplete-results" class="autocomplete-results" role="listbox" aria-label="Suggestions" hidden></ul>
-                <button type="button" id="search-button">Search</button>
                 <p id="search-info" class="search-info" aria-live="polite"></p>
             </div>
 
-            <fieldset id="category-filters" class="filter-group">
-                <legend>Category</legend>
-            </fieldset>
-            <fieldset id="status-filters" class="filter-group">
-                <legend>Status</legend>
-            </fieldset>
-            <fieldset id="waste-filters" class="filter-group">
-                <legend>Waste type</legend>
-            </fieldset>
+            <details class="filter-section" open>
+                <summary>Category</summary>
+                <fieldset id="category-filters" class="filter-group">
+                    <legend class="visually-hidden">Category</legend>
+                </fieldset>
+            </details>
+            <details class="filter-section">
+                <summary>Status</summary>
+                <fieldset id="status-filters" class="filter-group">
+                    <legend class="visually-hidden">Status</legend>
+                </fieldset>
+            </details>
+            <details class="filter-section">
+                <summary>Waste type</summary>
+                <fieldset id="waste-filters" class="filter-group">
+                    <legend class="visually-hidden">Waste type</legend>
+                </fieldset>
+            </details>
         </div>
     </div>
 
@@ -113,6 +126,6 @@
 
     <script src="vendor/leaflet-1.9.4/leaflet.js"></script>
     <script src="vendor/leaflet.markercluster-1.5.3/leaflet.markercluster.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=3"></script>
 </body>
 </html>
