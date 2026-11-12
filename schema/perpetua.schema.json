@@ -85,7 +85,7 @@
         "status_note": { "type": "string" },
         "status_as_of": { "$ref": "#/$defs/date" },
         "waste_types": {
-          "description": "Waste present at the site. Empty only for sites that hold no waste (e.g. underground research laboratories, exploration mines).",
+          "description": "Waste present at the site. Empty only for sites that hold no waste: research laboratories and exploration mines, and closed, cancelled or planned sites where no waste is known to remain or none has arrived yet.",
           "type": "array",
           "uniqueItems": true,
           "items": {

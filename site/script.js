@@ -220,7 +220,10 @@
         addRow(root, 'Country', site.country);
         addRow(root, 'Operator', site.operator);
         const waste = (site.waste_types || []).map(w => WASTE_TYPES[w] || w).join(', ');
-        addRow(root, 'Waste', waste || 'none stored on site');
+        const noWaste = site.facility_type === 'research_lab' ? 'none stored on site'
+            : site.status === 'planned' ? 'none yet'
+            : 'none known to remain on site';
+        addRow(root, 'Waste', waste || noWaste);
 
         const precision = PRECISION_NOTE[site.coord_precision];
         if (precision) root.appendChild(el('p', 'popup-precision', precision));

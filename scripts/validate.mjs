@@ -141,8 +141,9 @@ sites.forEach((site, i) => {
         }
     }
 
-    if (Array.isArray(site.waste_types) && site.waste_types.length === 0 && site.facility_type !== 'research_lab') {
-        err(p, 'waste_types may only be empty for research_lab entries');
+    if (Array.isArray(site.waste_types) && site.waste_types.length === 0 &&
+        site.facility_type !== 'research_lab' && !['closed', 'cancelled', 'planned'].includes(site.status)) {
+        err(p, 'waste_types may only be empty for research labs and for closed, cancelled or planned sites');
     }
 
     ['status_as_of', 'last_updated'].forEach(k => {
