@@ -1,99 +1,65 @@
 # Terra Perpetua
 
-Offene, quellenbelegte Weltkarte von End- und Zwischenlagern für radioaktive (und ausgewählte hochgefährliche) Abfälle. Live unter https://terraperpetua.org. Non-Profit, Repo öffentlich.
+Offene, quellenbelegte Weltkarte von Standorten radioaktiver (und ausgewählter hochgefährlicher) Abfälle: Endlager, Zwischenlager, Brennelementlager an Kraftwerken, Wiederaufarbeitung, Forschung und Altlasten. Live unter https://terraperpetua.org. Non-Profit, Medieninhaber Esox Consult GmbH, Repo öffentlich.
 
 **Dieses Repo ist öffentlich.** Keine Server-IPs, Zugangsdaten, Deploy-Keys, Analytics-IDs, Google-Sheet-Links oder privaten Notizen committen.
 
 ## Stack
 
-- Statische Seite unter `site/`: `index.html`, `style.css`, `script.js`, `perpetua.json` (Daten), `logos/`, `icons/`, `vendor/`
-- Leaflet 1.9.4, OpenStreetMap-Kacheln, kein Build-Schritt, kein Backend
-- Hosting: nginx auf dem Media-VPS, Webroot `/var/www/sites/terraperpetua.org/httpdocs`
-- Deploy (seit 12.11.2026): `httpdocs` ist ein Symlink auf `repo/site` eines Klons dieses Repos; Auslieferung per `git pull`, Details in `deploy/README.md`
+- Statische Seite unter `site/`: `index.html`, `style.css`, `script.js`, `perpetua.json` (Daten), `perpetua.csv` (generiert), `legal-notice.html`, `privacy.html`, `legal.css`, `logos/`, `vendor/`, `robots.txt`, `sitemap.xml`
+- `impressum.html` und `datenschutz.html` sind nur Weiterleitungen auf die englischen Seiten
+- Leaflet 1.9.4 und Leaflet.markercluster 1.5.3, Montserrat; alles selbst gehostet unter `site/vendor/` (Versionen und Lizenzen in `site/vendor/README.md`). Extern lädt der Browser nur OSM-Kacheln.
+- Kein Build-Schritt, kein Backend, keine Abhängigkeiten. Marker sind Inline-SVG (`L.DivIcon` mit Schatten), Farbe = Status, Symbol = Kategorie.
+- Bei Änderungen an `style.css` oder `script.js` die Versionsnummer `?v=` in `index.html` erhöhen (Cache).
+- Logo: `site/logos/terra-perpetua-mark.svg` (Hauptmarke), `terra-perpetua-favicon.svg` (vereinfacht für 16-48 px), PNGs 16/32/180/192/512, Vorschaubild `terra-perpetua-og.png` (1200x630). Name und Logo sind von den Lizenzen ausgenommen.
 
-## Stand bei Übernahme (12.11.2026)
+## Hosting und Deploy
 
-- Live ist der Stand vom 17.09.2025. Eine neuere Version (eigene `style.css`, Hamburger-Menü unter 768 px, Copyright-Badge mit automatischem Jahr) war geplant, wurde aber nie deployt. **Erst lokal auf Werners Mac danach suchen**, bevor neu gebaut wird.
-- Daten: 54 Einträge, gepflegt in Google Sheets, manuell als JSON/CSV exportiert, letzter Stand 16./17.09.2025.
-- Erledigt am 12.11.2026 auf dem Server: Logo-Rechte (Favicons lieferten 403), interne Dateien aus dem Webroot entfernt, Besitzer `www-data`.
-- Analytics (Umami) wurde am 19.08.2026 entfernt; ob wieder rein, entscheidet Werner (wenn ja: selbst gehostet, cookielos, in Datenschutzerklärung).
+- nginx auf dem Media-VPS. `httpdocs` ist ein Symlink auf `repo/site` eines Klons dieses Repos; `.git` liegt damit außerhalb des Webroots. Details in `deploy/README.md`.
+- Deploy nach Merge in `main`: `git -C /var/www/sites/terraperpetua.org/repo pull --ff-only`
+- nginx-Snippet `deploy/nginx/terraperpetua.conf` (HSTS, CSP ohne externe Skripte und ohne `unsafe-inline`, nosniff, Referrer-Policy, Permissions-Policy, gzip, Caching). Es wird nach `/etc/nginx/snippets/` kopiert, nicht verlinkt; nach Änderungen neu kopieren. CSP erlaubt Bilder nur von `self`, `data:` und `tile.openstreetmap.org`: keine Inline-Styles im HTML, keine externen Ressourcen einbauen.
+- **Server-Befehle nie selbst ausführen**, sondern Werner zum Kopieren geben.
 
-## Phase 0: Repo und Deploy
+## Daten (Schema v2)
 
-1. Webroot vom Server holen: `scp -r media:/var/www/sites/terraperpetua.org/httpdocs/ ./` (Inhalt ins Repo-Root).
-2. Lokal nach neuerer Version suchen (z. B. `mdfind -name style.css`, Ordner mit "perpetua" oder "terra" im Namen) und Unterschiede zu Werner zeigen, bevor etwas übernommen wird.
-3. Repo anlegen: `gh repo create esoxconsult/terra-perpetua --public --source=. --push`.
-4. Lizenzen: Code MIT, Daten (`perpetua.json`, `perpetua.csv`) CC BY 4.0. Rechteinhaber im Copyright-Vermerk mit Werner klären.
-5. Server-Deploy einrichten (Werner führt Server-Befehle selbst aus, Claude Code liefert sie): eigener Deploy-Key `~/.ssh/terra_perpetua` mit SSH-Alias, Webroot durch Klon ersetzen, vorher Backup als tar. nginx muss `.git` sperren (`location ~ /\. { deny all; }`). Danach Deploy = `git pull`.
+`site/perpetua.json` ist die einzige Quelle der Wahrheit. Schema: `schema/perpetua.schema.json`. Nach jeder Änderung:
 
-## Phase 1: Recht und Datenschutz (vor allem anderen live)
+```bash
+node scripts/validate.mjs && node scripts/to-csv.mjs
+```
 
-- Google Fonts, Leaflet (unpkg), Marker-Icons (raw.githubusercontent.com) und Marker-Schatten (cdnjs) **selbst hosten** unter `vendor/`. Danach lädt der Browser extern nur noch OSM-Kacheln.
-- Marker-Icons als eigene SVGs oder `L.divIcon` statt Hotlink auf ein fremdes GitHub-Repo; Schatten passend zu Leaflet 1.9.4.
-- Impressum (ECG § 5, MedienG § 25) und Datenschutzerklärung als eigene Seiten oder Modals; Angaben liefert Werner, nichts erfinden. Seit 12.11.2026 auf Englisch: `legal-notice.html`, `privacy.html` (alte deutsche Adressen leiten weiter).
-- OSM-Attribution auf https umstellen; Hinweis zu OSM-Kacheln in die Datenschutzerklärung.
+Die GitHub Action prüft Schema, IDs, Daten, Länder-Bounding-Boxes (Natural Earth, plus Atoll-Rahmen für MH und PF) und ob die CSV aktuell ist.
 
-## Phase 2: Technik
-
-- nginx-Header (Snippet für Werner): HSTS, CSP ohne externe Skripte, `X-Content-Type-Options: nosniff`, `Referrer-Policy`, Caching für `vendor/` und `logos/`.
-- Mobile: Media Query unter 768 px, Panel per Button ein-/ausklappbar, Karte frei.
-- Marker-Clustering (Leaflet.markercluster, selbst gehostet) oder Versatz für deckungsgleiche Punkte.
-- Suche: Treffer per `flyTo` anfahren und Popup öffnen; Vorschläge stylen und auf 8 begrenzen; Enter-Taste.
-- Waste-Filter dynamisch aus den Daten erzeugen (heute verschwinden Einträge, deren `waste_type` nicht in `wasteTypeOrder` steht).
-- Popups ohne innerHTML aus Rohdaten (escapen bzw. DOM-Knoten), `rel="noopener"`, Linktext "Source" statt "Official Website", `last_updated` anzeigen.
-- "about" als `<button>`, Modals per Esc schließbar, Fokus-Handling.
-- meta description, Open-Graph-Tags, `robots.txt`, `sitemap.xml`.
-- Fehleranzeige, wenn `perpetua.json` nicht lädt.
-
-## Phase 3: Daten (Schema v2)
-
-Ziel: `perpetua.json` ist die einzige Quelle der Wahrheit im Repo; Google Sheets entfällt. CSV wird per Skript aus JSON erzeugt.
-
-Felder pro Eintrag:
-
-- `id` (stabil, z. B. `DE-001`), `name`, `country`, `country_code` (ISO 3166-1 alpha-2)
-- `latitude`, `longitude`, `coord_precision` (`facility` | `locality` | `region`)
-- `facility_type`: `deep_geological` | `near_surface` | `interim_storage` (zentral) | `at_reactor_storage` (Lager am Kraftwerk) | `reprocessing_storage` | `military_production` | `research_lab` | `chemical_underground` | `accident_site` | `test_site` | `sea_dumping` | `sunken_vessel` | `uranium_legacy` | `legacy_site`
+- Datei: `{schema_version: 2, license, attribution, generated, sites: [...]}`
+- Felder: `id` (Ländercode plus drei Ziffern, `XZ` = internationale Gewässer; **nie umbenennen oder wiederverwenden**), `name`, `country`, `country_code`, `latitude`, `longitude`, `coord_precision` (`facility` | `locality` | `region`), `facility_type`, `status`, `status_note`, `status_as_of`, `waste_types`, `operator`, `sources` (`{url, title, accessed}`), `last_updated`, optional `notes`
+- `facility_type`: `deep_geological` | `near_surface` | `interim_storage` (zentral) | `at_reactor_storage` | `reprocessing_storage` | `military_production` | `research_lab` | `chemical_underground` | `accident_site` | `test_site` | `sea_dumping` | `sunken_vessel` | `uranium_legacy` | `legacy_site`
 - `status`: `operating` | `commissioning` | `under_construction` | `planned` | `dormant` | `closed` | `decommissioning` | `cancelled` | `remediation` | `abandoned`
-- `status_note`, `status_as_of` (ISO-Datum)
-- `waste_types` (Liste): `very-low-level` | `low-level` | `intermediate-level` | `high-level` | `spent-fuel` | `transuranic` | `norm` | `chemical`
-- `operator`
-- `sources` (Liste von `{url, title, accessed}`), konkrete Dokumente statt Startseiten
-- `last_updated`, optional `notes` (öffentliche Hinweise zu Datenqualität)
-- Datei: Objekt `{schema_version: 2, license, attribution, generated, sites: [...]}`; IDs nie umbenennen oder wiederverwenden, `XZ` = internationale Gewässer
+- `waste_types`: `very-low-level` | `low-level` | `intermediate-level` | `high-level` | `spent-fuel` | `transuranic` | `norm` | `chemical`; leer nur bei Forschungsstandorten ohne Abfall und bei `closed`, `cancelled`, `planned` oder `dormant`, wenn kein Abfall (mehr) vorhanden ist
+- `notes` ist öffentlich (im Popup sichtbar): nur Hinweise zur Datenqualität für Leser, max. ca. 220 Zeichen, keine internen Arbeitsnotizen
+- Datentexte in britischem Englisch
 
-Schema: `schema/perpetua.schema.json`. Prüfen: `node scripts/validate.mjs`; CSV erzeugen: `node scripts/to-csv.mjs`.
+Stand 12.11.2026: 547 Standorte in 65 Ländern und Gebieten.
 
-Entscheidungen (12.11.2026): Kraftwerksstandorte mit Brennelementlagern werden vollständig erfasst (ein Eintrag pro Standort). Zusätzliche Kategorien: Wiederaufarbeitung und militärische Produktion, Unfälle und Testgelände, Meeresversenkung und gesunkene Atom-U-Boote, Uranbergbau-Altlasten. Kraftwerkskoordinaten aus Wikidata (CC0); keine Übernahme aus ODbL- oder CC-BY-SA-Datenbanken (z. B. GeoNuclearData, Wikipedia-Tabellen), weil die Daten unter CC BY 4.0 stehen.
+### Regeln für Datenänderungen
 
-Validierung: JSON-Schema-Datei plus Skript (`scripts/validate.mjs`), das Schema, Koordinatenbereiche, doppelte IDs und Länder-Bounding-Boxes prüft. Als GitHub Action bei jedem Push.
+- Jede Änderung mit konkreter, tatsächlich geöffneter Quelle (keine Startseiten). Keine Koordinate oder Statusangabe aus dem Gedächtnis; Unsicherheit über `coord_precision` und `notes` kennzeichnen.
+- Kraftwerksstandorte mit Brennelementlagern werden vollständig erfasst, ein Eintrag pro Standort (Brennstoff muss einmal geladen worden sein). Benachbarte Blöcke desselben Betreibers in einem Eintrag.
+- Kraftwerkskoordinaten aus Wikidata (CC0). Keine Übernahme aus ODbL- oder CC-BY-SA-Datenbanken (z. B. GeoNuclearData, Wikipedia-Tabellen), weil die Daten unter CC BY 4.0 stehen. Einzelne Koordinaten aus Wikipedia oder einem OSM-Objekt sind erlaubt, wenn die Seite als Quelle zitiert wird.
 
-### Bekannte Datenfehler (Stand 12.11.2026, vor Korrektur jeweils gegen Quelle prüfen)
+### Bekannte offene Punkte
 
-Status veraltet (geprüft):
-- Onkalo (FI): Betriebsbewilligung der Regierung am 22.10.2026, Start noch offen → `commissioning`
-- Forsmark Endlager für Brennelemente (SE): Bau seit 15.01.2025 → `under_construction`
-- Dessel (BE): Bau seit 2025, erste Einheiten bis 2030 → `under_construction`
-- Fehlt: Radiana bei Kozloduy (BG), nationales LILW-Endlager, in Betrieb seit April 2026
-- Fehlt: Vrbina bei Krško (SI), LILW-Endlager, im Bau seit 2024, Probebetrieb geplant 2027
+- Belgien: Inbetriebnahme der SF2-Trockenlager in Doel und Tihange nicht bestätigt (Electrabel- und FANC-Seiten waren nicht erreichbar).
+- Rund ein Drittel der Einträge hat nur Orts- oder Regionsgenauigkeit; bei Altlasten ist oft Wikipedia die Hauptquelle.
+- Nicht aufgenommen mangels belastbarer Quelle, u. a.: Dimona, Pantex, Angarsk, Petten, Capenhurst, Springfields, Zhovti Vody, Armenien.
+- Schnell veränderlich (vor Ankündigungen prüfen): Onkalo, Rokkasho, Fugen, US-Wiederinbetriebnahmen (Palisades, Duane Arnold, Crane), Dungeness B, Holtec HI-STORE, russische NO-RAO-Anlagen.
 
-Koordinaten:
-- Schacht Asse II: richtig 52.1286, 10.6708 (Datensatz rund 11 km daneben, geprüft)
-- Vermutlich falsch, prüfen: "Aldeia" (BR) liegt in Recife, gemeint ist wohl Abadia de Goiás (Goiânia-Abfall); Domain `cnem.gov.br` → `cnen.gov.br`. El Cabril liegt bei Hornachuelos (rund 80 km falsch). Centre de la Manche liegt neben La Hague. Richard II bei Litoměřice. Schacht Konrad (Konrad 1 in Salzgitter-Bleckenstedt). "temporary storage am AKW" (DE) ist ein Platzhalter im Ruhrgebiet. Novaya Zemlya ist eine Pauschalkoordinate.
+## Pflege
 
-Inhaltlich, prüfen:
-- "Forsmark Interim Storage, high-level": gibt es so nicht; in Forsmark liegt SFR (LILW-Endlager). Zentrales Zwischenlager ist Clab (Oskarshamn), fehlt.
-- Australien "National Radioactive Facility" (Kimba): 2023 aufgegeben → `cancelled`
-- Wellenberg (CH): 2002 endgültig erledigt → `cancelled`
-- Indian Point: Eigentümer Holtec, nicht Exelon
-- Alte Quell-Domains (z. B. rawra.cz, magnoxsites.com, llwrsite.com) auf aktuelle umstellen
-
-Fehlende Kernstandorte: Cigéo (FR), Nördlich Lägern (CH), Revell/NWMO (CA), La Hague (FR), Clab (SE), Zwilag (CH), HABOG/COVRA (NL), TBL Gorleben und Ahaus (DE), Hanford, Savannah River, Idaho (US), Vaalputs (ZA), Runit Dome (MH), Olkiluoto und Loviisa VLJ (FI), Rokkasho LLW (JP), Novouralsk (RU), Chalk River NSDF (CA).
-
-Umfang klären mit Werner: Kraftwerksstandorte mit Brennelementlagern entweder vollständig oder gar nicht; Vorschlag drei Ebenen (Endlager, zentrale Zwischenlager, Lager am Kraftwerk) über `facility_type`.
+- Eine vierteljährliche Datenprüfung läuft als geplante Aufgabe (3. Februar, Mai, August, November): sie prüft schnell veränderliche und lange nicht bestätigte Einträge und legt einen PR an, ohne zu mergen.
+- Analytics: keine. Falls gewünscht, nur selbst gehostet und cookielos, mit Eintrag in `privacy.html`; Entscheidung bei Werner.
 
 ## Arbeitsweise
 
 - Sprache mit Werner: Deutsch. Nur einfacher Bindestrich, keine Gedankenstriche.
-- Jede Datenänderung mit Quelle; keine Koordinate oder Statusangabe aus dem Gedächtnis ohne Kennzeichnung (`coord_precision`, `status_note`).
-- Kleine Commits pro Phase; Server-Befehle nie selbst ausführen, sondern Werner zum Kopieren geben.
+- Arbeit auf einem Branch, PR nach `main`, Merge nur nach Werners Zustimmung; danach Deploy-Befehl für Werner nennen.
+- Kleine Commits; vor dem PR `validate.mjs` und einen Browsertest mit den CSP-Headern aus dem Snippet (Desktop und Phone).
