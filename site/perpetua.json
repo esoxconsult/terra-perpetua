@@ -213,6 +213,103 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "AR-004",
+      "name": "Former Malargüe uranium mill (Complejo Fabril Malargüe), encapsulated tailings",
+      "country": "Argentina",
+      "country_code": "AR",
+      "latitude": -35.475,
+      "longitude": -69.583,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "closed",
+      "status_note": "Uranium mill a few blocks from central Malargüe, Mendoza, that processed ore from Huemul and Sierra Pintada (1954-1986). CNEA encapsulated about 700,000 tonnes of tailings in place, with work completed around 2017; the area is being landscaped and remains under CNEA monitoring with ARN oversight.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "Comisión Nacional de Energía Atómica (CNEA)",
+      "sources": [
+        {
+          "url": "https://www.elinversorenergetico.com/concluyen-saneamiento-de-colas-de-uranio-en-malargue",
+          "title": "El Inversor Energético: Concluyen saneamiento de colas de uranio en Malargüe",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Malarg%C3%BCe",
+          "title": "Malargüe - Wikipedia (city coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "AR-005",
+      "name": "Sierra Pintada uranium mine (Complejo Minero Fabril San Rafael)",
+      "country": "Argentina",
+      "country_code": "AR",
+      "latitude": -34.6175,
+      "longitude": -68.33556,
+      "coord_precision": "region",
+      "facility_type": "uranium_legacy",
+      "status": "remediation",
+      "status_note": "Argentina's largest former uranium mine and mill, south-east of San Rafael, Mendoza, which closed in the late 1990s. Since October 2019 CNEA has been treating contaminated quarry water and drummed solid residues; in July 2026 the uranium treatment plant was running and the radium-arsenic plant still under construction. Reopening the mine is being discussed.",
+      "status_as_of": "2026-07-05",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "Comisión Nacional de Energía Atómica (CNEA)",
+      "sources": [
+        {
+          "url": "https://www.mendoza.gov.ar/prensa/remediacion-de-sierra-pintada-una-solucion-sostenible-a-una-problematica-ambiental-latente/",
+          "title": "Government of Mendoza (2019): Remediación de Sierra Pintada",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.losandes.com.ar/economia/sierra-pintada-como-avanza-la-remediacion-ambiental-que-busca-recuperar-el-historico-complejo-uranio-n5997279",
+          "title": "Los Andes (July 2026): Sierra Pintada, cómo avanza la remediación ambiental",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://es.wikipedia.org/wiki/San_Rafael_(Mendoza)",
+          "title": "San Rafael (Mendoza) - Wikipedia (city coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the city of San Rafael; the mine lies some distance to the south-east and its exact position is not given here.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "AR-006",
+      "name": "Los Gigantes former uranium mine and mill, Córdoba",
+      "country": "Argentina",
+      "country_code": "AR",
+      "latitude": -31.4197,
+      "longitude": -64.8053,
+      "coord_precision": "region",
+      "facility_type": "uranium_legacy",
+      "status": "abandoned",
+      "status_note": "Uranium mine and mill in the Sierras Grandes about 80 km west of Córdoba city, closed around 1990, leaving tailings and dams that are still awaiting remediation. CNEA says the site is monitored and audited by the ARN and that the main dam is intact (September 2025).",
+      "status_as_of": "2025-09-25",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "Comisión Nacional de Energía Atómica (CNEA)",
+      "sources": [
+        {
+          "url": "https://www.panorama-minero.com/en/news/cnea-denies-rumors-about-los-gigantes-and-guarantees-environmental-safety",
+          "title": "Panorama Minero (25 Sept 2025): CNEA denies rumors about Los Gigantes",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://es.wikipedia.org/wiki/Los_Gigantes",
+          "title": "Los Gigantes - Wikipedia (es), coordinates of the range",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the Los Gigantes range; the former mine's exact position is not given here.",
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "AT-001",
       "name": "Nuclear Engineering Seibersdorf (NES) waste treatment and interim storage",
       "country": "Austria",
@@ -463,6 +560,151 @@
         }
       ],
       "notes": "The 2022 start of Stage 3 is not confirmed in a primary source.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "AU-009",
+      "name": "Mary Kathleen former uranium mine and tailings repository",
+      "country": "Australia",
+      "country_code": "AU",
+      "latitude": -20.747,
+      "longitude": 140.0123,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "closed",
+      "status_note": "Uranium mine near Mount Isa, Queensland, worked 1958-1963 and 1976-1982. The mine, mill and town were dismantled and the tailings rehabilitated by 1985, but the tailings repository has since seeped radioactive water at rates above early predictions.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Mary_Kathleen,_Queensland",
+          "title": "Mary Kathleen, Queensland - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Coordinates are for the original ore discovery site, close to the mine.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "AU-010",
+      "name": "Radium Hill former uranium mine and low-level waste repository",
+      "country": "Australia",
+      "country_code": "AU",
+      "latitude": -32.3461,
+      "longitude": 140.63657,
+      "coord_precision": "facility",
+      "facility_type": "uranium_legacy",
+      "status": "closed",
+      "status_note": "Uranium (davidite) mine in South Australia, mainly worked by the state from 1952 to 1961. The tailings impoundment was covered in 1981, when the site also became a repository for low-level radioactive waste, mainly contaminated soil from Adelaide's Thebarton; about 16 consignments were buried there until 1998. The state monitors the site and is preparing a long-term management strategy.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "norm",
+        "low-level"
+      ],
+      "operator": "Government of South Australia (Department for Energy and Mining)",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Radium_Hill",
+          "title": "Radium Hill - Wikipedia",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://energymining.sa.gov.au/industry/minerals-and-mining/mining/former-mines/radium-hill-mine",
+          "title": "SA Department for Energy and Mining: Radium Hill mine",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "AU-011",
+      "name": "Port Pirie former uranium treatment plant tailings dams",
+      "country": "Australia",
+      "country_code": "AU",
+      "latitude": -33.18583,
+      "longitude": 138.01694,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "closed",
+      "status_note": "State-run plant immediately north of Port Pirie, next to the lead smelter, that processed Radium Hill ore for uranium and rare earths from 1955 to 1962. Its tailings dams remain, largely covered with smelter slag to cut gamma radiation, radon and dust, and are licensed and maintained under South Australia's radiation protection law.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "Government of South Australia (Department for Energy and Mining)",
+      "sources": [
+        {
+          "url": "https://www.energymining.sa.gov.au/industry/minerals-and-mining/mining/former-mines/port-pirie-treatment-plant",
+          "title": "SA Department for Energy and Mining: Port Pirie treatment plant",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Port_Pirie",
+          "title": "Port Pirie - Wikipedia (city coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the city of Port Pirie; the former plant lies just north of it.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "AU-012",
+      "name": "Olympic Dam copper-uranium mine tailings storage facilities",
+      "country": "Australia",
+      "country_code": "AU",
+      "latitude": -30.44,
+      "longitude": 136.87306,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "operating",
+      "status_note": "BHP's copper, uranium, gold and silver mine near the township of Roxby Downs, South Australia, in production since 1988. Uranium-bearing tailings are kept in large open-air tailings storage facilities on site.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "BHP",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Olympic_Dam_mine",
+          "title": "Olympic Dam mine - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "AU-013",
+      "name": "Intractable Waste Disposal Facility, Mt Walton East",
+      "country": "Australia",
+      "country_code": "AU",
+      "latitude": -30.34,
+      "longitude": 120.08,
+      "coord_precision": "region",
+      "facility_type": "near_surface",
+      "status": "operating",
+      "status_note": "Western Australia's state-owned facility, established in 1992 on a remote reserve about 475 km north-east of Perth, for burying intractable wastes generated in the state, including radioactive waste that needs time to decay and persistent chemical waste. Disposal is carried out in periodic campaigns; one was scheduled for August 2026.",
+      "status_as_of": "2026-10-23",
+      "waste_types": [
+        "low-level",
+        "chemical"
+      ],
+      "operator": "Government of Western Australia, Department of Housing and Works",
+      "sources": [
+        {
+          "url": "https://wa.gov.au/organisation/department-of-finance/mt-walton-east-intractable-waste-disposal-facility",
+          "title": "WA Government: Mt Walton East Intractable Waste Disposal Facility",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Koolyanobbing,_Western_Australia",
+          "title": "Koolyanobbing - Wikipedia (coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Position estimated as about 75 km north-east of Koolyanobbing; not surveyed.",
       "last_updated": "2026-11-12"
     },
     {
@@ -882,6 +1124,38 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "BR-005",
+      "name": "Caldas Decommissioning Unit (former Osamu Utsumi uranium mine and mill), INB",
+      "country": "Brazil",
+      "country_code": "BR",
+      "latitude": -21.92389,
+      "longitude": -46.38583,
+      "coord_precision": "region",
+      "facility_type": "uranium_legacy",
+      "status": "decommissioning",
+      "status_note": "Brazil's first uranium mine and mill (1982-1995) on 1,360 ha in Caldas, Minas Gerais, with a tailings basin, waste rock piles, an acidic pit lake and stored radioactive material from elsewhere. In 2025 Ibama issued the country's first uranium decommissioning licence (valid to January 2031); acid water treatment and dam safety work continue.",
+      "status_as_of": "2025-12-31",
+      "waste_types": [
+        "norm",
+        "low-level"
+      ],
+      "operator": "Indústrias Nucleares do Brasil (INB)",
+      "sources": [
+        {
+          "url": "https://neimagazine.com/?p=92649",
+          "title": "Nuclear Engineering International: INB receives licence to decommission Caldas uranium site",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://pt.wikipedia.org/wiki/Caldas_(Minas_Gerais)",
+          "title": "Caldas (Minas Gerais) - Wikipedia (pt), town coordinates",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the town of Caldas; the former mine lies within the municipality.",
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "BY-001",
       "name": "Belarusian (Ostrovets/Astravets) nuclear power plant",
       "country": "Belarus",
@@ -910,6 +1184,43 @@
         }
       ],
       "notes": "Whether any spent fuel has yet been shipped to Russia is not confirmed.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "BY-002",
+      "name": "Ekores radioactive waste storage and legacy near-surface repository, Sosny (Minsk)",
+      "country": "Belarus",
+      "country_code": "BY",
+      "latitude": 53.8263,
+      "longitude": 27.7706,
+      "coord_precision": "locality",
+      "facility_type": "near_surface",
+      "status": "operating",
+      "status_note": "Central Radon-type facility in use since 1963 for radioactive waste from industry and medicine (not from the nuclear power plant). More than 1,000 m3 of institutional waste, including spent high-activity sealed sources, was buried unsorted in 3 m deep vaults between 1963 and 1997; since 2003-2013 new stores for sealed sources and conditioned waste are in use, and the 2023 national strategy plans retrieval of the buried waste for a future disposal facility.",
+      "status_as_of": "2023-04-20",
+      "waste_types": [
+        "low-level",
+        "intermediate-level"
+      ],
+      "operator": "Unitary Enterprise Ekores",
+      "sources": [
+        {
+          "url": "https://conferences.iaea.org/event/330/contributions/28271/attachments/14684/24789/Rozdyalouskaya_IAEASnS2023_70_POS.pdf",
+          "title": "Rozdyalouskaya, IAEA conference poster (2023): Ensuring safety and sustainability in managing legacy and remediation radioactive waste (Belarus)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://news.zerkalo.io/economics/37188.html",
+          "title": "Zerkalo (20 Apr 2023): Belarus has not yet chosen a site for a national radioactive waste disposal facility",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D1%81%D0%BD%D1%8B_(%D0%9C%D0%B8%D0%BD%D1%81%D0%BA)",
+          "title": "Wikipedia (ru): Sosny (Minsk) (coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the settlement of Sosny on the edge of Minsk; the facility lies there but its exact position is not given in the sources.",
       "last_updated": "2026-11-12"
     },
     {
@@ -1455,6 +1766,228 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "CA-018",
+      "name": "Gunnar uranium mine and mill site, Lake Athabasca",
+      "country": "Canada",
+      "country_code": "CA",
+      "latitude": 59.385,
+      "longitude": -108.88694,
+      "coord_precision": "facility",
+      "facility_type": "uranium_legacy",
+      "status": "remediation",
+      "status_note": "Abandoned uranium mine and mill on the north shore of Lake Athabasca, Saskatchewan, mined 1955-1963, leaving about 4.4 million tonnes of tailings. The Saskatchewan Research Council is covering the tailings under Project CLEANS, with completion targeted for autumn 2026 and a monitoring programme to follow.",
+      "status_as_of": "2025-12-31",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "Saskatchewan Research Council (Project CLEANS)",
+      "sources": [
+        {
+          "url": "https://www.src.sk.ca/node/1966",
+          "title": "SRC: Project CLEANS - Recap of Remediation, Monitoring and Community Engagement in 2025",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Gunnar_Mine",
+          "title": "Gunnar Mine - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "CA-019",
+      "name": "Lorado uranium mill site and Nero Lake tailings",
+      "country": "Canada",
+      "country_code": "CA",
+      "latitude": 59.494,
+      "longitude": -108.614,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "closed",
+      "status_note": "Former uranium mill about 8 km south of Uranium City, Saskatchewan, run 1957-1960; about 227,000 m3 of tailings were dumped next to and into Nero Lake. Remediation (tailings cover, liming of the lake) was finished in 2015-2016 and the site is under monitoring before transfer to provincial institutional control.",
+      "status_as_of": "2025-12-31",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "Saskatchewan Research Council (Project CLEANS)",
+      "sources": [
+        {
+          "url": "https://src.sk.ca/resources/lorado-mill-site-fact-sheet",
+          "title": "SRC: Lorado Mill Site fact sheet",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.src.sk.ca/node/1966",
+          "title": "SRC: Project CLEANS - Recap of 2025",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Uranium_City",
+          "title": "Uranium City - Wikipedia (settlement coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Position estimated as about 8 km south of Uranium City, per SRC.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "CA-020",
+      "name": "Beaverlodge decommissioned uranium mine and mill properties, Uranium City",
+      "country": "Canada",
+      "country_code": "CA",
+      "latitude": 59.56583,
+      "longitude": -108.61444,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "closed",
+      "status_note": "Decommissioned Eldorado uranium mine and mill properties near Uranium City, Saskatchewan, managed by Cameco for the federal government since 1988. In May 2025 the CNSC released the final 27 properties from licensing and revoked the waste facility licence, so they pass to Saskatchewan's Institutional Control Program.",
+      "status_as_of": "2025-05-16",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "Province of Saskatchewan, Institutional Control Program (formerly Cameco for Canada Eldor Inc.)",
+      "sources": [
+        {
+          "url": "https://api.cnsc-ccsn.gc.ca/dms/digital-medias/CMD25-H3-ROD-ENG.pdf/object",
+          "title": "CNSC Record of Decision DEC 25-H3: release of the final 27 Beaverlodge properties (16 May 2025)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Uranium_City",
+          "title": "Uranium City - Wikipedia (settlement coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks Uranium City; the former mine and mill properties are spread around the nearby Beaverlodge Lake area.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "CA-021",
+      "name": "Rayrock (Kwetįįɂàà) former uranium mine",
+      "country": "Canada",
+      "country_code": "CA",
+      "latitude": 63.44389,
+      "longitude": -116.55083,
+      "coord_precision": "facility",
+      "facility_type": "uranium_legacy",
+      "status": "remediation",
+      "status_note": "Small underground uranium mine about 145 km north-west of Yellowknife, run 1957-1959; tailings were placed in two land containment areas and reached nearby lakes. First remediated in 1996-1997, the site has been under renewed remediation since 2024 (capping tailings, Mill Lake sediments), led by CIRNAC with the Tłı̨chǫ Government.",
+      "status_as_of": "2024-12-31",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "Crown-Indigenous Relations and Northern Affairs Canada (CIRNAC)",
+      "sources": [
+        {
+          "url": "https://www.rcaanc-cirnac.gc.ca/eng/1723210509475",
+          "title": "CIRNAC: Kwetı̨ı̨ɂaà (Rayrock) Mine Remediation Project",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Rayrock_Mine",
+          "title": "Rayrock Mine - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "CA-022",
+      "name": "Deloro mine site, Marmora and Lake",
+      "country": "Canada",
+      "country_code": "CA",
+      "latitude": 44.51167,
+      "longitude": -77.62333,
+      "coord_precision": "locality",
+      "facility_type": "legacy_site",
+      "status": "remediation",
+      "status_note": "Abandoned 202-hectare mine and refinery site in Ontario (1860s-1960s) contaminated mainly with arsenic, plus low-level radioactive residues from refining Port Hope ore wastes. Tailings and industrial areas were capped by 2012 and 2017; removal of Young's Creek sediments into an on-site containment cell is still to be completed under a CNSC licence.",
+      "status_as_of": "2021-12-10",
+      "waste_types": [
+        "low-level",
+        "chemical"
+      ],
+      "operator": "Ontario Ministry of the Environment, Conservation and Parks",
+      "sources": [
+        {
+          "url": "https://ontario.ca/page/deloro-site-cleanup-project",
+          "title": "Ontario: The Deloro site cleanup project",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://cnsc-ccsn.gc.ca/eng/resources/maps-of-nuclear-facilities/iemp/deloro",
+          "title": "CNSC: Independent Environmental Monitoring Program - Deloro",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Deloro,_Ontario",
+          "title": "Deloro, Ontario - Wikipedia (coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Coordinates are those of the former village of Deloro, next to the mine site.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "CA-023",
+      "name": "Whiteshell Laboratories, Pinawa (WR-1 reactor and waste management areas)",
+      "country": "Canada",
+      "country_code": "CA",
+      "latitude": 50.17842,
+      "longitude": -96.06075,
+      "coord_precision": "facility",
+      "facility_type": "research_lab",
+      "status": "decommissioning",
+      "status_note": "Former AECL nuclear research site about 100 km north-east of Winnipeg, under decommissioning since 2003. It holds waste management areas and a used fuel storage facility; the WR-1 reactor (1965-1985) is in storage with surveillance, and CNL's proposal to entomb it in place has yet to be licensed. Licence valid to end of 2027.",
+      "status_as_of": "2024-12-16",
+      "waste_types": [
+        "low-level",
+        "intermediate-level",
+        "spent-fuel"
+      ],
+      "operator": "Canadian Nuclear Laboratories (for AECL)",
+      "sources": [
+        {
+          "url": "https://www.canada.ca/en/nuclear-safety-commission/news/2024/12/commission-renews-canadian-nuclear-laboratories-ltds-decommissioning-licence-for-whiteshell-laboratories.html",
+          "title": "CNSC news release (16 Dec 2024): Commission renews CNL's decommissioning licence for Whiteshell Laboratories",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Whiteshell_Laboratories",
+          "title": "Whiteshell Laboratories - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "CD-001",
+      "name": "Shinkolobwe former uranium mine",
+      "country": "Democratic Republic of the Congo",
+      "country_code": "CD",
+      "latitude": -11.05497,
+      "longitude": 26.54728,
+      "coord_precision": "facility",
+      "facility_type": "uranium_legacy",
+      "status": "abandoned",
+      "status_note": "Historic uranium-radium mine about 20 km west of Likasi, Haut-Katanga, worked from 1921 and the source of Manhattan Project uranium. Shafts were sealed around 1960 and the mine was officially closed by decree in 2004, but artisanal mining has continued.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Shinkolobwe",
+          "title": "Shinkolobwe - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "No official remediation programme is known; informal mining continues.",
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "CH-001",
       "name": "Mont Terri Rock Laboratory",
       "country": "Switzerland",
@@ -1765,6 +2298,67 @@
           "accessed": "2026-11-12"
         }
       ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "CH-010",
+      "name": "Federal Interim Storage Facility (Bundeszwischenlager, BZL) at the Paul Scherrer Institute",
+      "country": "Switzerland",
+      "country_code": "CH",
+      "latitude": 47.5361,
+      "longitude": 8.2228,
+      "coord_precision": "locality",
+      "facility_type": "interim_storage",
+      "status": "operating",
+      "status_note": "Federally owned store, run by PSI, for conditioned low- and intermediate-level waste from medicine, industry and research, collected in annual federal campaigns, compacted or incinerated and cemented in drums. It is next to the Zwilag interim store for power plant waste.",
+      "status_as_of": "2018-09-13",
+      "waste_types": [
+        "low-level",
+        "intermediate-level"
+      ],
+      "operator": "Paul Scherrer Institute (PSI) on behalf of the Swiss Confederation",
+      "sources": [
+        {
+          "url": "https://www.psi.ch/en/news/psi-stories/the-swiss-federal-interim-storage-facility",
+          "title": "PSI (13 Sep 2018): The Swiss Federal Interim Storage Facility",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Paul_Scherrer_Institute",
+          "title": "Wikipedia: Paul Scherrer Institute (coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the PSI campus; the store lies on PSI's site next to Zwilag.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "CH-011",
+      "name": "Lucens experimental nuclear power plant (1969 reactor accident site)",
+      "country": "Switzerland",
+      "country_code": "CH",
+      "latitude": 46.6928,
+      "longitude": 6.8269,
+      "coord_precision": "facility",
+      "facility_type": "accident_site",
+      "status": "closed",
+      "status_note": "Underground experimental reactor that suffered a partial core meltdown on 21 January 1969, contaminating the reactor cavern. The plant was dismantled by 1974, the cavern sealed with concrete in 1991-1993 and the last stored radioactive waste removed in 2003; the caverns now house cantonal archives and depots, and drainage water is still monitored.",
+      "status_as_of": "2003-12-31",
+      "waste_types": [],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Lucens_reactor",
+          "title": "Wikipedia: Lucens reactor",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://ensi.admin.ch/en/topic/versuchsatomkraftwerk-lucens",
+          "title": "ENSI: Versuchsatomkraftwerk Lucens",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "A small amount of residual radioactivity remains enclosed in the concrete-filled reactor cavern.",
       "last_updated": "2026-11-12"
     },
     {
@@ -2833,6 +3427,211 @@
           "accessed": "2026-11-12"
         }
       ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "CZ-009",
+      "name": "Bukov Underground Research Facility (former Rožná I uranium mine)",
+      "country": "Czechia",
+      "country_code": "CZ",
+      "latitude": 49.4544,
+      "longitude": 16.2236,
+      "coord_precision": "locality",
+      "facility_type": "research_lab",
+      "status": "operating",
+      "status_note": "SÚRAO's underground laboratory about 500 m deep in the former Rožná I uranium mine, used since 2017 for in-situ experiments for the planned Czech deep geological repository. A second laboratory section (Bukov URF II) was excavated by April 2024 and equipped in 2025; the lower mine levels are being flooded.",
+      "status_as_of": "2025-07-31",
+      "waste_types": [],
+      "operator": "SÚRAO (Radioactive Waste Repository Authority)",
+      "sources": [
+        {
+          "url": "https://surao.gov.cz/wp-content/uploads/2025/07/Bukov_URF_Presskit_2025.pdf",
+          "title": "SÚRAO press kit (2025): Bukov Underground Research Facility",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Bukov_(%C5%BD%C4%8F%C3%A1r_nad_S%C3%A1zavou_District)",
+          "title": "Wikipedia: Bukov, Žďár nad Sázavou District (village coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "No radioactive waste is stored here. Point marks Bukov village; the laboratory lies under the former Rožná mine nearby.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "CZ-010",
+      "name": "Březový potok candidate site for the Czech deep geological repository",
+      "country": "Czechia",
+      "country_code": "CZ",
+      "latitude": 49.36502,
+      "longitude": 13.70144,
+      "coord_precision": "region",
+      "facility_type": "deep_geological",
+      "status": "planned",
+      "status_note": "One of four candidate sites (Klatovy district, Plzeň region) approved by the Czech government in December 2020 for a deep repository for spent fuel and high-level waste in crystalline rock. SÚRAO has applied for exploration areas; the final and backup sites are to be chosen later (2028 according to SÚRAO's current plan), with operation targeted for 2065.",
+      "status_as_of": "2025-01-31",
+      "waste_types": [],
+      "operator": "SÚRAO (Radioactive Waste Repository Authority)",
+      "sources": [
+        {
+          "url": "https://surao.gov.cz/wp-content/uploads/2021/05/presskit_20210504_EN_selection.pdf",
+          "title": "SÚRAO press kit (2021): Selection of a site for the deep geological repository",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://surao.gov.cz/wp-content/uploads/2025/01/ZZS-2-2024_web.pdf",
+          "title": "SÚRAO bulletin Zpravodaj 2/2024 (municipalities and areas of each candidate site)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://oenergetice.cz/jaderne-elektrarny/sprava-zazadala-o-povoleni-pruzkumu-v-mistech-pro-uloziste-radioaktivniho-odpadu",
+          "title": "oEnergetice.cz (27 Feb 2023): SÚRAO applies for exploration areas at the four sites",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://oenergetice.cz/jaderne-elektrarny/vlada-uloziste-jaderneho-odpadu-vznikne-u-temelina-na-vysocine-ci-u-klatov",
+          "title": "oEnergetice.cz (22 Dec 2020): Government narrows repository candidates to four sites",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://cs.wikipedia.org/wiki/Velk%C3%BD_Bor",
+          "title": "Wikipedia (cs): Velký Bor (municipality coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Candidate site only; no repository exists. Point marks the municipality of Velký Bor, which has the largest share of the candidate area (municipalities: Chanovice, Velký Bor, Pačejov, Horažďovice and others).",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "CZ-011",
+      "name": "Horka candidate site for the Czech deep geological repository",
+      "country": "Czechia",
+      "country_code": "CZ",
+      "latitude": 49.29402,
+      "longitude": 15.98387,
+      "coord_precision": "region",
+      "facility_type": "deep_geological",
+      "status": "planned",
+      "status_note": "One of four candidate sites (Třebíč district, Vysočina region) approved by the Czech government in December 2020 for a deep repository for spent fuel and high-level waste in crystalline rock. SÚRAO has applied for exploration areas; the final and backup sites are to be chosen later (2028 according to SÚRAO's current plan), with operation targeted for 2065.",
+      "status_as_of": "2025-01-31",
+      "waste_types": [],
+      "operator": "SÚRAO (Radioactive Waste Repository Authority)",
+      "sources": [
+        {
+          "url": "https://surao.gov.cz/wp-content/uploads/2021/05/presskit_20210504_EN_selection.pdf",
+          "title": "SÚRAO press kit (2021): Selection of a site for the deep geological repository",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://surao.gov.cz/wp-content/uploads/2025/01/ZZS-2-2024_web.pdf",
+          "title": "SÚRAO bulletin Zpravodaj 2/2024 (municipalities and areas of each candidate site)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://oenergetice.cz/jaderne-elektrarny/sprava-zazadala-o-povoleni-pruzkumu-v-mistech-pro-uloziste-radioaktivniho-odpadu",
+          "title": "oEnergetice.cz (27 Feb 2023): SÚRAO applies for exploration areas at the four sites",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://oenergetice.cz/jaderne-elektrarny/vlada-uloziste-jaderneho-odpadu-vznikne-u-temelina-na-vysocine-ci-u-klatov",
+          "title": "oEnergetice.cz (22 Dec 2020): Government narrows repository candidates to four sites",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://cs.wikipedia.org/wiki/Hodov",
+          "title": "Wikipedia (cs): Hodov (municipality coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Candidate site only; no repository exists. Point marks the municipality of Hodov, which has the largest share of the candidate area (municipalities: Hodov, Rohy, Oslavička, Budišov and others).",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "CZ-012",
+      "name": "Hrádek candidate site for the Czech deep geological repository",
+      "country": "Czechia",
+      "country_code": "CZ",
+      "latitude": 49.35027,
+      "longitude": 15.39919,
+      "coord_precision": "region",
+      "facility_type": "deep_geological",
+      "status": "planned",
+      "status_note": "One of four candidate sites (Jihlava district, Vysočina region) approved by the Czech government in December 2020 for a deep repository for spent fuel and high-level waste in crystalline rock. SÚRAO has applied for exploration areas; the final and backup sites are to be chosen later (2028 according to SÚRAO's current plan), with operation targeted for 2065.",
+      "status_as_of": "2025-01-31",
+      "waste_types": [],
+      "operator": "SÚRAO (Radioactive Waste Repository Authority)",
+      "sources": [
+        {
+          "url": "https://surao.gov.cz/wp-content/uploads/2021/05/presskit_20210504_EN_selection.pdf",
+          "title": "SÚRAO press kit (2021): Selection of a site for the deep geological repository",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://surao.gov.cz/wp-content/uploads/2025/01/ZZS-2-2024_web.pdf",
+          "title": "SÚRAO bulletin Zpravodaj 2/2024 (municipalities and areas of each candidate site)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://oenergetice.cz/jaderne-elektrarny/sprava-zazadala-o-povoleni-pruzkumu-v-mistech-pro-uloziste-radioaktivniho-odpadu",
+          "title": "oEnergetice.cz (27 Feb 2023): SÚRAO applies for exploration areas at the four sites",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://oenergetice.cz/jaderne-elektrarny/vlada-uloziste-jaderneho-odpadu-vznikne-u-temelina-na-vysocine-ci-u-klatov",
+          "title": "oEnergetice.cz (22 Dec 2020): Government narrows repository candidates to four sites",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://cs.wikipedia.org/wiki/Rohozn%C3%A1_(okres_Jihlava)",
+          "title": "Wikipedia (cs): Rohozná (municipality coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Candidate site only; no repository exists. Point marks the municipality of Rohozná, which has the largest share of the candidate area (municipalities: Rohozná, Cejle, Hojkov, Nový Rychnov and others).",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "CZ-013",
+      "name": "Janoch candidate site for the Czech deep geological repository",
+      "country": "Czechia",
+      "country_code": "CZ",
+      "latitude": 49.19292,
+      "longitude": 14.34877,
+      "coord_precision": "region",
+      "facility_type": "deep_geological",
+      "status": "planned",
+      "status_note": "One of four candidate sites (near the Temelín nuclear power plant, South Bohemia) approved by the Czech government in December 2020 for a deep repository for spent fuel and high-level waste in crystalline rock. SÚRAO has applied for exploration areas; the final and backup sites are to be chosen later (2028 according to SÚRAO's current plan), with operation targeted for 2065.",
+      "status_as_of": "2025-01-31",
+      "waste_types": [],
+      "operator": "SÚRAO (Radioactive Waste Repository Authority)",
+      "sources": [
+        {
+          "url": "https://surao.gov.cz/wp-content/uploads/2021/05/presskit_20210504_EN_selection.pdf",
+          "title": "SÚRAO press kit (2021): Selection of a site for the deep geological repository",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://surao.gov.cz/wp-content/uploads/2025/01/ZZS-2-2024_web.pdf",
+          "title": "SÚRAO bulletin Zpravodaj 2/2024 (municipalities and areas of each candidate site)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://oenergetice.cz/jaderne-elektrarny/sprava-zazadala-o-povoleni-pruzkumu-v-mistech-pro-uloziste-radioaktivniho-odpadu",
+          "title": "oEnergetice.cz (27 Feb 2023): SÚRAO applies for exploration areas at the four sites",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://oenergetice.cz/jaderne-elektrarny/vlada-uloziste-jaderneho-odpadu-vznikne-u-temelina-na-vysocine-ci-u-klatov",
+          "title": "oEnergetice.cz (22 Dec 2020): Government narrows repository candidates to four sites",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://cs.wikipedia.org/wiki/Temel%C3%ADn",
+          "title": "Wikipedia (cs): Temelín (municipality coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Candidate site only; no repository exists. Point marks the municipality of Temelín, which has the largest share of the candidate area (municipalities: Temelín, Olešník and Dříteň).",
       "last_updated": "2026-11-12"
     },
     {
@@ -4133,6 +4932,143 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "DE-039",
+      "name": "KTE waste treatment and interim stores, KIT Campus North (former Karlsruhe Nuclear Research Centre incl. WAK reprocessing plant)",
+      "country": "Germany",
+      "country_code": "DE",
+      "latitude": 49.1101,
+      "longitude": 8.4344,
+      "coord_precision": "locality",
+      "facility_type": "interim_storage",
+      "status": "operating",
+      "status_note": "KTE dismantles the former research and prototype facilities (incl. the WAK reprocessing plant and two prototype reactors) and treats and stores their waste on site; about 72,500 m3 of low- and intermediate-level waste awaits the Konrad repository. A new store for intermediate-level waste (L566) opened on 5 May 2025. WAK's liquid high-level waste was vitrified on site and the 140 glass canisters went to Zwischenlager Nord (Lubmin) in 2011.",
+      "status_as_of": "2025-05-05",
+      "waste_types": [
+        "low-level",
+        "intermediate-level"
+      ],
+      "operator": "Kerntechnische Entsorgung Karlsruhe GmbH (KTE), EWN group",
+      "sources": [
+        {
+          "url": "https://www.kte-karlsruhe.de/fileadmin/user_upload/KTE/Mediathek/Broschueren/KTE-Radioaktive_Abfaelle_2025_WEB.pdf",
+          "title": "KTE: Behandlung und Lagerung radioaktiver Abfälle (brochure, 2025)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.kte-karlsruhe.de/fileadmin/user_upload/KTE/Pressemitteilungen/2025/202550505_PI_Inbetriebnahme_L566.pdf",
+          "title": "KTE press release: commissioning of intermediate-level waste store L566 (5 May 2025)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/Kerntechnische_Entsorgung_Karlsruhe",
+          "title": "Wikipedia (de): Kerntechnische Entsorgung Karlsruhe (coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the KIT Campus North site as a whole, not a single store. The KNK II reactor on the same campus is shown as a separate entry.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "DE-040",
+      "name": "Leese external store for radioactive waste (Lower Saxony state collection facility waste)",
+      "country": "Germany",
+      "country_code": "DE",
+      "latitude": 52.5,
+      "longitude": 9.1167,
+      "coord_precision": "locality",
+      "facility_type": "interim_storage",
+      "status": "operating",
+      "status_note": "Interim store of Eckert & Ziegler Nuclitec in Leese holding conditioned low- and intermediate-level waste of the Lower Saxony state collection facility (from medicine, research and industry); at the end of 2017 it held about 4,900 drums (about 1,320 m3) plus a few Konrad containers awaiting the Konrad repository.",
+      "status_as_of": "2017-12-31",
+      "waste_types": [
+        "low-level",
+        "intermediate-level"
+      ],
+      "operator": "Eckert & Ziegler Nuclitec GmbH",
+      "sources": [
+        {
+          "url": "https://www.bundesumweltministerium.de/fileadmin/Daten_BMU/Download_PDF/Nukleare_Sicherheit/verzeichnis_radioaktiver_abfaelle_bf.pdf",
+          "title": "BMU: Verzeichnis radioaktiver Abfälle (inventory as of 31 Dec 2017)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/Leese",
+          "title": "Wikipedia (de): Leese (municipality coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the municipality of Leese; the store's exact location is not given in the sources.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "DE-041",
+      "name": "Mitterteich interim store and Bavarian state collection facility (GRB Sammelstelle Bayern)",
+      "country": "Germany",
+      "country_code": "DE",
+      "latitude": 49.93708,
+      "longitude": 12.21946,
+      "coord_precision": "facility",
+      "facility_type": "interim_storage",
+      "status": "operating",
+      "status_note": "Two storage halls hold low- and intermediate-level waste from Bavarian nuclear power plants and from medicine, research and industry, awaiting a federal repository. Storage began in 1985.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level",
+        "intermediate-level"
+      ],
+      "operator": "GRB Sammelstelle Bayern für radioaktive Stoffe GmbH",
+      "sources": [
+        {
+          "url": "https://www.lfu.bayern.de/strahlung/umgebungsueberwachung_sonstiger_anlagen/index.htm",
+          "title": "Bayerisches Landesamt für Umwelt: Umgebungsüberwachung sonstiger Anlagen (GRB Mitterteich)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/Zwischenlager_Mitterteich",
+          "title": "Wikipedia (de): Zwischenlager Mitterteich",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "DE-042",
+      "name": "Rossendorf interim store and state collection facility (VKTA), Dresden",
+      "country": "Germany",
+      "country_code": "DE",
+      "latitude": 51.0584,
+      "longitude": 13.9549,
+      "coord_precision": "locality",
+      "facility_type": "interim_storage",
+      "status": "operating",
+      "status_note": "VKTA stores and conditions radioactive waste from dismantling the former East German nuclear research centre, whose research reactor (1957-1991) was fully removed by 2019. The site also holds the waste of the state collection facilities of Saxony, Saxony-Anhalt and Thuringia until a federal repository is available.",
+      "status_as_of": "2019-09-20",
+      "waste_types": [
+        "low-level",
+        "intermediate-level"
+      ],
+      "operator": "VKTA - Strahlenschutz, Analytik & Entsorgung Rossendorf e. V.",
+      "sources": [
+        {
+          "url": "https://www.bundesumweltministerium.de/fileadmin/Daten_BMU/Download_PDF/Nukleare_Sicherheit/verzeichnis_radioaktiver_abfaelle_bf.pdf",
+          "title": "BMU: Verzeichnis radioaktiver Abfälle (inventory as of 31 Dec 2017)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.l-iz.de/melder/wortmelder/2019/09/Reaktor-nun-gruene-Wiese-Rueckbau-des-Rossendorfer-Forschungsreaktors-abgeschlossen-296162",
+          "title": "Leipziger Internet Zeitung (20 Sep 2019): Rossendorf research reactor dismantling completed",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://de.wikipedia.org/wiki/Rossendorfer_Forschungsreaktor",
+          "title": "Wikipedia (de): Rossendorfer Forschungsreaktor (coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the former Rossendorf research reactor on the research campus; the stores are nearby on the same site.",
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "DK-001",
       "name": "Risø waste storage (Danish Decommissioning)",
       "country": "Denmark",
@@ -4294,6 +5230,43 @@
         }
       ],
       "notes": "Position of Sillamäe town; the pond lies on its north-western edge.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "EG-001",
+      "name": "Hot Laboratory and Waste Management Center (HLWMC), Inshas",
+      "country": "Egypt",
+      "country_code": "EG",
+      "latitude": 30.38111,
+      "longitude": 31.45833,
+      "coord_precision": "locality",
+      "facility_type": "research_lab",
+      "status": "operating",
+      "status_note": "Egyptian Atomic Energy Authority centre (founded 1980s) beside the Inshas research reactors that treats low- and intermediate-level waste and spent sealed sources from research, medicine and industry, keeps conditioned drums in interim storage and has a disposal site licensed for pre-operational use in 2005.",
+      "status_as_of": "2007-03-01",
+      "waste_types": [
+        "low-level",
+        "intermediate-level"
+      ],
+      "operator": "Egyptian Atomic Energy Authority",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Hot_Laboratory_and_Waste_Management_Center",
+          "title": "Hot Laboratory and Waste Management Center - Wikipedia",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.osti.gov/scitech/biblio/21294787",
+          "title": "OSTI: Description of Site Operations at the Low-Level Radioactive Waste Disposal Site (WM'07)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Inshas",
+          "title": "Inshas - Wikipedia (village coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks Inshas village. Sources differ on the founding year (1980 or 1983) and one places the centre at Abu Zaabal.",
       "last_updated": "2026-11-12"
     },
     {
@@ -4576,6 +5549,102 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "ES-010",
+      "name": "Andújar Uranium Mill (Fábrica de Uranio de Andújar, FUA), restored site",
+      "country": "Spain",
+      "country_code": "ES",
+      "latitude": 38.0392,
+      "longitude": -4.0506,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "closed",
+      "status_note": "Uranium mill operated from 1959 to 1981. Enresa dismantled it, conditioned the residues on site and restored the area (completed 1995); the fenced site has been in a surveillance 'compliance period' since then, which continues because target values have not yet been reached.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "Enresa",
+      "sources": [
+        {
+          "url": "https://www.csn.es/en/fabrica-uranio-de-andujar",
+          "title": "CSN: Andújar Uranium Mill (FUA) overview",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://es.wikipedia.org/wiki/And%C3%BAjar",
+          "title": "Wikipedia (es): Andújar (town coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the town of Andújar; the restored mill site lies in the municipality.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "ES-011",
+      "name": "Centralised Temporary Storage Facility (ATC) project, Villar de Cañas (cancelled)",
+      "country": "Spain",
+      "country_code": "ES",
+      "latitude": 39.7789,
+      "longitude": -2.5661,
+      "coord_precision": "locality",
+      "facility_type": "interim_storage",
+      "status": "cancelled",
+      "status_note": "Site chosen in 2011 for a single national store for spent fuel and high-level waste. Enresa bought land and built ancillary buildings, but on 27 December 2023 the government abandoned the project; the 7th General Radioactive Waste Plan instead provides for separate stores at each of the seven nuclear power plant sites.",
+      "status_as_of": "2024-01-16",
+      "waste_types": [],
+      "operator": "Enresa",
+      "sources": [
+        {
+          "url": "https://www.boe.es/boe/dias/2024/01/16/pdfs/BOE-A-2024-806.pdf",
+          "title": "BOE-A-2024-806: Council of Ministers agreement to abandon the ATC project at Villar de Cañas (16 Jan 2024)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://es.wikipedia.org/wiki/Villar_de_Ca%C3%B1as",
+          "title": "Wikipedia (es): Villar de Cañas (municipality coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "No radioactive waste was ever stored here. Point marks the municipality of Villar de Cañas.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "ES-012",
+      "name": "Quercus uranium concentrate plant and Saelices el Chico uranium mines (ENUSA)",
+      "country": "Spain",
+      "country_code": "ES",
+      "latitude": 40.6683,
+      "longitude": -6.6342,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "decommissioning",
+      "status_note": "Uranium concentrate plant at the Saelices el Chico mining centre, permanently shut down in 2003. ENUSA's project for phase I of dismantling and closing the plant was put out for public consultation in July 2025; the surrounding uranium mines are under restoration.",
+      "status_as_of": "2025-07-30",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "ENUSA Industrias Avanzadas",
+      "sources": [
+        {
+          "url": "https://www.csn.es/en/planta-quercus",
+          "title": "CSN: Quercus plant overview",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://boe.es/boe/dias/2025/07/30/pdfs/BOE-B-2025-27854.pdf",
+          "title": "BOE-B-2025-27854: public consultation on phase I of dismantling and closure of the Quercus plant (30 Jul 2025)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://es.wikipedia.org/wiki/Saelices_el_Chico",
+          "title": "Wikipedia (es): Saelices el Chico (village coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the village of Saelices el Chico; the plant and mines lie within the municipality.",
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "FI-001",
       "name": "Onkalo spent fuel repository (Olkiluoto)",
       "country": "Finland",
@@ -4605,6 +5674,11 @@
         {
           "url": "https://www.openstreetmap.org/way/222977536",
           "title": "OpenStreetMap object (location)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.aljazeera.com/news/2026/10/23/finland-nearing-opening-of-worlds-first-permanent-nuclear-waste-repository",
+          "title": "Al Jazeera - Finland nearing opening of world's first permanent nuclear waste repository (2026-10-23)",
           "accessed": "2026-11-12"
         }
       ],
@@ -4885,8 +5959,8 @@
       "coord_precision": "facility",
       "facility_type": "at_reactor_storage",
       "status": "closed",
-      "status_note": "Experimental 70 MWe heavy-water gas-cooled reactor, shut down in 1985; a dismantling licence was issued in 2006 and dismantling is in progress.",
-      "status_as_of": "2026-11-12",
+      "status_note": "Experimental 70 MWe heavy-water gas-cooled reactor, shut down in 1985; all irradiated fuel was removed during the 1985-1992 shutdown work. A 2023 decree requires full dismantling, and preparatory work on the reactor block is under way.",
+      "status_as_of": "2026-06-10",
       "waste_types": [],
       "operator": "EDF",
       "sources": [
@@ -4904,9 +5978,13 @@
           "url": "https://www.wikidata.org/wiki/Q1489205",
           "title": "Wikidata: Brennilis Nuclear Power Plant",
           "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://reglementation-controle.asnr.fr/controle/l-asnr-en-region/bretagne/monts-d-arree-el4-d-centrale-nucleaire-de-brennilis",
+          "title": "ASNR - Monts d'Arree EL4-D (Brennilis nuclear power plant) (updated 2026-06-10, French)",
+          "accessed": "2026-11-12"
         }
       ],
-      "notes": "Removal of the spent fuel is assumed from the decommissioning status but is not confirmed.",
       "last_updated": "2026-11-12"
     },
     {
@@ -5733,6 +6811,113 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "FR-029",
+      "name": "CEA Cadarache research centre: solid waste storage area (BNI 56) and Cedra store (BNI 164)",
+      "country": "France",
+      "country_code": "FR",
+      "latitude": 43.6875,
+      "longitude": 5.7619,
+      "coord_precision": "locality",
+      "facility_type": "research_lab",
+      "status": "operating",
+      "status_note": "BNI 56, declared in 1968, holds legacy solid waste, mostly long-lived intermediate-level, in pools, pits, trenches and hangars; waste is being retrieved and repackaged, partly into the Cedra store (BNI 164), and decommissioning of BNI 56 is being prepared. Several research reactors and plutonium facilities on the centre are being decommissioned.",
+      "status_as_of": "2024-12-31",
+      "waste_types": [
+        "low-level",
+        "intermediate-level"
+      ],
+      "operator": "CEA (Commissariat à l'énergie atomique et aux énergies alternatives)",
+      "sources": [
+        {
+          "url": "https://regulation-oversight.asnr.fr/annual_report/2024gb/94/",
+          "title": "ASN annual report 2024: CEA Cadarache (incl. BNI 56 and Cedra)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://regulation-oversight.asnr.fr/annual_report/2024gb/92/",
+          "title": "ASN annual report 2024: CEA Cadarache facilities in decommissioning",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Cadarache",
+          "title": "Wikipedia: Cadarache (coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the Cadarache research centre as a whole, which also hosts the ITER site; individual stores are not located separately.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "FR-030",
+      "name": "Malvési uranium conversion plant and Écrin waste storage facility (BNI 175), Narbonne",
+      "country": "France",
+      "country_code": "FR",
+      "latitude": 43.2136,
+      "longitude": 2.98,
+      "coord_precision": "facility",
+      "facility_type": "uranium_legacy",
+      "status": "operating",
+      "status_note": "The Malvési plant refines and converts uranium concentrate. Legacy sludge and residues from conversion are held in former settling basins B1 and B2 and the PERLE cell, licensed since 2018 as the Écrin storage facility; final cover works were completed in 2023 and options for permanent disposal are under study.",
+      "status_as_of": "2024-12-31",
+      "waste_types": [
+        "low-level",
+        "chemical"
+      ],
+      "operator": "Orano Chimie-Enrichissement",
+      "sources": [
+        {
+          "url": "https://regulation-oversight.asnr.fr/annual_report/2024gb/87/",
+          "title": "ASN annual report 2024: Écrin facility (BNI 175), Malvési",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Malv%C3%A9si",
+          "title": "Wikipedia: Malvési (plant coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "FR-031",
+      "name": "CEA Paris-Saclay (Saclay) nuclear research centre: solid waste zone (BNI 72) and liquid effluent zone (BNI 35)",
+      "country": "France",
+      "country_code": "FR",
+      "latitude": 48.7247,
+      "longitude": 2.1488,
+      "coord_precision": "locality",
+      "facility_type": "research_lab",
+      "status": "decommissioning",
+      "status_note": "BNI 72 has processed, packaged and stored high-, intermediate- and low-level waste from the Saclay facilities since 1971, plus legacy spent fuel and sealed sources. It was shut down at the end of 2022 and a 2022 decree requires its decommissioning; legacy fuel and waste are being removed, and old liquid waste tanks elsewhere on the site are being emptied.",
+      "status_as_of": "2024-12-31",
+      "waste_types": [
+        "low-level",
+        "intermediate-level",
+        "high-level",
+        "spent-fuel"
+      ],
+      "operator": "CEA (Commissariat à l'énergie atomique et aux énergies alternatives)",
+      "sources": [
+        {
+          "url": "https://regulation-oversight.asnr.fr/annual_report/2024gb/67/",
+          "title": "ASN annual report 2024: Solid radioactive waste management zone (BNI 72), Saclay",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://regulation-oversight.asnr.fr/annual_report/2024gb/68/",
+          "title": "ASN annual report 2024: CEA Paris-Saclay centre",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q4393524",
+          "title": "Wikidata: CEA Paris-Saclay (coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the Saclay research centre as a whole.",
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "GA-001",
       "name": "Mounana former uranium mine and mill (COMUF)",
       "country": "Gabon",
@@ -5808,8 +6993,8 @@
       "coord_precision": "facility",
       "facility_type": "reprocessing_storage",
       "status": "decommissioning",
-      "status_note": "Former reprocessing complex in Cumbria: THORP stopped reprocessing in 2018 and the Magnox reprocessing plant was due to close in July 2022, ending reprocessing in the UK. The site continues to store spent fuel from the UK AGR fleet and manages high-, intermediate- and low-level waste, while retrieving waste and sludge from its legacy ponds and silos.",
-      "status_as_of": "2026-11-12",
+      "status_note": "Former reprocessing complex in Cumbria: THORP stopped reprocessing in 2018 and the Magnox reprocessing plant took its final fuel on 17 July 2022, ending reprocessing in the UK. The site continues to store spent fuel from the UK AGR fleet and manages high-, intermediate- and low-level waste; retrievals are under way from all four legacy ponds and silos.",
+      "status_as_of": "2026-02-02",
       "waste_types": [
         "spent-fuel",
         "high-level",
@@ -5831,6 +7016,16 @@
         {
           "url": "https://www.openstreetmap.org/way/335158741",
           "title": "OpenStreetMap object (location)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.gov.uk/government/news/job-done-sellafield-plant-safely-completes-its-mission",
+          "title": "GOV.UK - Job done: Sellafield plant safely completes its mission (2022-07-19)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.onr.org.uk/our-work/what-we-regulate/sellafield-decommissioning-fuel-and-waste/sellafield/legacy-ponds-and-silos",
+          "title": "ONR - Sellafield's legacy ponds and silos (updated 2026-02-02)",
           "accessed": "2026-11-12"
         }
       ],
@@ -6069,8 +7264,8 @@
       "coord_precision": "facility",
       "facility_type": "at_reactor_storage",
       "status": "operating",
-      "status_note": "Dungeness A (two Magnox reactors) ceased generation in 2006 and was defuelled by June 2012, with all fuel sent to Sellafield. Dungeness B (two AGRs, 1983/1985) entered defuelling in June 2021; its spent fuel is being shipped to Sellafield in flasks, a process EDF expects to take three to five years.",
-      "status_as_of": "2026-11-12",
+      "status_note": "Dungeness A (two Magnox reactors) ceased generation in 2006 and was defuelled by June 2012, with all fuel sent to Sellafield. Dungeness B (two AGRs) entered defuelling in June 2021 and ships its spent fuel to Sellafield in flasks; by mid-January 2026 fuel had been removed from 193 of 815 fuel channels. EDF expects reactor 21 to be defuelled around the end of 2026 and reactor 22 by the end of 2029.",
+      "status_as_of": "2026-02-04",
       "waste_types": [
         "spent-fuel",
         "intermediate-level"
@@ -6091,9 +7286,14 @@
           "url": "https://www.wikidata.org/wiki/Q104946950",
           "title": "Wikidata: Dungeness B power station",
           "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://nrsssg.com/wp-content/uploads/2025/12/Meeting-Pack-Of-Papers-And-Reports-For-the-Dungeness-SSG-Meeting-Wednesday-4-February-2026-2.pdf",
+          "title": "Dungeness Site Stakeholder Group - Meeting pack, 4 February 2026 (EDF Dungeness B report)",
+          "accessed": "2026-11-12"
         }
       ],
-      "notes": "Completion of Dungeness B defuelling is not confirmed.",
+      "notes": "Dungeness B still holds spent fuel; the site is to pass to Nuclear Restoration Services once defuelling is complete.",
       "last_updated": "2026-11-12"
     },
     {
@@ -6416,6 +7616,37 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "GB-019",
+      "name": "Winfrith former Atomic Energy Establishment (SGHWR and Dragon reactors), Dorset",
+      "country": "United Kingdom",
+      "country_code": "GB",
+      "latitude": 50.682,
+      "longitude": -2.261,
+      "coord_precision": "locality",
+      "facility_type": "research_lab",
+      "status": "decommissioning",
+      "status_note": "Former UKAEA reactor research site (1960-1990s) in the final stage of decommissioning. The operator has applied to demolish the remaining reactor buildings and backfill the below-ground structures of the SGHWR and Dragon reactors with demolition waste, including some low-level radioactive waste, under an engineered cap; the end state is public heathland. The regulator's final decision was expected in autumn 2026.",
+      "status_as_of": "2025-06-03",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": "Nuclear Restoration Services Ltd (NDA group)",
+      "sources": [
+        {
+          "url": "https://www.gov.uk/government/news/winfrith-nuclear-site-have-your-say-on-decommissioning-permits",
+          "title": "Environment Agency (3 Jun 2025): Winfrith nuclear site - have your say on decommissioning permits",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Winfrith",
+          "title": "Wikipedia: Winfrith (history and coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "If the permits are granted, some low-level radioactive waste will remain buried on site permanently.",
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "GG-001",
       "name": "Hurd Deep radioactive waste dumping site (English Channel)",
       "country": "Guernsey",
@@ -6607,6 +7838,67 @@
         }
       ],
       "notes": "Position of Püspökszilágy village; the facility is on a nearby hill. Tritium in groundwater within the controlled zone has been reported but not confirmed by the regulator.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "HU-004",
+      "name": "Boda Claystone Formation research area for a high-level waste repository (near Pécs)",
+      "country": "Hungary",
+      "country_code": "HU",
+      "latitude": 46.0803,
+      "longitude": 18.0495,
+      "coord_precision": "region",
+      "facility_type": "deep_geological",
+      "status": "dormant",
+      "status_note": "Since 1999 PURAM has regarded the Boda Claystone Formation as a potential host rock for Hungary's deep repository for spent fuel and high-level waste, and has drilled exploratory boreholes there. Field investigations were reported as temporarily suspended in 2025.",
+      "status_as_of": "2025-04-19",
+      "waste_types": [],
+      "operator": "PURAM (Radioaktív Hulladékokat Kezelő Kft.)",
+      "sources": [
+        {
+          "url": "https://saltclayrock.ngbk.de/de/blog/research-site-boda",
+          "title": "Salt Clay Rock project blog (19 Apr 2025): Research site Boda",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Boda,_Hungary",
+          "title": "Wikipedia: Boda, Hungary (village coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Candidate research area only; no repository or waste exists. Point marks Boda village; the claystone formation extends over a wider area.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "ID-001",
+      "name": "Radioactive Waste Management Installation (IPLR), Serpong Nuclear Area",
+      "country": "Indonesia",
+      "country_code": "ID",
+      "latitude": -6.35244,
+      "longitude": 106.66306,
+      "coord_precision": "locality",
+      "facility_type": "research_lab",
+      "status": "operating",
+      "status_note": "Indonesia's only radioactive waste management facility, in the Serpong Nuclear Area (South Tangerang) next to the G.A. Siwabessy research reactor. It treats liquid and solid waste from research and nuclear applications and keeps cemented waste in interim storage pending disposal; it is run by BRIN, which replaced BATAN.",
+      "status_as_of": "2023-06-24",
+      "waste_types": [
+        "low-level",
+        "intermediate-level"
+      ],
+      "operator": "National Research and Innovation Agency (BRIN), Directorate of Nuclear Facilities Management",
+      "sources": [
+        {
+          "url": "https://ejournal.brin.go.id/ganendra/article/download/15556/11957/45842",
+          "title": "Suhartono et al. (2023): Determination of the clearance level of cemented evaporation concentrates radioactive waste, Ganendra 26(1)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q7300764",
+          "title": "Wikidata: Reaktor Serba Guna G.A. Siwabessy (Q7300764), coordinates",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the G.A. Siwabessy reactor in the same nuclear area.",
       "last_updated": "2026-11-12"
     },
     {
@@ -7048,6 +8340,37 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "IN-013",
+      "name": "Jaduguda uranium mine, mill and tailings ponds",
+      "country": "India",
+      "country_code": "IN",
+      "latitude": 22.65327,
+      "longitude": 86.34664,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "operating",
+      "status_note": "India's oldest uranium mine (from 1967) and mill in East Singhbhum, Jharkhand, run by UCIL. Fine tailings are pumped into engineered tailings ponds in a valley close to the town, where they stay above ground; pipeline bursts have spilled tailings several times (2006-2015). Mining was suspended in 2014 and reported to have resumed in 2018.",
+      "status_as_of": "2018-10-07",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "Uranium Corporation of India Limited (UCIL)",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Jaduguda_uranium_mine",
+          "title": "Jaduguda uranium mine - Wikipedia",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.wise-uranium.org/umopjdg.html",
+          "title": "WISE Uranium Project: Issues at Jaduguda uranium mine, Jharkhand",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Health effects of the tailings ponds are disputed between the operator and local groups.",
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "IR-001",
       "name": "Bushehr Nuclear Power Plant",
       "country": "Iran",
@@ -7057,8 +8380,8 @@
       "coord_precision": "facility",
       "facility_type": "at_reactor_storage",
       "status": "operating",
-      "status_note": "One VVER-1000 unit (fuel loaded 2010, commercial operation 2013) operates; unit 2 is under construction. Under a 2005 agreement Russia supplies the fuel and spent fuel is to be returned to Russia.",
-      "status_as_of": "2026-11-12",
+      "status_note": "One VVER-1000 unit (fuel loaded 2010, commercial operation 2013) operates; unit 2 is under construction. Under its agreements with Russia, spent fuel is to be returned to Russia, but Rosatom's head said in March 2026 that 210 t of spent fuel was stored at Bushehr.",
+      "status_as_of": "2026-07-17",
       "waste_types": [
         "spent-fuel"
       ],
@@ -7083,9 +8406,14 @@
           "url": "https://www.wikidata.org/wiki/Q204637",
           "title": "Wikidata: Bushehr Nuclear Power Plant (coordinates)",
           "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://thebulletin.org/2026/07/why-do-we-keep-ignoring-the-large-quantity-of-plutonium-at-irans-bushehr-nuclear-power-plant/",
+          "title": "Bulletin of the Atomic Scientists - Why do we keep ignoring the large quantity of plutonium at Iran's Bushehr nuclear power plant? (2026-07-17)",
+          "accessed": "2026-11-12"
         }
       ],
-      "notes": "Whether any spent fuel has been returned to Russia is not confirmed; discharged fuel is assumed to be in the on-site pool.",
+      "notes": "No return of spent fuel to Russia has been confirmed; the fuel is assumed to be in the on-site pool.",
       "last_updated": "2026-11-12"
     },
     {
@@ -7300,6 +8628,69 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "IT-007",
+      "name": "Former FN nuclear fuel fabrication plant, Bosco Marengo (temporary waste store B106)",
+      "country": "Italy",
+      "country_code": "IT",
+      "latitude": 44.8264,
+      "longitude": 8.6783,
+      "coord_precision": "locality",
+      "facility_type": "interim_storage",
+      "status": "operating",
+      "status_note": "Former nuclear fuel element factory. Sogin completed dismantling in 2021-2022 (brown-field status), the first Italian nuclear site to reach this stage. About 500 m3 of conditioned radioactive waste from operation and dismantling remain in the on-site temporary store B106 until Italy's national repository is available.",
+      "status_as_of": "2022-06-15",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": "Sogin",
+      "sources": [
+        {
+          "url": "https://www.italpress.com/?p=294160",
+          "title": "Italpress (15 Jun 2022): Sogin completes dismantling of the FN plant at Bosco Marengo",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://it.wikipedia.org/wiki/Bosco_Marengo",
+          "title": "Wikipedia (it): Bosco Marengo (municipality coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the municipality of Bosco Marengo; the former plant lies within it.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "IT-008",
+      "name": "ENEA Casaccia research centre: temporary radioactive waste stores (Nucleco), Rome",
+      "country": "Italy",
+      "country_code": "IT",
+      "latitude": 42.044,
+      "longitude": 12.3026,
+      "coord_precision": "locality",
+      "facility_type": "research_lab",
+      "status": "operating",
+      "status_note": "Research centre north-west of Rome hosting temporary stores, managed by Nucleco, for low- and intermediate-level waste from Italian industry and medicine; in November 2023 ENEA warned that the stores risk running out of space within a few years. The waste awaits Italy's national repository.",
+      "status_as_of": "2023-11-14",
+      "waste_types": [
+        "low-level",
+        "intermediate-level"
+      ],
+      "operator": "Nucleco S.p.A. (Sogin/ENEA) on the ENEA Casaccia site",
+      "sources": [
+        {
+          "url": "https://documenti.camera.it/leg19/documentiAcquisiti/COM08/Audizioni/leg19.com08.Audizioni.Memoria.PUBBLICO.ideGes.23501.13-11-2023-12-37-39.538.pdf",
+          "title": "ENEA hearing statement to the Italian Chamber of Deputies, Environment Committee (14 Nov 2023)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.turismoroma.it/it/luoghi/biblioteca-centro-ricerche-casaccia-enea",
+          "title": "Turismo Roma: Biblioteca Centro Ricerche Casaccia - ENEA (address and coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the ENEA library on the research campus, not a specific store.",
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "JP-001",
       "name": "Rokkasho Reprocessing Plant",
       "country": "Japan",
@@ -7309,8 +8700,8 @@
       "coord_precision": "facility",
       "facility_type": "reprocessing_storage",
       "status": "under_construction",
-      "status_note": "Commercial reprocessing plant (800 tU/year design) under construction since 1993, with active tests from 2007; its spent fuel receiving pool already holds fuel from Japanese reactors. Completion was postponed for the 27th time to FY2026 (by March 2027), and in mid-2026 a 28th postponement was reported as certain.",
-      "status_as_of": "2026-08-03",
+      "status_note": "Commercial reprocessing plant (800 tU/year design) under construction since 1993, with active tests from 2007; its spent fuel receiving pool already holds fuel from Japanese reactors. Completion was postponed for the 27th time to FY2026 (by March 2027); in September 2026 JNFL's president called completion within FY2026 difficult and said a new schedule would be presented by the end of 2026.",
+      "status_as_of": "2026-10-02",
       "waste_types": [
         "spent-fuel",
         "high-level"
@@ -7331,9 +8722,14 @@
           "url": "https://en.wikipedia.org/wiki/Japan_Nuclear_Fuel_Limited",
           "title": "Japan Nuclear Fuel Limited - Wikipedia",
           "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.nikkei.com/article/DGXZQOUA288QA0Y6A920C2000000/",
+          "title": "Nikkei - Rokkasho reprocessing plant likely to face 28th completion delay (2026-10-02, Japanese)",
+          "accessed": "2026-11-12"
         }
       ],
-      "notes": "The latest delay is reported by an advocacy group (CNIC); no operator announcement confirms it.",
+      "notes": "A 28th postponement is widely expected but had not been formally announced by early November 2026.",
       "last_updated": "2026-11-12"
     },
     {
@@ -7346,8 +8742,8 @@
       "coord_precision": "facility",
       "facility_type": "at_reactor_storage",
       "status": "operating",
-      "status_note": "Prototype heavy-water-moderated ATR (148 MWe), operated 1979-2003 and now being decommissioned. Its 731 used fuel assemblies (about 111 t) are contracted for shipment to Orano's La Hague plant for reprocessing; shipments were planned for 2023-2026 but have been delayed.",
-      "status_as_of": "2026-11-12",
+      "status_note": "Prototype heavy-water-moderated ATR (148 MWe), operated 1979-2003 and now being decommissioned. Its spent fuel, still held in the on-site pool, is contracted for reprocessing at Orano's La Hague plant; after delays the shipments are planned from FY2027 to FY2031. All six transport casks were completed in December 2025.",
+      "status_as_of": "2026-10-20",
       "waste_types": [
         "spent-fuel"
       ],
@@ -7377,9 +8773,19 @@
           "url": "https://www.wikidata.org/wiki/Q1500817",
           "title": "Wikidata: Fugen Prototype Advanced Thermal Reactor (coordinates)",
           "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.jaea.go.jp/04/fugen/haishi/carryout/",
+          "title": "JAEA - Fugen: efforts towards spent fuel shipment (Japanese)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.pref.shiga.lg.jp/documents/34289/20261019085528.pdf",
+          "title": "JAEA Tsuruga - Status of Fugen and Monju decommissioning, briefing to Shiga Prefecture (2026-10-20, Japanese)",
+          "accessed": "2026-11-12"
         }
       ],
-      "notes": "Assumes the fuel is still on site; no source confirms a shipment to France as of November 2026. Fugen and Tsuruga form a dual site.",
+      "notes": "Fugen and Tsuruga form a dual site.",
       "last_updated": "2026-11-12"
     },
     {
@@ -7621,8 +9027,8 @@
       "coord_precision": "facility",
       "facility_type": "at_reactor_storage",
       "status": "operating",
-      "status_note": "Units 1 and 2 (PWR, 1977 and 1982) were retired in 2016 and 2018; unit 3 (1994) operates. An on-site dry cask store was being built, with the first 15 casks (for units 1-2 fuel) ordered and a start of operation planned for around July 2025.",
-      "status_as_of": "2026-11-12",
+      "status_note": "Units 1 and 2 (PWR, 1977 and 1982) were retired in 2016 and 2018; unit 3 (1994) operates. An on-site dry cask storage facility for spent fuel, with room for up to 45 casks (about 1,200 fuel assemblies), entered operation on 1 July 2025.",
+      "status_as_of": "2025-07-01",
       "waste_types": [
         "spent-fuel"
       ],
@@ -7652,9 +9058,13 @@
           "url": "https://www.wikidata.org/wiki/Q1201465",
           "title": "Wikidata: Ikata Nuclear Power Plant (coordinates)",
           "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.jaif.or.jp/journal/japan/28682.html",
+          "title": "JAIF - Ikata Power Station dry storage facility begins operation (2025-07-02, Japanese)",
+          "accessed": "2026-11-12"
         }
       ],
-      "notes": "Whether the dry storage facility entered service in 2025 is not confirmed.",
       "last_updated": "2026-11-12"
     },
     {
@@ -8241,6 +9651,98 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "JP-027",
+      "name": "Japanese radioactive waste dumping site off the Bōsō Peninsula (Pacific)",
+      "country": "Japan",
+      "country_code": "JP",
+      "latitude": 34.7,
+      "longitude": 139.9333,
+      "coord_precision": "region",
+      "facility_type": "sea_dumping",
+      "status": "abandoned",
+      "status_note": "Japan dumped about 3,000 drums of mortar-solidified low-level waste in the Pacific between 1955 and 1969, almost all at this site south of the Bōsō Peninsula at 2,400-2,800 m depth; total reported activity about 15 TBq.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/te_1105_prn.pdf",
+          "title": "IAEA-TECDOC-1105: Inventory of radioactive waste disposals at sea (1999)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "IAEA position 34°42'N 139°56'E; a few early dumps (1955-1958) were made at nearby sites.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "JP-028",
+      "name": "Ningyo-toge Environmental Engineering Center and former uranium mine (JAEA)",
+      "country": "Japan",
+      "country_code": "JP",
+      "latitude": 35.31322,
+      "longitude": 133.93117,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "decommissioning",
+      "status_note": "Former test uranium mine and mill on the Okayama-Tottori border, worked 1956-1987, where waste rock yards and a mill tailings pond remain; later also a uranium refining, conversion and enrichment test site. JAEA manages the mine wastes under the Mine Safety Law and is dismantling the old front-end fuel cycle plants.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "norm",
+        "low-level"
+      ],
+      "operator": "Japan Atomic Energy Agency (JAEA)",
+      "sources": [
+        {
+          "url": "https://archivedproceedings.econference.io/wmsym/2003/pdfs/594.pdf",
+          "title": "Sato and Tokizawa (WM'03): Current status and reclamation plan of former uranium mining and milling facilities at Ningyo-toge in Japan",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q11376007",
+          "title": "Wikidata: Ningyō Pass (Q11376007), coordinates",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks Ningyō Pass; the centre and mine facilities lie nearby.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "JP-029",
+      "name": "Mizunami Underground Research Laboratory (backfilled)",
+      "country": "Japan",
+      "country_code": "JP",
+      "latitude": 35.36181,
+      "longitude": 137.2545,
+      "coord_precision": "locality",
+      "facility_type": "research_lab",
+      "status": "closed",
+      "status_note": "JAEA's underground research laboratory in crystalline rock at Mizunami, Gifu, used for geological disposal research until FY2019. Shafts and galleries were backfilled and surface facilities removed by January 2022; settlement of the backfill in the main shafts in 2023 required re-backfilling, and site restoration is due by FY2027. No radioactive waste was stored there.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [],
+      "operator": "Japan Atomic Energy Agency (JAEA)",
+      "sources": [
+        {
+          "url": "https://www.jaea.go.jp/04/tono/en/research/miu/index.html",
+          "title": "JAEA Tono Geoscience Center: Mizunami Underground Research Laboratory project",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://jopss.jaea.go.jp/pdfdata/JAEA-Review-2024-066.pdf",
+          "title": "JAEA-Review 2024-066 (backfilled shaft settlement and re-backfilling)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Mizunami",
+          "title": "Mizunami - Wikipedia (city coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the city of Mizunami, not the laboratory site.",
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "KG-001",
       "name": "Mailuu-Suu uranium tailings",
       "country": "Kyrgyzstan",
@@ -8268,6 +9770,114 @@
           "accessed": "2026-11-12"
         }
       ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "KG-002",
+      "name": "Kadji-Sai (Kajy-Say) uranium tailings",
+      "country": "Kyrgyzstan",
+      "country_code": "KG",
+      "latitude": 42.14,
+      "longitude": 77.18,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "closed",
+      "status_note": "Tailings from former uranium extraction near Lake Issyk-Kul. Under a CIS interstate programme led by Rosatom the tailings site was fully reclaimed (earthworks, retaining dam, drainage), reported complete in May 2026.",
+      "status_as_of": "2026-05-28",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://en.fergana.agency/news/146899/",
+          "title": "Fergana Agency (28 May 2026): Kyrgyzstan and Rosatom complete uranium tailings clean-up under CIS programme",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Kajy-Say",
+          "title": "Wikipedia: Kajy-Say (village coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks Kajy-Say village; the tailings site lies nearby. Earlier reports also listed a tunnel and mine at Kadji-Sai for remediation.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "KG-003",
+      "name": "Min-Kush (Ming-Kush) uranium legacy site and tailings (Taldy-Bulak, Tuyuk-Su, Dalneye)",
+      "country": "Kyrgyzstan",
+      "country_code": "KG",
+      "latitude": 41.68,
+      "longitude": 74.46,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "remediation",
+      "status_note": "Former uranium mining and processing site. The EBRD-funded ERA project demolished the old ore-processing plant (accepted February 2022); under a CIS programme about 1.5 million m3 of tailings from Taldy-Bulak and Tuyuk-Su were moved to the rebuilt Dalneye site, reported complete in May 2026.",
+      "status_as_of": "2026-05-28",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://www.ebrd.com/home/news-and-events/news/2022/uranium-legacy-sites-remediated-in-kyrgyz-republic.html",
+          "title": "EBRD news (2022): Uranium legacy sites remediated in Kyrgyz Republic",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.fergana.agency/news/146899/",
+          "title": "Fergana Agency (28 May 2026): Kyrgyzstan and Rosatom complete uranium tailings clean-up under CIS programme",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.ebrd.com/home/what-we-do/focus-areas/nuclear-safety/environmental-remediation-account.html",
+          "title": "EBRD: Environmental Remediation Account for Central Asia (ERA)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Ming-Kush",
+          "title": "Wikipedia: Ming-Kush (village coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks Min-Kush village; the tailings sites lie in the surrounding valley.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "KG-004",
+      "name": "Shekaftar former uranium mines and waste dumps",
+      "country": "Kyrgyzstan",
+      "country_code": "KG",
+      "latitude": 41.21,
+      "longitude": 71.31,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "closed",
+      "status_note": "Former uranium mining area (mined 1946-1968) with several waste-rock dumps near the village. Under the EBRD-managed ERA fund, mine openings were sealed, dumps removed and buildings demolished; Kyrgyz authorities accepted the works in December 2021.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://www.ebrd.com/home/news-and-events/news/2022/uranium-legacy-sites-remediated-in-kyrgyz-republic.html",
+          "title": "EBRD news (2022): Uranium legacy sites remediated in Kyrgyz Republic",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.ebrd.com/home/what-we-do/focus-areas/nuclear-safety/environmental-remediation-account.html",
+          "title": "EBRD: Environmental Remediation Account for Central Asia (ERA)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Shekaftar",
+          "title": "Wikipedia: Shekaftar (village coordinates, mining history)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks Shekaftar village; the former mines and dumps lie around it.",
       "last_updated": "2026-11-12"
     },
     {
@@ -8358,21 +9968,47 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "KP-002",
+      "name": "Yongbyon (Nyongbyon) Nuclear Scientific Research Center",
+      "country": "North Korea",
+      "country_code": "KP",
+      "latitude": 39.8,
+      "longitude": 125.754,
+      "coord_precision": "locality",
+      "facility_type": "reprocessing_storage",
+      "status": "operating",
+      "status_note": "North Korea's main nuclear complex, about 100 km north of Pyongyang, with a 5 MWe gas-graphite reactor, an experimental light water reactor, a research reactor and a PUREX reprocessing plant (Radiochemical Laboratory) that separates plutonium from Magnox spent fuel, plus short-term spent fuel storage. Reactor operation was assessed to have resumed in November 2025.",
+      "status_as_of": "2025-12-31",
+      "waste_types": [
+        "spent-fuel",
+        "high-level"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Yongbyon_Nuclear_Scientific_Research_Center",
+          "title": "Nyongbyon Nuclear Scientific Research Center - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "No independent information on waste stores; IAEA inspectors have been barred from the site since October 2008.",
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "KR-001",
-      "name": "Wolseong Low- and Intermediate-Level Radioactive Waste Disposal Center, Gyeongju",
+      "name": "Wolseong LILW Disposal Center, phase 1 underground silos, Gyeongju",
       "country": "South Korea",
       "country_code": "KR",
       "latitude": 35.7373,
       "longitude": 129.4833,
       "coord_precision": "locality",
-      "facility_type": "near_surface",
+      "facility_type": "deep_geological",
       "status": "operating",
-      "status_note": "South Korea's only LILW disposal site, in Bongil-ri, Munmu Daewang-myeon, Gyeongju. Phase 1 is an underground silo facility (six silos, 100,000 drums) with first disposal on 13 July 2015, 37.7 % full by May 2026. The Phase 2 near-surface vault facility (125,000 drums) was completed on 13 May 2026 for operation from the second half of 2026; a Phase 3 landfill for very low-level waste is planned for 2031.",
+      "status_note": "Phase 1 of South Korea's LILW disposal centre in Bonggil-ri, Munmu Daewang-myeon, Gyeongju: an underground facility of six concrete silos (about 24 m in diameter) more than 80 m below sea level, with capacity for 100,000 drums. Built from 2006 to 2014, it received its first waste on 13 July 2015 and was 37.7 % full in May 2026.",
       "status_as_of": "2026-05-14",
       "waste_types": [
         "low-level",
-        "intermediate-level",
-        "very-low-level"
+        "intermediate-level"
       ],
       "operator": "Korea Radioactive Waste Agency (KORAD)",
       "sources": [
@@ -8402,7 +10038,7 @@
           "accessed": "2026-11-12"
         }
       ],
-      "notes": "Position of Bonggil-ri village, where the centre lies. Phase 1 is an underground silo (80-130 m below sea level), phase 2 near-surface; very-low-level refers to the planned phase 3.",
+      "notes": "Position of Bonggil-ri village, where the centre lies. The phase 2 near-surface facility on the same site is a separate entry. The silos lie at intermediate depth (more than 80 m below sea level), shallower than a classic geological repository.",
       "last_updated": "2026-11-12"
     },
     {
@@ -8559,6 +10195,106 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "KR-006",
+      "name": "Wolseong LILW Disposal Center, phase 2 near-surface facility, Gyeongju",
+      "country": "South Korea",
+      "country_code": "KR",
+      "latitude": 35.7373,
+      "longitude": 129.4833,
+      "coord_precision": "locality",
+      "facility_type": "near_surface",
+      "status": "commissioning",
+      "status_note": "Near-surface engineered vault facility for low-level and very low-level waste on the site of the Gyeongju LILW disposal centre, with 20 concrete vaults (each 20 m by 20 m and 10 m high) for 125,000 drums of 200 litres. Construction finished in late 2025, the Nuclear Safety and Security Commission gave final approval on 16 March 2026 and the facility was inaugurated on 13 May 2026, with full operation planned from the second half of 2026.",
+      "status_as_of": "2026-05-14",
+      "waste_types": [
+        "low-level",
+        "very-low-level"
+      ],
+      "operator": "Korea Radioactive Waste Agency (KORAD)",
+      "sources": [
+        {
+          "url": "https://zdnet.co.kr/view/?no=20260513100635",
+          "title": "ZDNet Korea - Gyeongju disposal centre phase 2 facility for 125,000 drums of low-level waste starts up (2026-05-13, Korean)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.asiae.co.kr/en/article/2026051408580405144",
+          "title": "Asia Economy - Phase 2 Surface Disposal Facility Completed in Gyeongju (2026-05-14)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.openstreetmap.org/node/415150502",
+          "title": "OpenStreetMap node 415150502 - Bonggil-ri (봉길리), Munmu Daewang-myeon, Gyeongju",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Shares the position of the phase 1 entry (Bonggil-ri village). The first disposal of waste in the vaults had not been confirmed by November 2026.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "KR-007",
+      "name": "Korean radioactive waste dumping site near Ulleungdo (East Sea / Sea of Japan)",
+      "country": "South Korea",
+      "country_code": "KR",
+      "latitude": 37.3333,
+      "longitude": 130.7333,
+      "coord_precision": "region",
+      "facility_type": "sea_dumping",
+      "status": "abandoned",
+      "status_note": "The Republic of Korea dumped 115 concrete-lined drums (about 45 tonnes) of radioactive waste at about 2,200 m depth at this single site between 1968 and 1972; no activity figures were reported to the IAEA.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/te_1105_prn.pdf",
+          "title": "IAEA-TECDOC-1105: Inventory of radioactive waste disposals at sea (1999)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "IAEA position 37°20'N 130°44'E; activity unknown.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "KR-008",
+      "name": "Korea Atomic Energy Research Institute (KAERI) radioactive waste stores, Daejeon",
+      "country": "South Korea",
+      "country_code": "KR",
+      "latitude": 36.3333,
+      "longitude": 127.3833,
+      "coord_precision": "locality",
+      "facility_type": "research_lab",
+      "status": "operating",
+      "status_note": "KAERI's Daejeon site, home of the HANARO research reactor, stores low- and intermediate-level waste in drums; about 31,000 drums remained in Daejeon in September 2023 and are being shipped in batches of a few hundred per year to the Gyeongju disposal centre.",
+      "status_as_of": "2023-11-29",
+      "waste_types": [
+        "low-level",
+        "intermediate-level"
+      ],
+      "operator": "Korea Atomic Energy Research Institute",
+      "sources": [
+        {
+          "url": "https://www.asiae.co.kr/en/article/2023112908565948694",
+          "title": "Asia Economy (29 Nov 2023): Daejeon storage to ship out 525 drums of intermediate and low-level radioactive waste",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q626848",
+          "title": "Wikidata: Korea Atomic Energy Research Institute (Q626848), coordinates",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Korea_Atomic_Energy_Research_Institute",
+          "title": "Korea Atomic Energy Research Institute - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "The Daejeon drum count includes waste at the neighbouring KEPCO Nuclear Fuel plant.",
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "KZ-001",
       "name": "BN-350 fast reactor, Aktau",
       "country": "Kazakhstan",
@@ -8655,6 +10391,75 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "KZ-004",
+      "name": "Koshkar-Ata tailings pond, Aktau",
+      "country": "Kazakhstan",
+      "country_code": "KZ",
+      "latitude": 43.7694,
+      "longitude": 51.2034,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "remediation",
+      "status_note": "A former salt lake about 5 km north of Aktau used from the 1960s to the 1990s as the dump for radioactive and toxic residues from the Shevchenko (Aktau) uranium processing and chemical complex. As the lake dries out, exposed residues can be blown away; staged reclamation, including planting saxaul shrubs, started in 2021 but was suspended in 2022 pending a revised project.",
+      "status_as_of": "2023-09-20",
+      "waste_types": [
+        "norm",
+        "chemical"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Koshkar-Ata_(lake)",
+          "title": "Wikipedia: Koshkar-Ata (lake)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://forbes.kz/news/newsid_309365/amp",
+          "title": "Forbes.kz (20 Sep 2023): call to speed up reclamation of the Koshkar-Ata tailings",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q16432556",
+          "title": "Wikidata: Koshkar-Ata (coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Waste totals differ widely between sources. Point marks the lake, which covers a large area.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "KZ-005",
+      "name": "Stepnogorsk Mining and Chemical Combine uranium tailings dump (former Tselinny combine)",
+      "country": "Kazakhstan",
+      "country_code": "KZ",
+      "latitude": 52.3497,
+      "longitude": 71.89,
+      "coord_precision": "region",
+      "facility_type": "uranium_legacy",
+      "status": "operating",
+      "status_note": "Tailings dump in use since 1956 for residues from uranium ore processing at the Stepnogorsk hydrometallurgical plant, described as the largest radioactive tailings dump in Kazakhstan. A 2021 survey found contaminated land and stagnant water bodies beyond its sanitary protection zone.",
+      "status_as_of": "2021-08-18",
+      "waste_types": [
+        "norm",
+        "chemical"
+      ],
+      "operator": "Stepnogorsk Mining and Chemical Combine (SMCC)",
+      "sources": [
+        {
+          "url": "https://ect-journal.kz/index.php/ectj/article/download/1132/882/1831",
+          "title": "Nygymanova et al., Eurasian Chem.-Technol. J. 23 (2021) 283-288: Current radiation situation near the uranium mining enterprises of Northern Kazakhstan",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Stepnogorsk",
+          "title": "Wikipedia: Stepnogorsk (town coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the town of Stepnogorsk; the tailings lie about 4 km west of the processing plant and 3-5 km north of the villages of Aksu, Zavodskoy and Kvartsitka.",
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "LT-001",
       "name": "Ignalina Near Surface Repository (B25) for short-lived LILW",
       "country": "Lithuania",
@@ -8717,6 +10522,40 @@
         }
       ],
       "notes": "Position of the plant; the interim spent fuel store lies about 1 km away.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "LT-003",
+      "name": "Maišiagala radioactive waste storage facility (decommissioned)",
+      "country": "Lithuania",
+      "country_code": "LT",
+      "latitude": 54.8722,
+      "longitude": 25.0667,
+      "coord_precision": "region",
+      "facility_type": "near_surface",
+      "status": "closed",
+      "status_note": "Soviet-era concrete vault 3 m below ground that took unsorted very-low- to intermediate-level waste from industry, research and medicine (Lithuania and the Kaliningrad and Grodno regions) from 1963 to 1989. All waste, contaminated structures and soil were removed and taken to the Ignalina site; in 2026 the regulator confirmed completion and cancelled the decommissioning licence.",
+      "status_as_of": "2026-05-18",
+      "waste_types": [],
+      "operator": "Ignalina NPP / Altra (decommissioning completed)",
+      "sources": [
+        {
+          "url": "https://world-nuclear-news.org/articles/lithuania-to-tackle-soviet-era-waste-store",
+          "title": "World Nuclear News (19 Jan 2022): Lithuania to tackle Soviet-era waste store",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.nucnet.org/news/lithuania-completes-decommissioning-of-soviet-era-radwaste-storage-facility-5-1-2026",
+          "title": "NucNet (18 May 2026): Lithuania completes decommissioning of Soviet-era radwaste storage facility",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Mai%C5%A1iagala",
+          "title": "Wikipedia: Maišiagala (town coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "All waste has been removed; the site is shown for its history. Point marks Maišiagala town; the former store lay in the wider area about 40 km north-west of Vilnius.",
       "last_updated": "2026-11-12"
     },
     {
@@ -8850,6 +10689,31 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "MW-001",
+      "name": "Kayelekera uranium mine",
+      "country": "Malawi",
+      "country_code": "MW",
+      "latitude": -9.9928,
+      "longitude": 33.6981,
+      "coord_precision": "facility",
+      "facility_type": "uranium_legacy",
+      "status": "operating",
+      "status_note": "Uranium mine in Karonga District, northern Malawi, opened in 2009 and kept on care and maintenance from 2014. Lotus Resources (85%) has restarted it; the first exports in four years left in November 2026.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "Lotus Resources (85%), Government of Malawi (15%)",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Kayelekera_mine",
+          "title": "Kayelekera mine - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "MX-001",
       "name": "Laguna Verde Nuclear Power Station",
       "country": "Mexico",
@@ -8885,6 +10749,73 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "MX-002",
+      "name": "Radioactive Waste Storage Centre (CADER), Santa María Maquixco, Temascalapa",
+      "country": "Mexico",
+      "country_code": "MX",
+      "latitude": 19.82786,
+      "longitude": -98.90083,
+      "coord_precision": "locality",
+      "facility_type": "near_surface",
+      "status": "operating",
+      "status_note": "ININ's national store for low- and intermediate-level waste from industry and medicine (not from Laguna Verde), on about 16 ha in the State of Mexico. Waste was buried in trenches from 1970 to 1989; since then it is kept in three surface warehouses. Municipal staff occupied the site for twelve days in March 2025 before control returned to ININ.",
+      "status_as_of": "2025-03-19",
+      "waste_types": [
+        "low-level",
+        "intermediate-level"
+      ],
+      "operator": "Instituto Nacional de Investigaciones Nucleares (ININ)",
+      "sources": [
+        {
+          "url": "https://laka.org/docu/ines/event/1247",
+          "title": "Laka Foundation INES archive: CADER takeover event (March 2025, INES 0)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.excelsior.com.mx/nacional/panteon-radiactivo-a-14-km-de-santa-lucia-no-lo-incluyen-en-estudio-de-impacto-ambiental",
+          "title": "Excélsior (10 June 2019): Panteón radiactivo, a 14 km de Santa Lucía",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://es.wikipedia.org/wiki/Temascalapa",
+          "title": "Temascalapa - Wikipedia (coordinates of municipal seat)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks Temascalapa town; the store lies in the nearby community of Santa María Maquixco, about 14 km north-east of Santa Lucía airport.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "NA-001",
+      "name": "Rössing uranium mine and tailings storage facility",
+      "country": "Namibia",
+      "country_code": "NA",
+      "latitude": -22.48417,
+      "longitude": 15.04889,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "operating",
+      "status_note": "Large open-pit uranium mine near Arandis in the Namib Desert, operating since 1976 and majority-owned by China National Uranium Corporation. Its tailings storage facility was being enlarged (target end of 2025) to take ten more years of tailings under a life-of-mine extension to 2036.",
+      "status_as_of": "2024-06-25",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "Rössing Uranium Limited (majority CNUC)",
+      "sources": [
+        {
+          "url": "https://world-nuclear-news.org/articles/rossing-eyes-operation-beyond-2036",
+          "title": "World Nuclear News (25 June 2024): Rössing eyes operation beyond 2036",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/R%C3%B6ssing_uranium_mine",
+          "title": "Rössing uranium mine - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "NE-001",
       "name": "COMINAK Akouta uranium mine (closure and remediation)",
       "country": "Niger",
@@ -8912,7 +10843,38 @@
           "accessed": "2026-11-12"
         }
       ],
-      "notes": "Position of Arlit town; Akouta lies nearby. The neighbouring SOMAIR open-pit mine and its tailings are not included.",
+      "notes": "Position of Arlit town; Akouta lies nearby. The neighbouring SOMAIR mine is a separate entry.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "NE-002",
+      "name": "SOMAÏR uranium mine, Arlit (open pits, waste rock and tailings)",
+      "country": "Niger",
+      "country_code": "NE",
+      "latitude": 18.733,
+      "longitude": 7.383,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "operating",
+      "status_note": "Open-pit uranium mining at Arlit since 1971 by SOMAÏR, founded in 1968 and nationalised by Niger in June 2025 after a dispute with Orano. Surface piles of mining waste near the town have been criticised for threatening water supplies. A new state company received the Arlit permit in August 2026 and work continues on the old SOMAÏR area.",
+      "status_as_of": "2026-08-26",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "Teloua Safeguarding Uranium Mining Company (TSUMCO SA), state-owned",
+      "sources": [
+        {
+          "url": "https://www.world-nuclear-news.org/articles/niger-awards-arlit-uranium-mining-permit-to-state-owned-company",
+          "title": "World Nuclear News (26 Aug 2026): Niger awards Arlit uranium mining permit to state-owned company",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Arlit",
+          "title": "Arlit - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the town of Arlit; the pits and waste piles lie around it.",
       "last_updated": "2026-11-12"
     },
     {
@@ -9082,6 +11044,49 @@
         }
       ],
       "notes": "Rock caverns in a hillside. Waste is held and managed here, but disposal operations have stopped.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "NO-003",
+      "name": "Kjeller nuclear facilities (IFE, former JEEP II research reactor and waste stores)",
+      "country": "Norway",
+      "country_code": "NO",
+      "latitude": 59.9743,
+      "longitude": 11.0513,
+      "coord_precision": "locality",
+      "facility_type": "research_lab",
+      "status": "decommissioning",
+      "status_note": "Research site with stores of spent research-reactor fuel and radioactive waste dating back to the 1960s, some in ageing facilities. The JEEP II reactor (1966-2018) is not being restarted and is to be decommissioned; the state body NND plans to take over the site from IFE around the end of 2028, and new interim stores for spent fuel are planned for about 2031.",
+      "status_as_of": "2026-03-26",
+      "waste_types": [
+        "spent-fuel",
+        "low-level",
+        "intermediate-level"
+      ],
+      "operator": "Institute for Energy Technology (IFE); transfer to Norwegian Nuclear Decommissioning (NND) planned",
+      "sources": [
+        {
+          "url": "https://www.altinget.no/helse/artikkel/vestre-om-situasjonen-for-det-norske-atomavfallet-alvorlig-men-haandterbar",
+          "title": "Altinget (26 Mar 2026): Vestre on the situation of Norwegian nuclear waste",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.altinget.no/statogstyring/artikkel/prislappen-kan-bli-over-50-milliarder-slik-vil-de-rydde-opp-atomavfallet",
+          "title": "Altinget (25 Mar 2026): Clean-up price tag may exceed 50 billion",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/JEEP_II",
+          "title": "Wikipedia: JEEP II",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Institute_for_Energy_Technology",
+          "title": "Wikipedia: Institute for Energy Technology (coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Part of Norway's roughly 17 tonnes of research-reactor spent fuel is stored here and part at Halden; sources do not give the split.",
       "last_updated": "2026-11-12"
     },
     {
@@ -9294,6 +11299,67 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "PR-001",
+      "name": "BONUS reactor (Boiling Nuclear Superheater), Rincón",
+      "country": "Puerto Rico",
+      "country_code": "PR",
+      "latitude": 18.36639,
+      "longitude": -67.26861,
+      "coord_precision": "facility",
+      "facility_type": "at_reactor_storage",
+      "status": "closed",
+      "status_note": "Prototype boiling-superheater power reactor north-west of Rincón, run 1964-1968. Fuel and highly activated parts were shipped to the mainland in 1969-1970 and the reactor vessel was entombed in concrete inside the domed building, which DOE Legacy Management still inspects.",
+      "status_as_of": "2026-08-01",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": "US Department of Energy, Office of Legacy Management",
+      "sources": [
+        {
+          "url": "https://www.energy.gov/lm/articles/bonus-puerto-rico-decommissioned-reactor-site-fact-sheet",
+          "title": "DOE LM: BONUS, Puerto Rico, Decommissioned Reactor Site fact sheet (08.2026)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Boiling_Nuclear_Superheater_(BONUS)_Reactor_Facility",
+          "title": "Boiling Nuclear Superheater (BONUS) Reactor Facility - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "PT-001",
+      "name": "Urgeiriça former radium and uranium mine and tailings dams (Barragem Velha, Barragem Nova)",
+      "country": "Portugal",
+      "country_code": "PT",
+      "latitude": 40.5137,
+      "longitude": -7.8945,
+      "coord_precision": "facility",
+      "facility_type": "uranium_legacy",
+      "status": "closed",
+      "status_note": "Former radium and uranium mine (from 1913) with a uranium treatment plant built in 1950/51; mining ended in 2001. From 2005 the state company EDM capped and drained the tailings dams, flooded the underground mine, cleaned up industrial areas and installed water treatment; the last contract, decontaminating plant buildings, started in 2016. Drainage and water treatment systems are maintained.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "EDM - Empresa de Desenvolvimento Mineiro",
+      "sources": [
+        {
+          "url": "https://edm.pt/en/projetos/environmental-remediation-of-the-urgeirica-mining-area/",
+          "title": "EDM: Environmental remediation of the Urgeiriça mining area (incl. map coordinates)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Urgeiri%C3%A7a",
+          "title": "Wikipedia: Urgeiriça (mining 1913-2001)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "The operator's project page lists the remediation both as concluded and as ongoing.",
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "RO-001",
       "name": "Cernavodă nuclear power plant",
       "country": "Romania",
@@ -9359,6 +11425,40 @@
         }
       ],
       "notes": "Position of the Băița uranium mine, of which the repository gallery is part; its portal is not published. The fill level is from an undated source.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "RO-003",
+      "name": "Saligny final repository for low- and intermediate-level waste (DFDSMA), near Cernavodă",
+      "country": "Romania",
+      "country_code": "RO",
+      "latitude": 44.2833,
+      "longitude": 28.0833,
+      "coord_precision": "locality",
+      "facility_type": "near_surface",
+      "status": "planned",
+      "status_note": "Planned near-surface repository for short-lived low- and intermediate-level waste from the Cernavodă nuclear power plant, on the Saligny site inside the plant's exclusion zone (site preferred since 1997, partial siting licence 2008). Start of operation has slipped repeatedly; in 2022 it was planned for 2028.",
+      "status_as_of": "2022-03-22",
+      "waste_types": [],
+      "operator": "ANDR (Nuclear Agency and for Radioactive Waste)",
+      "sources": [
+        {
+          "url": "https://www.iaea.org/sites/default/files/documents/review-missions/final_report_artemis_romania.pdf",
+          "title": "IAEA ARTEMIS review mission to Romania, final report (March 2022)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://proceedings.cns-snc.ca/index.php/pcns/article/view/6602",
+          "title": "CNS proceedings (2011): Current status of development of a new LILW repository in Romania",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Saligny,_Constan%C8%9Ba",
+          "title": "Wikipedia: Saligny, Constanța (commune coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Planned facility; no waste disposed of yet. Point marks Saligny commune; the site lies within the Cernavodă plant exclusion zone.",
       "last_updated": "2026-11-12"
     },
     {
@@ -10043,8 +12143,8 @@
       "coord_precision": "region",
       "facility_type": "near_surface",
       "status": "under_construction",
-      "status_note": "Near-surface final disposal facility for solid class 3 and 4 (low- and intermediate-level) waste, mainly from Mayak, built by the national operator NO RAO. As of March 2026 it was under construction with the first stage scheduled for commissioning in 2026.",
-      "status_as_of": "2026-03-27",
+      "status_note": "Near-surface final disposal facility for solid class 3 and 4 (low- and intermediate-level) waste, mainly from Mayak, built by the national operator NO RAO. In October 2026 NO RAO said the facility in Chelyabinsk region would start operating before the end of 2026.",
+      "status_as_of": "2026-10-20",
       "waste_types": [
         "low-level",
         "intermediate-level"
@@ -10060,9 +12160,14 @@
           "url": "https://en.wikipedia.org/wiki/Mayak",
           "title": "Mayak (Wikipedia, coordinates of the Mayak complex)",
           "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.norao.ru/press/news/8527/",
+          "title": "NO RAO - Rosatom expands infrastructure for final isolation of radioactive waste (2026-10-20, Russian)",
+          "accessed": "2026-11-12"
         }
       ],
-      "notes": "Exact site not published; the Mayak position is used as a stand-in. Whether commissioning took place in 2026 is not confirmed.",
+      "notes": "Exact site not published; the Mayak position is used as a stand-in. Start of operation had not been confirmed by November 2026.",
       "last_updated": "2026-11-12"
     },
     {
@@ -10074,9 +12179,9 @@
       "longitude": 84.85,
       "coord_precision": "region",
       "facility_type": "near_surface",
-      "status": "under_construction",
-      "status_note": "Near-surface final disposal facility for solid class 3 and 4 waste being built by NO RAO at Seversk. As of March 2026 the first stage was scheduled for commissioning in 2026.",
-      "status_as_of": "2026-03-27",
+      "status": "operating",
+      "status_note": "Near-surface final disposal facility for solid class 3 and 4 (low- and intermediate-level) waste, mainly from the Siberian Chemical Combine and other Siberian nuclear sites. NO RAO received a Rostekhnadzor licence and put the first stage (15,000 m3) into operation in October 2026; further stages are to raise capacity to 142,000 m3 by 2035.",
+      "status_as_of": "2026-10-20",
       "waste_types": [
         "low-level",
         "intermediate-level"
@@ -10092,9 +12197,19 @@
           "url": "https://en.wikipedia.org/wiki/Seversk",
           "title": "Seversk (Wikipedia)",
           "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.norao.ru/press/news/8527/",
+          "title": "NO RAO - Rosatom expands infrastructure for final isolation of radioactive waste (2026-10-20, Russian)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.riatomsk.ru/article/20261020/vtoroi-v-rf-punkt-zahoroneniya-radioaktivnih-othodov-zapuschen-v-severske",
+          "title": "RIA Tomsk - Russia's second radioactive waste disposal facility launched in Seversk (2026-10-20, Russian)",
+          "accessed": "2026-11-12"
         }
       ],
-      "notes": "Exact site not located; the town position is used. First waste was planned for summer 2026; this is not confirmed.",
+      "notes": "Exact site not located; the Seversk town position is used.",
       "last_updated": "2026-11-12"
     },
     {
@@ -10576,6 +12691,135 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "RU-039",
+      "name": "Atomflot nuclear icebreaker base, Murmansk (spent fuel storage)",
+      "country": "Russia",
+      "country_code": "RU",
+      "latitude": 69.0464,
+      "longitude": 33.0739,
+      "coord_precision": "facility",
+      "facility_type": "interim_storage",
+      "status": "operating",
+      "status_note": "Home port and service base of Russia's nuclear icebreaker fleet. A land-based dry store for 50 TUK-120 casks of icebreaker spent fuel opened in 2006, replacing storage on ageing floating service ships; in 2015 fuel unloaded from the decommissioned service ship Lotta filled the 50 casks, pending later shipment to Mayak for reprocessing.",
+      "status_as_of": "2015-07-15",
+      "waste_types": [
+        "spent-fuel"
+      ],
+      "operator": "FSUE Atomflot (Rosatom)",
+      "sources": [
+        {
+          "url": "https://bellona.org/news/nuclear-issues/radioactive-waste-and-spent-nuclear-fuel/2006-10-long-term-storage-facility-for-snf-from-nuclear-icebreakers-opens-at-atomflot-in-murmansk",
+          "title": "Bellona (12 Oct 2006): Long-term storage facility for SNF from nuclear icebreakers opens at Atomflot",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://bellona.org/news/nuclear-issues/2015-07-spent-nuclear-fuel-unloaded-from-decommissioned-icebreaker-service-ship-fills-50-containers",
+          "title": "Bellona (15 Jul 2015): Spent fuel unloaded from decommissioned icebreaker service ship fills 50 containers",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://ru.wikipedia.org/wiki/%D0%90%D1%82%D0%BE%D0%BC%D1%84%D0%BB%D0%BE%D1%82",
+          "title": "Wikipedia (ru): Atomflot (coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "RU-040",
+      "name": "Radon storage and processing site near Sergiev Posad (former Moscow NPO Radon)",
+      "country": "Russia",
+      "country_code": "RU",
+      "latitude": 56.315,
+      "longitude": 38.1367,
+      "coord_precision": "region",
+      "facility_type": "interim_storage",
+      "status": "operating",
+      "status_note": "Main site of the former Moscow Radon organisation, which since the Soviet period has collected, treated and stored radioactive waste from industry, medicine and research in Moscow and nine central Russian regions (not from nuclear power plants). The first stage of a new solid waste store with a planned volume of 55,000 m3 was completed in 2019.",
+      "status_as_of": "2020-12-03",
+      "waste_types": [
+        "low-level",
+        "intermediate-level"
+      ],
+      "operator": "FSUE Radon (Rosatom)",
+      "sources": [
+        {
+          "url": "https://nuclear-safety-cooperation.ec.europa.eu/contracts/r40203-upgrading-sergiev-posad-dept-moscow-npo-radon-and-assessment-radiological-impact-area-nearby_en",
+          "title": "European Commission, nuclear safety cooperation: Upgrading of Sergiev Posad department of Moscow NPO Radon",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.osti.gov/biblio/21156485",
+          "title": "OSTI (2007): Upgrading of Sergiev Posad department of Moscow NPO Radon",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://bellona.org/news/nuclear-issues/2020-12-a-five-year-review-of-russias-efforts-to-address-its-radiation-hazards",
+          "title": "Bellona (3 Dec 2020): A five-year review of Russia's efforts to address its radiation hazards",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Sergiyev_Posad",
+          "title": "Wikipedia: Sergiyev Posad (town coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the town of Sergiev Posad; the site lies about 72 km from Moscow near the town, its exact position is not given in the sources.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "RU-041",
+      "name": "Barents Sea Soviet liquid waste dumping area 4 (coastal, off Kola Peninsula)",
+      "country": "Russia",
+      "country_code": "RU",
+      "latitude": 69.7125,
+      "longitude": 34.5533,
+      "coord_precision": "region",
+      "facility_type": "sea_dumping",
+      "status": "abandoned",
+      "status_note": "Coastal area off the Kola Peninsula (100-200 m depth) where the Soviet Union discharged about 2 TBq of liquid radioactive waste.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/te_1105_prn.pdf",
+          "title": "IAEA-TECDOC-1105: Inventory of radioactive waste disposals at sea (1999)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Centre of the dumping rectangle 69°34'-69°51'N, 34°15'-34°51'E.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "RU-042",
+      "name": "Barents Sea Soviet liquid waste dumping area 5 (coastal, Kola Peninsula east coast)",
+      "country": "Russia",
+      "country_code": "RU",
+      "latitude": 68.2333,
+      "longitude": 40.4083,
+      "coord_precision": "region",
+      "facility_type": "sea_dumping",
+      "status": "abandoned",
+      "status_note": "Coastal area near the eastern Kola Peninsula (50-100 m depth) where the Soviet Union discharged about 12 TBq of liquid radioactive waste.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/te_1105_prn.pdf",
+          "title": "IAEA-TECDOC-1105: Inventory of radioactive waste disposals at sea (1999)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Centre of the dumping rectangle 68°10'-68°18'N, 40°13'-40°36'E.",
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "SE-001",
       "name": "Spent Fuel Repository, Forsmark (Slutförvaret för använt kärnbränsle)",
       "country": "Sweden",
@@ -10845,6 +13089,38 @@
           "accessed": "2026-11-12"
         }
       ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "SE-009",
+      "name": "Studsvik nuclear site: SVAFO interim storage for legacy and decommissioning waste, Nyköping",
+      "country": "Sweden",
+      "country_code": "SE",
+      "latitude": 58.7647,
+      "longitude": 17.3778,
+      "coord_precision": "locality",
+      "facility_type": "interim_storage",
+      "status": "operating",
+      "status_note": "Former state nuclear research site (R2 reactor shut 2005) where SVAFO manages historic waste from Swedish state research. A new interim store with room for up to 10,000 m3 of low- and intermediate-level waste opened in 2022, initially for waste from dismantling the Ågesta and R2 reactors, until the SFR repository at Forsmark is extended.",
+      "status_as_of": "2022-11-08",
+      "waste_types": [
+        "low-level",
+        "intermediate-level"
+      ],
+      "operator": "AB SVAFO (Vattenfall subsidiary according to WNN 2022)",
+      "sources": [
+        {
+          "url": "https://www.world-nuclear-news.org/articles/swedish-interim-radwaste-storage-facility-opens",
+          "title": "World Nuclear News (8 Nov 2022): Swedish interim radwaste storage facility opens",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Studsvik",
+          "title": "Wikipedia: Studsvik (site coordinates, R2 reactor)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the Studsvik site, which also hosts commercial waste treatment plants.",
       "last_updated": "2026-11-12"
     },
     {
@@ -11664,6 +13940,47 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "UA-012",
+      "name": "Former Prydniprovsky Chemical Plant (PChP) uranium tailings, Kamianske",
+      "country": "Ukraine",
+      "country_code": "UA",
+      "latitude": 48.5289,
+      "longitude": 34.5969,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "remediation",
+      "status_note": "The plant processed uranium ore from 1948 to 1991 and left about 42 million tonnes of residues in nine tailings sites around Kamianske, some on the Dnipro floodplain, plus contaminated plant buildings. State programmes since 2003 and EU-funded projects since 2016 have made limited progress; the state enterprise Barrier manages the most hazardous objects.",
+      "status_as_of": "2021-09-22",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "State enterprise Barrier (DP Barier)",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Prydniprovsky_Chemical_Plant_radioactive_dumps",
+          "title": "Wikipedia: Prydniprovsky Chemical Plant radioactive dumps",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://bellona.org/news/nuclear-issues/2021-09-the-most-dangerous-place-in-ukraine-is-one-you-have-never-heard-of",
+          "title": "Bellona (22 Sep 2021): The most dangerous place in Ukraine is one you have never heard of",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://uk.wikipedia.org/wiki/%D0%9A%D0%B0%D0%BC%27%D1%8F%D0%BD%D1%81%D1%8C%D0%BA%D0%B5",
+          "title": "Wikipedia (uk): Kamianske (city coordinates)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.opendemocracy.net/en/in-central-ukraine-a-citys-future-is-overshadowed-by-a-radioactive-neighbour/",
+          "title": "openDemocracy (5 Feb 2019): In central Ukraine, a city's future is overshadowed by a radioactive neighbour",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the city of Kamianske; the nine tailings sites are spread around the city and the Dnipro floodplain.",
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "US-001",
       "name": "Waste Isolation Pilot Plant (WIPP)",
       "country": "United States",
@@ -11944,12 +14261,12 @@
       "coord_precision": "facility",
       "facility_type": "at_reactor_storage",
       "status": "operating",
-      "status_note": "BWR operated 1962-1997 and is fully decommissioned; only the dry fuel storage installation near Charlevoix remains.",
-      "status_as_of": "2026-11-12",
+      "status_note": "BWR operated 1962-1997 and is fully decommissioned; only the dry fuel storage installation near Charlevoix remains. The sale from Entergy to Holtec closed on 28 June 2022, and in March 2026 the NRC approved a further transfer of the licence from Holtec Palisades, LLC to Holtec Big Rock Point, LLC, with Holtec Decommissioning International remaining the licensed operator.",
+      "status_as_of": "2026-03-11",
       "waste_types": [
         "spent-fuel"
       ],
-      "operator": "Holtec (Holtec Palisades / Holtec Decommissioning International)",
+      "operator": "Holtec Decommissioning International, LLC (Holtec)",
       "sources": [
         {
           "url": "https://www.govinfo.gov/content/pkg/FR-2013-09-24/html/2013-23181.htm",
@@ -11975,9 +14292,19 @@
           "url": "https://www.wikidata.org/wiki/Q836568",
           "title": "Wikidata: Big Rock Point Nuclear Power Plant (coordinates)",
           "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.nrc.gov/docs/ML2217/ML22179A075.pdf",
+          "title": "Entergy email to US NRC - Palisades/Big Rock Point transaction closed (2022-06-28)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.govinfo.gov/content/pkg/FR-2026-03-17/html/2026-05153.htm",
+          "title": "Federal Register 91 FR (2026-03-17) - Big Rock Point Plant and ISFSI; Order approving direct transfer of licence",
+          "accessed": "2026-11-12"
         }
       ],
-      "notes": "The NRC approved the licence transfer from Entergy to Holtec in 2021; completion of the transfer is not confirmed.",
+      "notes": "Whether the 2026 licence transfer to Holtec Big Rock Point, LLC has closed is not confirmed; the NRC order allows one year to close.",
       "last_updated": "2026-11-12"
     },
     {
@@ -12800,8 +15127,8 @@
       "coord_precision": "facility",
       "facility_type": "at_reactor_storage",
       "status": "operating",
-      "status_note": "Single BWR shut down on 10 August 2020; all fuel has been in the on-site ISFSI since April 2022. NextEra is pursuing a restart under NRC review.",
-      "status_as_of": "2026-11-12",
+      "status_note": "Single BWR shut down on 10 August 2020; all fuel has been in the on-site ISFSI since April 2022. NextEra has applied to restart the plant: the NRC approved consolidating the licence in NextEra Energy Duane Arnold in March 2026 and issued a draft environmental assessment with a finding of no significant impact in July 2026, while the restart licensing actions remained under review in September 2026.",
+      "status_as_of": "2026-09-14",
       "waste_types": [
         "spent-fuel"
       ],
@@ -13078,14 +15405,14 @@
     },
     {
       "id": "US-036",
-      "name": "HI-STORE consolidated interim storage facility (Holtec, Lea County, cancelled by developer)",
+      "name": "HI-STORE consolidated interim storage facility (Holtec, Lea County)",
       "country": "United States",
       "country_code": "US",
       "latitude": 32.577,
       "longitude": -103.7,
       "coord_precision": "locality",
       "facility_type": "interim_storage",
-      "status": "cancelled",
+      "status": "dormant",
       "status_note": "Proposed store for up to 8,680 t of commercial spent fuel in 500 canisters on land of the Eddy-Lea Energy Alliance, roughly halfway between Carlsbad and Hobbs. The NRC issued a licence in May 2023 and the Supreme Court refused a challenge in January 2026, but Holtec cancelled its agreement with ELEA and its plans to build in October 2025.",
       "status_as_of": "2026-01-13",
       "waste_types": [
@@ -13127,9 +15454,19 @@
           "url": "https://www.nrc.gov/docs/ML2229/ML22299A238.pdf",
           "title": "NRC NUREG-2237 Supplement 1 - EIS for Holtec's HI-STORE CISF licence application (October 2022)",
           "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.ans.org/news/article-5915/court-vacates-holtecs-license-for-new-mexico-spent-fuel-facility/",
+          "title": "ANS Nuclear Newswire - Court vacates Holtec's license for New Mexico spent fuel facility (2024-04-03)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://holtecinternational.com/hh-40-13/",
+          "title": "Holtec International - Supreme Court decision on NRC's right to license private storage projects (2025-06-19)",
+          "accessed": "2026-11-12"
         }
       ],
-      "notes": "Position derived from the NRC environmental impact statement (north of US 62/180, next to Laguna Gatuna). The licence still exists; the status reflects the developer withdrawing.",
+      "notes": "The NRC licence (May 2023) was vacated by a federal appeals court in 2024; Holtec expected reinstatement after a June 2025 Supreme Court ruling. No surrender or termination found.",
       "last_updated": "2026-11-12"
     },
     {
@@ -14164,8 +16501,8 @@
       "coord_precision": "facility",
       "facility_type": "at_reactor_storage",
       "status": "operating",
-      "status_note": "Single PWR shut down in May 2022; in August 2025 it returned to operational licensing status and fuel loading for a restart began in late August 2026, but no restart had been confirmed by mid-October 2026. Spent fuel is stored in the pool and in the on-site ISFSI.",
-      "status_as_of": "2026-11-12",
+      "status_note": "Single PWR shut down in May 2022; it returned to operational licensing status in August 2025 and fuel loading for a restart began in late August 2026. A fuel assembly that tilted during loading was recovered and moved to the spent fuel pool in October 2026, after which loading resumed; the restart still awaited NRC clearance in late October 2026. Spent fuel is stored in the pool and in the on-site ISFSI.",
+      "status_as_of": "2026-10-29",
       "waste_types": [
         "spent-fuel"
       ],
@@ -14195,9 +16532,19 @@
           "url": "https://www.wikidata.org/wiki/Q533357",
           "title": "Wikidata: Palisades Nuclear Generating Station (coordinates)",
           "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.michiganpublic.org/environment-climate-change/2026-10-22/palisades-nuclear-plant-fuel-assembly",
+          "title": "Michigan Public - Fuel loading to resume at Palisades after workers remove damaged fuel assembly (2026-10-22)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.michiganpublic.org/transportation-infrastructure/2026-10-29/historic-palisades-nuclear-plant-restart-may-only-be-weeks-away-energy-secretary-says",
+          "title": "Michigan Public - Palisades restart may only be weeks away, energy secretary says (2026-10-29)",
+          "accessed": "2026-11-12"
         }
       ],
-      "notes": "Restart status changes quickly; in October 2026 the NRC approved removal of a tilted fuel assembly after a fuel-loading incident.",
+      "notes": "Restart status changes quickly; in late October 2026 the US energy secretary said a restart could come as soon as the end of November.",
       "last_updated": "2026-11-12"
     },
     {
@@ -14566,8 +16913,8 @@
       "coord_precision": "facility",
       "facility_type": "at_reactor_storage",
       "status": "operating",
-      "status_note": "PWR shut down in 1989 and decommissioned; spent fuel is stored at the site-specifically licensed ISFSI (SNM-2510), whose licence renewal for a further 40 years was under NRC review in 2020.",
-      "status_as_of": "2026-11-12",
+      "status_note": "PWR shut down in 1989 and decommissioned; spent fuel is stored at the site-specifically licensed ISFSI (SNM-2510). The NRC renewed the ISFSI licence in March 2020 for a further 40 years, to 30 June 2060.",
+      "status_as_of": "2020-03-09",
       "waste_types": [
         "spent-fuel"
       ],
@@ -14591,6 +16938,11 @@
         {
           "url": "https://www.wikidata.org/wiki/Q1233845",
           "title": "Wikidata: Rancho Seco Nuclear Generating Station (coordinates)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.govinfo.gov/content/pkg/FR-2020-03-16/html/2020-05323.htm",
+          "title": "Federal Register 85 FR (2020-03-16) - Sacramento Municipal Utility District; Rancho Seco ISFSI; licence renewal",
           "accessed": "2026-11-12"
         }
       ],
@@ -14850,8 +17202,8 @@
       "coord_precision": "facility",
       "facility_type": "at_reactor_storage",
       "status": "operating",
-      "status_note": "One PWR unit in operation (operating licence 1986). Spent fuel is stored in the plant's pool(s); the site was not shown with a dry storage ISFSI on the NRC's June 2023 ISFSI map.",
-      "status_as_of": "2026-11-12",
+      "status_note": "One PWR unit in operation (operating licence 1986). Spent fuel is stored in the plant's pools; Harris is not listed among North Carolina's dry storage installations (Brunswick, McGuire) on the NRC's ISFSI map with data as of 30 September 2024.",
+      "status_as_of": "2024-09-30",
       "waste_types": [
         "spent-fuel"
       ],
@@ -14876,9 +17228,14 @@
           "url": "https://www.wikidata.org/wiki/Q1568903",
           "title": "Wikidata: Shearon Harris Nuclear Power Plant (coordinates)",
           "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.nrc.gov/reading-rm/doc-collections/maps/isfsi.html",
+          "title": "US NRC - Licensed and Operating Independent Spent Fuel Storage Installations by State (map January 2025, data as of 2024-09-30)",
+          "accessed": "2026-11-12"
         }
       ],
-      "notes": "In June 2023 Harris had not announced plans for dry storage; later plans are not confirmed.",
+      "notes": "No dry cask storage installation at Harris was found in NRC records up to September 2024; later plans are not confirmed.",
       "last_updated": "2026-11-12"
     },
     {
@@ -15109,8 +17466,8 @@
       "coord_precision": "facility",
       "facility_type": "at_reactor_storage",
       "status": "operating",
-      "status_note": "Unit 1 (renamed Crane Clean Energy Center in 2025) shut down on 26 September 2019 and Constellation is pursuing a restart; its spent fuel has been moved into dry storage at the on-site ISFSI. Unit 2 was damaged in the 1979 accident; its core debris is stored by DOE in Idaho and Unit 2 is being decommissioned.",
-      "status_as_of": "2026-11-12",
+      "status_note": "Unit 1 (renamed Crane Clean Energy Center in 2025) shut down on 26 September 2019 and its spent fuel has been moved into dry storage at the on-site ISFSI. Constellation's restart request remained under NRC review in October 2026: the NRC allowed receipt of new fuel in July 2026 and issued a final environmental assessment with a finding of no significant impact on 18 September 2026. Unit 2 was damaged in the 1979 accident; its core debris is stored by DOE in Idaho and Unit 2 is being decommissioned.",
+      "status_as_of": "2026-10-08",
       "waste_types": [
         "spent-fuel"
       ],
@@ -15633,8 +17990,8 @@
       "coord_precision": "facility",
       "facility_type": "at_reactor_storage",
       "status": "operating",
-      "status_note": "Two PWR units retired in 1998 and dismantled; fuel transfer to the on-site ISFSI was completed in January 2015. The NRC released the rest of the site in November 2023, leaving the ISFSI under licence.",
-      "status_as_of": "2026-11-12",
+      "status_note": "Two PWR units retired in 1998 and dismantled by ZionSolutions (EnergySolutions); fuel transfer to the on-site ISFSI was completed in January 2015. After the NRC released the rest of the site in November 2023, the licences returned to Constellation, which now holds the remaining ISFSI.",
+      "status_as_of": "2023-11-16",
       "waste_types": [
         "spent-fuel"
       ],
@@ -15659,8 +18016,712 @@
           "url": "https://www.wikidata.org/wiki/Q839256",
           "title": "Wikidata: Zion Nuclear Power Station (coordinates)",
           "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.energysolutions.com/zion_nuclear_powerstation_decommissioning_successfully_completed/",
+          "title": "EnergySolutions - Zion Nuclear Power Station decommissioning successfully completed (2023-11-16)",
+          "accessed": "2026-11-12"
         }
       ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-099",
+      "name": "Maxey Flats low-level radioactive waste disposal site",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 38.25833,
+      "longitude": -83.56944,
+      "coord_precision": "facility",
+      "facility_type": "near_surface",
+      "status": "closed",
+      "status_note": "Commercial shallow-land burial site in Fleming County, Kentucky, used 1963-1977; about 4.75 million cubic feet of LLW in 52 unlined trenches, plus special nuclear material in 'hot wells'. Plutonium migration led to closure in 1977 and Superfund listing in 1986; the trenches are now capped and under long-term state care.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level",
+        "transuranic"
+      ],
+      "operator": "Commonwealth of Kentucky (former operator Nuclear Engineering Company)",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Maxey_Flats",
+          "title": "Maxey Flats - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-100",
+      "name": "Sheffield low-level radioactive waste disposal site",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 41.33,
+      "longitude": -89.77,
+      "coord_precision": "locality",
+      "facility_type": "near_surface",
+      "status": "closed",
+      "status_note": "Commercial LLW burial ground in Bureau County, Illinois, licensed in 1967 and closed in 1978 when full; about 3.2 million cubic feet of waste lies in 21 shallow earthen trenches. Tritium has migrated into groundwater, and the state still monitors the site.",
+      "status_as_of": "2023-12-31",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": "Illinois Emergency Management Agency and Office of Homeland Security (monitoring)",
+      "sources": [
+        {
+          "url": "https://iemaohs.illinois.gov/content/dam/soi/en/web/iemaohs/nrs/documents/cy2023-sheffield-llrw-disposal-site-environmental-monitoring-report.pdf",
+          "title": "IEMA-OHS: 2023 Radiological Environmental Monitoring Report for Sheffield Low-Level Radioactive Waste Site",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Sheffield,_Illinois",
+          "title": "Sheffield, Illinois - Wikipedia (village coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Position estimated from the official description (about three miles south-west of Sheffield); not surveyed.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-101",
+      "name": "Beatty low-level radioactive waste disposal site",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 36.762,
+      "longitude": -116.68,
+      "coord_precision": "locality",
+      "facility_type": "near_surface",
+      "status": "closed",
+      "status_note": "State-owned former commercial LLW and mixed-waste burial site about 11 miles south of Beatty, Nye County, used 1962-1992 and closed on 31 December 1992. A fire in trench 14 in October 2015, caused by rainwater reaching buried sodium, led the state to plan a permanent closure solution.",
+      "status_as_of": "2017-10-23",
+      "waste_types": [
+        "low-level",
+        "chemical"
+      ],
+      "operator": "State of Nevada (Division of State Lands; licensed by the Radiation Control Program)",
+      "sources": [
+        {
+          "url": "https://dpbh.nv.gov:443/uploadedFiles/dpbhnvgov/content/Reg/Low-Level-Waste/Docs/Beatty_Action_Plan_Timeline_10-23-17_v_4.0.pdf",
+          "title": "Nevada DPBH: Beatty Low Level Radioactive Waste Site Action Plan (2017)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.usgs.gov/centers/nevada-water-science-center/science/amargosa-desert-research-site-description",
+          "title": "USGS: Amargosa Desert Research Site description",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.usgs.gov/media/images/desert-perchlorate-field-work",
+          "title": "USGS image page with ADRS coordinates",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Coordinates are those of the adjacent USGS Amargosa Desert Research Site, not of the trenches themselves.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-102",
+      "name": "Fernald Preserve (former Feed Materials Production Center) and On-Site Disposal Facility",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 39.29806,
+      "longitude": -84.69083,
+      "coord_precision": "facility",
+      "facility_type": "near_surface",
+      "status": "closed",
+      "status_note": "Former uranium refining plant for the US weapons complex (1951-1989) near Cincinnati, Ohio. Surface clean-up ended in 2006; more than 900,000 cubic yards of contaminated material lie in an eight-cell on-site disposal facility, and groundwater remediation of a uranium plume continues under DOE Legacy Management.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": "US Department of Energy, Office of Legacy Management",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Fernald_Feed_Materials_Production_Center",
+          "title": "Fernald Feed Materials Production Center - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-103",
+      "name": "Weldon Spring Site disposal cell (former uranium feed materials plant)",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 38.69583,
+      "longitude": -90.74667,
+      "coord_precision": "locality",
+      "facility_type": "near_surface",
+      "status": "closed",
+      "status_note": "Former AEC uranium and thorium processing plant (1957-1966) and quarry dump in St. Charles County, Missouri. About 1.48 million cubic yards of contaminated material, including raffinate pit sludge, were placed in a 41-acre engineered disposal cell completed in 2001, now under DOE Legacy Management stewardship.",
+      "status_as_of": "2026-09-01",
+      "waste_types": [
+        "low-level",
+        "norm"
+      ],
+      "operator": "US Department of Energy, Office of Legacy Management",
+      "sources": [
+        {
+          "url": "https://www.energy.gov/lm/articles/weldon-spring-site-missouri-fact-sheet",
+          "title": "DOE LM: Weldon Spring, Missouri, Site fact sheet (09.2026)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://epa.gov/fedfac/weldon-spring-quarryplantpits-department-energy-site",
+          "title": "EPA: Weldon Spring Quarry/Plant/Pits (Department of Energy) site",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Weldon_Spring_Ordnance_Works",
+          "title": "Weldon Spring Ordnance Works - Wikipedia (coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the former Ordnance Works area, not the disposal cell itself.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-104",
+      "name": "Rocky Flats Site (former Rocky Flats Plant), Central Operable Unit",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 39.89,
+      "longitude": -105.2,
+      "coord_precision": "locality",
+      "facility_type": "military_production",
+      "status": "closed",
+      "status_note": "Former plutonium weapons-component plant near Denver (1952-1992). Clean-up was declared complete in 2005; the DOE-retained Central Operable Unit, with residual plutonium and solvent contamination, remains closed to the public and under groundwater treatment and monitoring.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "transuranic",
+        "chemical"
+      ],
+      "operator": "US Department of Energy, Office of Legacy Management",
+      "sources": [
+        {
+          "url": "https://www.energy.gov/lm/rocky-flats-colorado-site",
+          "title": "DOE LM: Rocky Flats, Colorado, Site",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Rocky_Flats_Plant",
+          "title": "Rocky Flats Plant - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Residual contamination rather than stored waste; most waste was shipped off site.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-105",
+      "name": "Mound Site (former Mound Laboratories), Miamisburg",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 39.6291,
+      "longitude": -84.2863,
+      "coord_precision": "facility",
+      "facility_type": "legacy_site",
+      "status": "closed",
+      "status_note": "Former AEC/DOE weapons-component and tritium plant (1948-2000s) in Miamisburg, Ohio; a Superfund site from 1989. Clean-up finished in 2010, the land has been transferred out of DOE ownership, and DOE Legacy Management still monitors groundwater; the pump-and-treat system was removed in 2024.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [],
+      "operator": "US Department of Energy, Office of Legacy Management (monitoring)",
+      "sources": [
+        {
+          "url": "https://www.energy.gov/lm/mound-ohio-site",
+          "title": "DOE LM: Mound, Ohio, Site",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Mound_Laboratories",
+          "title": "Mound Laboratories - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Clean-up completed; no waste is known to be stored here today.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-106",
+      "name": "Paducah Gaseous Diffusion Plant",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 37.11389,
+      "longitude": -88.81028,
+      "coord_precision": "facility",
+      "facility_type": "legacy_site",
+      "status": "decommissioning",
+      "status_note": "Uranium enrichment plant in Kentucky operated 1952-2013, now being deactivated and decommissioned by DOE. Legacy issues include a TCE and technetium-99 groundwater plume and uranium-contaminated process buildings; part of the site was leased in 2025 for new HALEU production.",
+      "status_as_of": "2026-01-31",
+      "waste_types": [
+        "low-level",
+        "chemical"
+      ],
+      "operator": "US Department of Energy",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Paducah_Gaseous_Diffusion_Plant",
+          "title": "Paducah Gaseous Diffusion Plant - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-107",
+      "name": "Portsmouth Gaseous Diffusion Plant and On-Site Waste Disposal Facility, Piketon",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 39.00833,
+      "longitude": -83.0,
+      "coord_precision": "locality",
+      "facility_type": "near_surface",
+      "status": "operating",
+      "status_note": "Former uranium enrichment plant in Piketon, Ohio (enrichment ended 2001), being decommissioned by DOE. Demolition rubble and excavated landfills go into an on-site LLW and hazardous waste disposal facility built cell by cell since the early 2020s; a DUF6 conversion plant also runs on site. Clean-up is expected to end around 2039-2043.",
+      "status_as_of": "2023-05-01",
+      "waste_types": [
+        "low-level",
+        "chemical"
+      ],
+      "operator": "US Department of Energy (Portsmouth/Paducah Project Office)",
+      "sources": [
+        {
+          "url": "https://www.energy.gov/sites/default/files/2023-05/DOE%20EM%20Strategic%20Vision%202023%20-%20Portsmouth.pdf",
+          "title": "DOE EM Strategic Vision 2023-2033: Portsmouth",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Portsmouth_Gaseous_Diffusion_Plant",
+          "title": "Portsmouth Gaseous Diffusion Plant - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the plant site generally; the disposal facility lies within the DOE reservation.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-108",
+      "name": "Brookhaven National Laboratory (former reactors and legacy waste areas)",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 40.875,
+      "longitude": -72.877,
+      "coord_precision": "locality",
+      "facility_type": "research_lab",
+      "status": "remediation",
+      "status_note": "DOE research laboratory on Long Island, New York, and a Superfund site. Its shut-down research reactors (BGRR, HFBR) have been or are being decommissioned; a 1997 tritium leak from the HFBR fuel pool and other legacy contamination led to long-running groundwater treatment.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": "US Department of Energy (Brookhaven Science Associates)",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Brookhaven_National_Laboratory",
+          "title": "Brookhaven National Laboratory - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-109",
+      "name": "Vallecitos Nuclear Center, Sunol",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 37.61327,
+      "longitude": -121.84016,
+      "coord_precision": "facility",
+      "facility_type": "research_lab",
+      "status": "decommissioning",
+      "status_note": "Former GE nuclear research site in Alameda County, California, with the early Vallecitos Boiling Water Reactor (1957-1963) and test reactors. NorthStar Group Services acquired the site in March 2025 to decommission it; the VBWR was removed in 2023.",
+      "status_as_of": "2025-03-18",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": "NorthStar Group Services",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Vallecitos_Nuclear_Center",
+          "title": "Vallecitos Nuclear Center - Wikipedia",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.ans.org/news/2025-03-18/article-6858/northstar-closes-on-vallecitos-dd-agreement/",
+          "title": "ANS Nuclear Newswire: NorthStar closes on Vallecitos D&D agreement (2025)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-110",
+      "name": "Hallam Nuclear Power Facility (entombed reactor)",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 40.55833,
+      "longitude": -96.78469,
+      "coord_precision": "facility",
+      "facility_type": "at_reactor_storage",
+      "status": "closed",
+      "status_note": "Sodium-cooled demonstration reactor in Nebraska that ran only in 1963-1964. Fuel was removed and the below-ground reactor components were entombed on site, next to the Sheldon power station; DOE Legacy Management has inspected and maintained the site since 2003.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": "US Department of Energy, Office of Legacy Management",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Hallam_Nuclear_Power_Facility",
+          "title": "Hallam Nuclear Power Facility - Wikipedia",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.energy.gov/lm/hallam-nebraska-decommissioned-reactor-site",
+          "title": "DOE LM: Hallam, Nebraska, Decommissioned Reactor Site",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-111",
+      "name": "Piqua Nuclear Power Facility (entombed reactor)",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 40.13232,
+      "longitude": -84.23477,
+      "coord_precision": "facility",
+      "facility_type": "at_reactor_storage",
+      "status": "closed",
+      "status_note": "Organic-cooled demonstration reactor in Piqua, Ohio, operated 1963-1966 and dismantled 1967-1969. Remaining activated parts were entombed in the reactor vessel under sand and concrete; DOE Legacy Management carries out routine inspection.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": "US Department of Energy, Office of Legacy Management",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Piqua_Nuclear_Generating_Station",
+          "title": "Piqua Nuclear Generating Station - Wikipedia",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.energy.gov/lm/piqua-ohio-decommissioned-reactor-site",
+          "title": "DOE LM: Piqua, Ohio, Decommissioned Reactor Site",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-112",
+      "name": "Elk River reactor (former), Elk River Station",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 45.29517,
+      "longitude": -93.5567,
+      "coord_precision": "facility",
+      "facility_type": "at_reactor_storage",
+      "status": "closed",
+      "status_note": "Small boiling water demonstration reactor in Minnesota, operated 1964-1968 and dismantled in the following years; no radioactive waste is known to remain on site.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Elk_River_Station",
+          "title": "Elk River Station - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Reactor dismantled; listed for completeness of early US power reactors.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-113",
+      "name": "Pathfinder reactor (former), Sioux Falls",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 43.60361,
+      "longitude": -96.6375,
+      "coord_precision": "facility",
+      "facility_type": "at_reactor_storage",
+      "status": "closed",
+      "status_note": "Nuclear superheat demonstration reactor in South Dakota, retired in 1967 after an accident; the reactor vessel was removed in 1990 and shipped to a low-level waste site in Washington State.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Pathfinder_Nuclear_Generating_Station",
+          "title": "Pathfinder Nuclear Generating Station - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Reactor removed; no waste is known to remain.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-114",
+      "name": "Carolinas-Virginia Tube Reactor (former), Parr",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 34.2625,
+      "longitude": -81.32917,
+      "coord_precision": "facility",
+      "facility_type": "at_reactor_storage",
+      "status": "closed",
+      "status_note": "Heavy-water test reactor in South Carolina, run 1963-1967. Demolition was completed in 2009; no fuel remains and the site was returned to greenfield status.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Carolinas%E2%80%93Virginia_Tube_Reactor",
+          "title": "Carolinas-Virginia Tube Reactor - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Site cleared; no waste remains.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-115",
+      "name": "Shiprock disposal site (former uranium mill), Navajo Nation",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 36.7925,
+      "longitude": -108.70056,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "remediation",
+      "status_note": "Former uranium-vanadium mill near Shiprock, New Mexico, run 1954-1968 on land leased from the Navajo Nation. By 1986 all tailings and contaminated material were encapsulated in a disposal cell on the old tailings piles, about 600 feet from the San Juan River; contaminated groundwater is still being pumped and treated.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "US Department of Energy, Office of Legacy Management",
+      "sources": [
+        {
+          "url": "https://www.energy.gov/lm/articles/shiprock-new-mexico-disposal-site-fact-sheet",
+          "title": "DOE LM: Shiprock, New Mexico, Disposal Site fact sheet",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.energy.gov/lm/shiprock-new-mexico-disposal-site",
+          "title": "DOE LM: Shiprock, New Mexico, Disposal Site",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Shiprock,_New_Mexico",
+          "title": "Shiprock, New Mexico - Wikipedia (town coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks the town of Shiprock; the disposal cell lies nearby on a terrace above the San Juan River.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-116",
+      "name": "Abandoned uranium mines on and near the Navajo Nation",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 35.67056,
+      "longitude": -109.06389,
+      "coord_precision": "region",
+      "facility_type": "uranium_legacy",
+      "status": "remediation",
+      "status_note": "More than 500 (523 counted by EPA) abandoned uranium mines across the Navajo Nation in Arizona, New Mexico and Utah, worked 1944-1986 for nearly 30 million tons of ore. Settlements worth over 1.7 billion US dollars fund assessment and clean-up at 230 mines under a 2020-2029 ten-year plan.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "US EPA and Navajo Nation EPA (clean-up oversight)",
+      "sources": [
+        {
+          "url": "https://www.epa.gov/navajo-nation-uranium-cleanup/abandoned-mines-cleanup",
+          "title": "US EPA: Navajo Nation - Abandoned Mines Cleanup",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Window_Rock,_Arizona",
+          "title": "Window Rock, Arizona - Wikipedia (coordinates of Navajo Nation capital)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "One symbolic point for more than 500 mines spread over about 71,000 km2; placed at Window Rock, the Navajo Nation capital.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-117",
+      "name": "Grand Junction disposal site (former Cheney disposal cell)",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 38.9,
+      "longitude": -108.33,
+      "coord_precision": "region",
+      "facility_type": "uranium_legacy",
+      "status": "operating",
+      "status_note": "UMTRCA Title I disposal cell about 18 miles south-east of Grand Junction, Colorado, built from 1990 for tailings of the former Climax uranium mill and contaminated vicinity properties. It holds about 4.5 million cubic yards and is the only facility in Colorado still accepting such material; DOE's authority to operate it expires on 30 September 2031 unless extended.",
+      "status_as_of": "2026-03-02",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": "US Department of Energy, Office of Legacy Management",
+      "sources": [
+        {
+          "url": "https://www.energy.gov/lm/articles/grand-junction-colorado-disposal-and-processing-sites-fact-sheet",
+          "title": "DOE LM: Grand Junction, Colorado, Disposal and Processing Sites fact sheet",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.bennet.senate.gov/wp-content/uploads/2026/03/CDPHE-Colorado-Support-Letter-for-Cheney-Disposal-Facility.pdf",
+          "title": "CDPHE letter to US Senate supporting reauthorisation of the Cheney Disposal Cell (2 March 2026)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Grand_Junction,_Colorado",
+          "title": "Grand Junction, Colorado - Wikipedia (city coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Location estimated as about 18 miles south-east of Grand Junction, as described by DOE; exact cell position not verified.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-118",
+      "name": "Uravan uranium mill site and tailings (former company town)",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 38.36833,
+      "longitude": -108.73639,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "closed",
+      "status_note": "Vanadium-uranium mill town in Montrose County, Colorado, founded 1936 and closed 1985. Superfund clean-up ran from 1986 to 2008; buildings were removed and the site regraded, and mill wastes remain in an on-site disposal cell.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Uravan,_Colorado",
+          "title": "Uravan, Colorado - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "US-119",
+      "name": "White Mesa uranium mill and tailings cells, Blanding",
+      "country": "United States",
+      "country_code": "US",
+      "latitude": 37.536,
+      "longitude": -109.479,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "operating",
+      "status_note": "The only conventional uranium mill still running in the US, licensed in 1980, about six miles south of Blanding, Utah, and some five miles north of the White Mesa Ute community. Tailings sit in five lined cells (about 284 acres); the mill also processes alternate feed including radioactive residues from abroad, and plans for new cells are opposed by the Ute Mountain Ute Tribe.",
+      "status_as_of": "2026-08-12",
+      "waste_types": [
+        "norm",
+        "low-level"
+      ],
+      "operator": "Energy Fuels Resources (USA) Inc.",
+      "sources": [
+        {
+          "url": "https://deq.utah.gov/waste-management-and-radiation-control/energy-fuels-resources-usa-inc",
+          "title": "Utah DEQ: Energy Fuels Resources (USA) Inc. - White Mesa Uranium Mill",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.kunc.org/npr-news/2026-08-12/nuclear-power-push-ramps-up-uranium-mill-and-tribal-health-concerns",
+          "title": "KUNC/KFF Health News (2026): Nuclear power push ramps up uranium mill and tribal health concerns",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Blanding,_Utah",
+          "title": "Blanding, Utah - Wikipedia (town coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Position estimated from the official description (about six miles south of Blanding).",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "UZ-001",
+      "name": "Charkesar (Chorkesar-2) former uranium mine",
+      "country": "Uzbekistan",
+      "country_code": "UZ",
+      "latitude": 41.0306,
+      "longitude": 70.9092,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "closed",
+      "status_note": "Former Soviet uranium mining site in Namangan region. Remediation funded by the EBRD-managed ERA fund was completed in August 2024.",
+      "status_as_of": "2025-10-09",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://gov.uz/en/news/view/91909",
+          "title": "Government of Uzbekistan (9 Oct 2025): EBRD delegation reviews reclamation work at former uranium mines",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.ebrd.com/home/what-we-do/focus-areas/nuclear-safety/environmental-remediation-account.html",
+          "title": "EBRD: Environmental Remediation Account for Central Asia (ERA)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Chorkesar",
+          "title": "Wikipedia: Chorkesar (settlement coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks Chorkesar settlement; the mine site lies nearby.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "UZ-002",
+      "name": "Yangiabad (Yangiobod) former uranium mines",
+      "country": "Uzbekistan",
+      "country_code": "UZ",
+      "latitude": 41.1192,
+      "longitude": 70.0942,
+      "coord_precision": "locality",
+      "facility_type": "uranium_legacy",
+      "status": "closed",
+      "status_note": "Former Soviet uranium mining town in Tashkent region. EBRD-funded (ERA) remediation ran from March 2023 to August 2025 and included demolition, a disposal site for contaminated material and mine-water drainage.",
+      "status_as_of": "2025-10-09",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://gov.uz/en/news/view/91909",
+          "title": "Government of Uzbekistan (9 Oct 2025): EBRD delegation reviews reclamation work at former uranium mines",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://www.ebrd.com/home/what-we-do/focus-areas/nuclear-safety/environmental-remediation-account.html",
+          "title": "EBRD: Environmental Remediation Account for Central Asia (ERA)",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Yangiobod",
+          "title": "Wikipedia: Yangiobod (town coordinates)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Point marks Yangiobod town; mine workings and the new disposal site lie in the surrounding area.",
       "last_updated": "2026-11-12"
     },
     {
@@ -16029,6 +19090,295 @@
       "last_updated": "2026-11-12"
     },
     {
+      "id": "XZ-013",
+      "name": "Sea of Japan Soviet dumping area 6 (liquid and solid waste, submarine reactors)",
+      "country": "International waters (Sea of Japan)",
+      "country_code": "XZ",
+      "latitude": 41.8333,
+      "longitude": 132.0,
+      "coord_precision": "region",
+      "facility_type": "sea_dumping",
+      "status": "abandoned",
+      "status_note": "Area at 1,900-3,300 m depth where the Soviet Pacific Fleet dumped about 18 TBq of liquid waste and about 119 TBq of solid waste between 1968 and the late 1980s, including in 1971 two submarine reactors without spent fuel, plus several scrapped vessels.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level",
+        "intermediate-level"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/te_1105_prn.pdf",
+          "title": "IAEA-TECDOC-1105: Inventory of radioactive waste disposals at sea (1999)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Centre of the dumping rectangle 41°45'-41°55'N, 131°47'-132°13'E; activity as reported at the time of dumping.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "XZ-014",
+      "name": "Sea of Japan Soviet dumping area 10 (liquid and solid waste, submarine reactors)",
+      "country": "International waters (Sea of Japan)",
+      "country_code": "XZ",
+      "latitude": 40.6667,
+      "longitude": 131.4167,
+      "coord_precision": "region",
+      "facility_type": "sea_dumping",
+      "status": "abandoned",
+      "status_note": "Area at 2,900-3,300 m depth used by the Soviet Union for about 20 TBq of liquid waste and about 105 TBq of solid waste; in 1979 the two reactors of submarine No. 172, without spent fuel, were dumped here along with other reactor parts and vessels.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level",
+        "intermediate-level"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/te_1105_prn.pdf",
+          "title": "IAEA-TECDOC-1105: Inventory of radioactive waste disposals at sea (1999)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Centre of the dumping rectangle 40°10'-41°10'N, 131°15'-131°35'E.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "XZ-015",
+      "name": "Sea of Japan Soviet liquid waste dumping area 5",
+      "country": "International waters (Sea of Japan)",
+      "country_code": "XZ",
+      "latitude": 42.3625,
+      "longitude": 131.975,
+      "coord_precision": "region",
+      "facility_type": "sea_dumping",
+      "status": "abandoned",
+      "status_note": "Area at 1,100-1,500 m depth south of Peter the Great Gulf where the Soviet Union discharged liquid radioactive waste (about 4.3 TBq reported). Liquid waste disperses and is not recoverable.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/te_1105_prn.pdf",
+          "title": "IAEA-TECDOC-1105: Inventory of radioactive waste disposals at sea (1999)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Centre of the dumping rectangle 42°17'-42°26'N, 131°37'-132°20'E.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "XZ-016",
+      "name": "East Kamchatka Soviet dumping areas 7 and 8 (Avacha Bay approaches)",
+      "country": "International waters (North Pacific, off Kamchatka)",
+      "country_code": "XZ",
+      "latitude": 52.5167,
+      "longitude": 159.1167,
+      "coord_precision": "region",
+      "facility_type": "sea_dumping",
+      "status": "abandoned",
+      "status_note": "Neighbouring areas off the east coast of Kamchatka at 1,400-2,570 m depth where the Soviet and Russian Pacific Fleet discharged about 13 TBq of liquid waste (area 7) and dumped about 111 TBq of solid waste (area 8), up to 1992.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level",
+        "intermediate-level"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/te_1105_prn.pdf",
+          "title": "IAEA-TECDOC-1105: Inventory of radioactive waste disposals at sea (1999)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Combined centre of areas 7 (52°28'-52°40'N, 159°02'-159°12'E) and 8 (52°28'-52°34'N, 159°02'-159°11'E).",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "XZ-017",
+      "name": "Barents Sea Soviet liquid waste dumping area 1 (open sea)",
+      "country": "International waters (Barents Sea)",
+      "country_code": "XZ",
+      "latitude": 76.0,
+      "longitude": 50.0,
+      "coord_precision": "region",
+      "facility_type": "sea_dumping",
+      "status": "abandoned",
+      "status_note": "Large open-sea area west of Novaya Zemlya (180-300 m depth) where the Soviet Northern Fleet discharged about 235 TBq of liquid radioactive waste between 1959 and 1991, the largest share of Soviet Arctic liquid dumping.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/te_1105_prn.pdf",
+          "title": "IAEA-TECDOC-1105: Inventory of radioactive waste disposals at sea (1999)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Centre of the dumping rectangle 74°-78°N, 48°-52°E; the area is several hundred kilometres across.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "XZ-018",
+      "name": "Barents Sea Soviet liquid waste dumping area 2 (open sea)",
+      "country": "International waters (Barents Sea)",
+      "country_code": "XZ",
+      "latitude": 74.75,
+      "longitude": 45.0,
+      "coord_precision": "region",
+      "facility_type": "sea_dumping",
+      "status": "abandoned",
+      "status_note": "Open-sea area in the central Barents Sea (200-300 m depth) where the Soviet Union discharged about 124 TBq of liquid radioactive waste between 1959 and 1991.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/te_1105_prn.pdf",
+          "title": "IAEA-TECDOC-1105: Inventory of radioactive waste disposals at sea (1999)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Centre of the dumping rectangle 72°30'-77°N, 43°-47°E.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "XZ-019",
+      "name": "Barents Sea Soviet liquid waste dumping area 3 (open sea)",
+      "country": "International waters (Barents Sea)",
+      "country_code": "XZ",
+      "latitude": 72.5,
+      "longitude": 35.0,
+      "coord_precision": "region",
+      "facility_type": "sea_dumping",
+      "status": "abandoned",
+      "status_note": "Open-sea area north of the Kola Peninsula (200-300 m depth) where the Soviet Union discharged about 77 TBq of liquid radioactive waste between 1959 and 1991.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/te_1105_prn.pdf",
+          "title": "IAEA-TECDOC-1105: Inventory of radioactive waste disposals at sea (1999)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Centre of the dumping rectangle 72°15'-72°45'N, 33°30'-36°30'E.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "XZ-020",
+      "name": "New Zealand radioactive waste dumping site 4 (south of Cape Palliser)",
+      "country": "International waters (South Pacific, off New Zealand)",
+      "country_code": "XZ",
+      "latitude": -42.25,
+      "longitude": 175.0,
+      "coord_precision": "region",
+      "facility_type": "sea_dumping",
+      "status": "abandoned",
+      "status_note": "New Zealand dumped a few drums and concrete blocks of radioactive waste (about 1 TBq in total, including radium) at sea between 1954 and 1976; most of the activity went to this site at about 2,800 m depth in 1967-1976.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/te_1105_prn.pdf",
+          "title": "IAEA-TECDOC-1105: Inventory of radioactive waste disposals at sea (1999)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "IAEA position 42°15'S 175°00'E. Earlier small dumps were made off Lyttelton Heads and Baring Head.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "XZ-021",
+      "name": "US Pacific radioactive waste dumping site off Southern California (33°40'N 119°35'W)",
+      "country": "International waters (North-East Pacific, off California)",
+      "country_code": "XZ",
+      "latitude": 33.6667,
+      "longitude": -119.5833,
+      "coord_precision": "region",
+      "facility_type": "sea_dumping",
+      "status": "abandoned",
+      "status_note": "One of 18 US Pacific dumping sites: 3,114 containers of radioactive waste (about 4 TBq at packaging) were dumped here at 1,829-1,940 m depth between 1946 and 1962.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/te_1105_prn.pdf",
+          "title": "IAEA-TECDOC-1105: Inventory of radioactive waste disposals at sea (1999)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "IAEA position 33°40'N 119°35'W, south of the Channel Islands.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "XZ-022",
+      "name": "US Pacific radioactive waste dumping site off Southern California (32°00'N 121°30'W)",
+      "country": "International waters (North-East Pacific, off California)",
+      "country_code": "XZ",
+      "latitude": 32.0,
+      "longitude": -121.5,
+      "coord_precision": "region",
+      "facility_type": "sea_dumping",
+      "status": "abandoned",
+      "status_note": "US dumping site at 2,210-3,658 m depth where 4,415 containers of radioactive waste (about 1.3 TBq at packaging) were dumped between 1959 and 1962.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "low-level"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://www-pub.iaea.org/MTCD/Publications/PDF/te_1105_prn.pdf",
+          "title": "IAEA-TECDOC-1105: Inventory of radioactive waste disposals at sea (1999)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "IAEA position 32°00'N 121°30'W.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "XZ-023",
+      "name": "Lost B43 nuclear bomb, Philippine Sea (1965 A-4E Skyhawk accident)",
+      "country": "International waters (Philippine Sea)",
+      "country_code": "XZ",
+      "latitude": 27.5533,
+      "longitude": 131.3217,
+      "coord_precision": "region",
+      "facility_type": "sunken_vessel",
+      "status": "abandoned",
+      "status_note": "On 5 December 1965 an A-4E Skyhawk carrying a B43 thermonuclear bomb rolled off the carrier USS Ticonderoga and sank in about 4,900 m of water, roughly 110 km from Kikai Island, Japan. The aircraft, pilot and weapon were never recovered.",
+      "status_as_of": "2026-11-12",
+      "waste_types": [
+        "transuranic"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/1965_Philippine_Sea_A-4_incident",
+          "title": "1965 Philippine Sea A-4 incident - Wikipedia",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "Position is approximate and not officially confirmed; the weapon contains plutonium and uranium but no reactor.",
+      "last_updated": "2026-11-12"
+    },
+    {
       "id": "ZA-002",
       "name": "Koeberg Nuclear Power Station",
       "country": "South Africa",
@@ -16131,6 +19481,37 @@
         }
       ],
       "notes": "The planned central interim store (CISF) may be linked to Vaalputs; its location is not fixed.",
+      "last_updated": "2026-11-12"
+    },
+    {
+      "id": "ZA-005",
+      "name": "Witwatersrand gold mine tailings (uranium-bearing), incl. Tudor Shaft",
+      "country": "South Africa",
+      "country_code": "ZA",
+      "latitude": -26.1,
+      "longitude": 27.767,
+      "coord_precision": "region",
+      "facility_type": "uranium_legacy",
+      "status": "abandoned",
+      "status_note": "Gold mine dumps covering about 400 km2 across Gauteng are estimated to hold some 600,000 tonnes of uranium. Dust and seepage reach nearby settlements and rivers; at the Tudor Shaft informal settlement on the West Rand, doses of 8-15 mSv per year were measured and the regulator has warned of radiological risks in the Wonderfonteinspruit catchment.",
+      "status_as_of": "2015-10-15",
+      "waste_types": [
+        "norm"
+      ],
+      "operator": null,
+      "sources": [
+        {
+          "url": "https://health-e.org.za/2015/10/15/gautengs-mine-dumps-brimming-with-radioactive-uranium/",
+          "title": "Health-e News (15 Oct 2015): Gauteng's mine dumps brimming with radioactive uranium",
+          "accessed": "2026-11-12"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Krugersdorp",
+          "title": "Krugersdorp - Wikipedia (coordinates, West Rand)",
+          "accessed": "2026-11-12"
+        }
+      ],
+      "notes": "One symbolic point for hundreds of dumps across the Witwatersrand; placed at Krugersdorp on the West Rand. Some dumps are being reprocessed or removed.",
       "last_updated": "2026-11-12"
     }
   ]
