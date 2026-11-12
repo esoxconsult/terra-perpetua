@@ -30,7 +30,7 @@ Offene, quellenbelegte Weltkarte von End- und Zwischenlagern für radioaktive (u
 
 - Google Fonts, Leaflet (unpkg), Marker-Icons (raw.githubusercontent.com) und Marker-Schatten (cdnjs) **selbst hosten** unter `vendor/`. Danach lädt der Browser extern nur noch OSM-Kacheln.
 - Marker-Icons als eigene SVGs oder `L.divIcon` statt Hotlink auf ein fremdes GitHub-Repo; Schatten passend zu Leaflet 1.9.4.
-- Impressum (ECG § 5, MedienG § 25) und Datenschutzerklärung als eigene Seiten oder Modals; Angaben liefert Werner, nichts erfinden.
+- Impressum (ECG § 5, MedienG § 25) und Datenschutzerklärung als eigene Seiten oder Modals; Angaben liefert Werner, nichts erfinden. Seit 12.11.2026 auf Englisch: `legal-notice.html`, `privacy.html` (alte deutsche Adressen leiten weiter).
 - OSM-Attribution auf https umstellen; Hinweis zu OSM-Kacheln in die Datenschutzerklärung.
 
 ## Phase 2: Technik

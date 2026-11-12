@@ -448,6 +448,12 @@ a {
     color: var(--link);
 }
 
+.site-popup .popup-coords {
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: var(--muted);
+}
+
 .site-popup .popup-updated {
     margin-top: 8px;
     font-size: 0.85em;
