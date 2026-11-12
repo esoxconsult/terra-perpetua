@@ -1,0 +1,397 @@
+/* Terra Perpetua, main stylesheet (no inline styles: CSP style-src 'self') */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#map {
+    height: 100vh;
+    height: 100dvh;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* ---------- Panel ---------- */
+
+.controls-container {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    max-width: 320px;
+    width: 90%;
+    max-height: calc(100vh - 20px);
+    overflow-y: auto;
+    font-size: 0.9em;
+}
+
+.header-container, .filter-container {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    margin-bottom: 10px;
+}
+
+.logo {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 120px;
+    margin: 0 auto 5px auto;
+}
+
+.claim {
+    text-align: center;
+    font-style: italic;
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.about-link {
+    display: block;
+    margin: 25px auto;
+    padding: 0;
+    border: none;
+    background: none;
+    font: inherit;
+    font-size: 0.8em;
+    color: #0056b3;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.legal-links {
+    text-align: center;
+    font-size: 0.75em;
+    color: #555;
+}
+
+.legal-links a {
+    color: #555;
+}
+
+/* Mobile toggle button, only shown below 768px */
+.panel-toggle {
+    display: none;
+}
+
+/* ---------- Search ---------- */
+
+.search-container {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: inherit;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+#search-input:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 1px;
+}
+
+#search-button {
+    width: 100%;
+    padding: 10px 5px;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    font: inherit;
+    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+#search-button:hover,
+#search-button:focus-visible {
+    background-color: #0056b3;
+}
+
+.autocomplete-results {
+    list-style: none;
+    margin: 4px 0 0 0;
+    padding: 4px 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.autocomplete-item {
+    padding: 6px 12px;
+    cursor: pointer;
+    line-height: 1.3;
+}
+
+.autocomplete-item small {
+    color: #666;
+}
+
+.autocomplete-item:hover,
+.autocomplete-item.active {
+    background-color: #e8f0fb;
+}
+
+.search-info {
+    margin: 6px 0 0 0;
+    font-size: 0.85em;
+    color: #555;
+    text-align: center;
+}
+
+/* ---------- Filters ---------- */
+
+.filter-group {
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+    line-height: 1.6em;
+}
+
+.filter-group legend {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: 10px 0 5px 0;
+    padding: 0;
+    color: #333;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.filter-count {
+    color: #777;
+}
+
+.horizontal-separator {
+    border-top: 1px solid #ccc;
+    height: 0;
+    margin: 6px 0;
+}
+
+.color-dot {
+    flex: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    border: 1px solid #999;
+}
+
+.dot-orange { background-color: #cb8427; }
+.dot-gold   { background-color: #ffd326; }
+.dot-blue   { background-color: #2a81cb; }
+.dot-red    { background-color: #cb2b3e; }
+.dot-grey   { background-color: #7b7b7b; }
+.dot-black  { background-color: #3d3d3d; }
+
+/* ---------- Messages ---------- */
+
+.status-message {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1500;
+    max-width: 90%;
+    padding: 12px 18px;
+    background: #fff3cd;
+    border: 1px solid #c69500;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-size: 0.9em;
+}
+
+/* ---------- Popups ---------- */
+
+.site-popup h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.1em;
+}
+
+.site-popup p {
+    margin: 4px 0;
+}
+
+.site-popup .popup-updated {
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #666;
+}
+
+/* ---------- About modal ---------- */
+
+.info-box-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-box-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    text-align: justify;
+    box-sizing: border-box;
+}
+
+.info-box-content h2 {
+    text-align: left;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    line-height: 1;
+    padding: 4px 8px;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.info-box-logo {
+    display: block;
+    max-width: 120px;
+    height: auto;
+    margin: 0 auto 15px auto;
+}
+
+/* ---------- Clusters: calmer colours than the plugin default ---------- */
+
+.marker-cluster-small,
+.marker-cluster-medium,
+.marker-cluster-large {
+    background-color: rgba(42, 129, 203, 0.35);
+}
+
+.marker-cluster-small div,
+.marker-cluster-medium div,
+.marker-cluster-large div {
+    background-color: rgba(42, 129, 203, 0.8);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* ---------- Mobile (< 768px) ---------- */
+
+@media (max-width: 767.98px) {
+    .panel-toggle {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1100;
+        padding: 10px 14px;
+        border: none;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+        font: inherit;
+        font-weight: 700;
+        font-size: 0.95em;
+        cursor: pointer;
+    }
+
+    .panel-toggle-icon,
+    .panel-toggle-icon::before,
+    .panel-toggle-icon::after {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: #333;
+        position: relative;
+    }
+
+    .panel-toggle-icon::before,
+    .panel-toggle-icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+
+    .panel-toggle-icon::before { top: -6px; }
+    .panel-toggle-icon::after  { top: 6px; }
+
+    .controls-container {
+        display: none;
+        top: 60px;
+        left: 10px;
+        right: 10px;
+        width: auto;
+        max-width: none;
+        max-height: calc(100dvh - 80px);
+    }
+
+    body.panel-open .controls-container {
+        display: block;
+    }
+
+    .logo {
+        max-width: 64px;
+    }
+
+    .claim {
+        margin-bottom: 10px;
+    }
+
+    /* 16px prevents iOS Safari from zooming into the field */
+    #search-input {
+        font-size: 16px;
+    }
+
+    .about-link {
+        margin: 10px auto;
+    }
+}

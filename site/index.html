@@ -3,235 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terra Perpetua</title>
+    <title>Terra Perpetua | World map of radioactive waste repositories</title>
+    <meta name="description" content="Open, source-backed world map of final repositories and interim storage facilities for radioactive and other high-hazard waste. Independent and non-profit.">
+    <link rel="canonical" href="https://terraperpetua.org/">
 
-    <link rel="stylesheet" href="vendor/fonts/montserrat/montserrat.css">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Terra Perpetua">
+    <meta property="og:title" content="Terra Perpetua">
+    <meta property="og:description" content="Open, source-backed world map of final repositories and interim storage facilities for radioactive and other high-hazard waste.">
+    <meta property="og:url" content="https://terraperpetua.org/">
+    <meta property="og:image" content="https://terraperpetua.org/logos/Terra_Perpetua-180x180.png">
+    <meta property="og:image:width" content="180">
+    <meta property="og:image:height" content="180">
+    <meta property="og:image:alt" content="Terra Perpetua logo">
+    <meta property="og:locale" content="en_GB">
+    <meta name="twitter:card" content="summary">
 
     <link rel="apple-touch-icon" sizes="180x180" href="logos/Terra_Perpetua-180x180.png">
     <link rel="icon" type="image/png" sizes="32x32" href="logos/Terra_Perpetua-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="logos/Terra_Perpetua-16x16.png">
 
+    <link rel="stylesheet" href="vendor/fonts/montserrat/montserrat.css">
     <link rel="stylesheet" href="vendor/leaflet-1.9.4/leaflet.css">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .legal-links {
-            text-align: center;
-            font-size: 0.75em;
-            color: #555;
-        }
-
-        .legal-links a {
-            color: #555;
-        }
-
-        #map { height: 100vh; }
-
-        .controls-container {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            z-index: 1000;
-            max-width: 320px; /* Breite wurde auf 320px geändert */
-            width: 90%;
-            max-height: 95vh;
-            overflow-y: auto;
-            font-size: 0.9em;
-        }
-
-        .header-container, .filter-container {
-            background-color: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        .header-container {
-            margin-bottom: 10px;
-        }
-
-        .color-dot {
-            height: 12px;
-            width: 12px;
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 5px;
-            border: 1px solid #999;
-            vertical-align: middle;
-        }
-    
-        .logo {
-            display: block;
-            margin-bottom: 5px;
-            width: 100%;
-            height: auto;
-            max-width: 120px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    
-        .claim {
-            text-align: center;
-            font-style: italic;
-            font-size: 1em;
-            color: #555;
-            margin-bottom: 25px;
-        }
-        
-        .horizontal-separator {
-            border-top: 1px solid #ccc;
-            height: 0;
-            margin: 10px 0;
-        }
-        
-        .info-box-backdrop {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 2000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .info-box-content {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            width: 90%;
-            max-width: 600px;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            text-align: justify;
-        }
-        
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 1.5em;
-            cursor: pointer;
-            border: none;
-            background: none;
-        }
-        
-        .about-link {
-            text-align: center;
-            font-size: 0.8em;
-            color: #007bff;
-            text-decoration: underline;
-            cursor: pointer;
-            margin-top: 25px;
-            margin-bottom: 25px;
-        }
-        
-        .search-container {
-            margin-top: 25px;
-            margin-bottom: 15px;
-        }
-
-        #search-input {
-            width: 100%;
-            padding: 10px 15px;
-            border: 1px solid #ccc;
-            border-radius: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            font-family: inherit;
-            font-size: 1em;
-            transition: box-shadow 0.2s ease-in-out;
-            box-sizing: border-box;
-        }
-        
-        #search-input:focus {
-            outline: none;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        }
-
-        #search-button {
-            width: 100%;
-            padding: 10px 5px;
-            border: 1px solid #007bff;
-            background-color: #007bff;
-            color: white;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 1em;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-top: 10px;
-        }
-
-        #search-button:hover {
-            background-color: #0056b3;
-        }
-        
-        .search-container label {
-            display: block;
-            margin-top: 5px;
-            font-size: 1em;
-            color: #555;
-            text-align: center;
-        }
-        
-        .filter-container h4 {
-            font-size: 1em;
-            margin: 10px 0 5px 0;
-            color: #333;
-        }
-
-        #status-filters, #waste-filters {
-            font-size: 0.9em;
-            line-height: 1.5em;
-        }
-
-        .info-box-logo {
-            display: block;
-            max-width: 120px;
-            height: auto;
-            margin: 0 auto 15px auto;
-        }
-    </style>
+    <link rel="stylesheet" href="vendor/leaflet.markercluster-1.5.3/MarkerCluster.css">
+    <link rel="stylesheet" href="vendor/leaflet.markercluster-1.5.3/MarkerCluster.Default.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="map"></div>
+    <h1 class="visually-hidden">Terra Perpetua: world map of radioactive waste repositories</h1>
 
-    <div class="controls-container">
+    <div id="map" role="region" aria-label="Map of waste repositories"></div>
+
+    <button type="button" id="panel-toggle" class="panel-toggle" aria-controls="controls" aria-expanded="false">
+        <span class="panel-toggle-icon" aria-hidden="true"></span>
+        <span>Search &amp; filter</span>
+    </button>
+
+    <div id="controls" class="controls-container">
         <div class="header-container">
-            <img src="logos/Terra_Perpetua.png" alt="Terra Perpetua Logo" class="logo">
+            <img src="logos/Terra_Perpetua.png" alt="Terra Perpetua logo" class="logo" width="120" height="120">
             <div class="claim">making the world safer,<br>one pin at a time</div>
-            <div id="about-link" class="about-link">about / more information</div>
+            <button type="button" id="about-link" class="about-link" aria-haspopup="dialog" aria-controls="info-box">about / more information</button>
             <div class="legal-links"><a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a></div>
         </div>
 
         <div class="filter-container">
             <div class="search-container">
-                <input type="text" id="search-input" placeholder="Search by name/country">
-                <div id="autocomplete-results"></div>
-                <button id="search-button">Search</button>
+                <label for="search-input" class="visually-hidden">Search by name or country</label>
+                <input type="search" id="search-input" placeholder="Search by name/country" autocomplete="off"
+                       role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="autocomplete-results">
+                <ul id="autocomplete-results" class="autocomplete-results" role="listbox" aria-label="Suggestions" hidden></ul>
+                <button type="button" id="search-button">Search</button>
+                <p id="search-info" class="search-info" aria-live="polite"></p>
             </div>
-            
-            <div id="status-filters">
-                <h4>Status</h4>
-            </div>
-            <div id="waste-filters">
-                <h4>Waste Type</h4>
-            </div>
+
+            <fieldset id="status-filters" class="filter-group">
+                <legend>Status</legend>
+            </fieldset>
+            <fieldset id="waste-filters" class="filter-group">
+                <legend>Waste Type</legend>
+            </fieldset>
         </div>
     </div>
-    
-    <div id="info-box" class="info-box-backdrop" style="display: none;">
-        <div class="info-box-content">
-            <button class="close-btn">&times;</button>
-            <img src="logos/Terra_Perpetua.png" alt="Terra Perpetua Logo" class="info-box-logo">
+
+    <div id="status-message" class="status-message" role="alert" hidden></div>
+
+    <div id="info-box" class="info-box-backdrop" hidden>
+        <div class="info-box-content" role="dialog" aria-modal="true" aria-labelledby="info-box-title">
+            <button type="button" class="close-btn" aria-label="Close">&times;</button>
+            <img src="logos/Terra_Perpetua.png" alt="" class="info-box-logo" width="120" height="120">
             <div class="claim">making the world safer, one pin at a time</div>
-            <h2>About Terra Perpetua</h2>
+            <h2 id="info-box-title">About Terra Perpetua</h2>
             <p>TerraPerpetua.org is an independent, non-profit project dedicated to mapping the world's most hazardous waste repositories.</p>
             <p>The long-term storage of nuclear and high-level waste poses a unique challenge to humanity. With some materials remaining dangerous for millennia, a robust and accessible record is essential for the safety of future generations. We believe a modern, digital platform is the most effective way to address this challenge.</p>
             <p>By gathering data from official sources, we provide a transparent, global overview of the long-term storage of nuclear and other high-risk materials.</p>
@@ -241,6 +83,7 @@
     </div>
 
     <script src="vendor/leaflet-1.9.4/leaflet.js"></script>
+    <script src="vendor/leaflet.markercluster-1.5.3/leaflet.markercluster.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

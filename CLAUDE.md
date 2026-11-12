@@ -6,10 +6,10 @@ Offene, quellenbelegte Weltkarte von End- und Zwischenlagern für radioaktive (u
 
 ## Stack
 
-- Statische Seite: `index.html`, `script.js`, `perpetua.json` (Daten), `logos/`
+- Statische Seite unter `site/`: `index.html`, `style.css`, `script.js`, `perpetua.json` (Daten), `logos/`, `icons/`, `vendor/`
 - Leaflet 1.9.4, OpenStreetMap-Kacheln, kein Build-Schritt, kein Backend
 - Hosting: nginx auf dem Media-VPS, Webroot `/var/www/sites/terraperpetua.org/httpdocs`
-- Ziel-Deploy: Webroot ist ein Git-Klon dieses Repos, Auslieferung per `git pull` (siehe Phase 0)
+- Deploy (seit 12.11.2026): `httpdocs` ist ein Symlink auf `repo/site` eines Klons dieses Repos; Auslieferung per `git pull`, Details in `deploy/README.md`
 
 ## Stand bei Übernahme (12.11.2026)
 
