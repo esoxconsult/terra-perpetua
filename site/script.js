@@ -594,6 +594,18 @@
         return result;
     }
 
+    // Initial view: all sites, leaving room for the panel on wide screens
+    function fitToSites() {
+        if (!sites.length) return;
+        const bounds = L.latLngBounds(sites.map(s => s.marker.getLatLng()));
+        const wide = !MOBILE_QUERY.matches;
+        map.fitBounds(bounds, {
+            paddingTopLeft: wide ? [360, 20] : [10, 70],
+            paddingBottomRight: [20, 20],
+            maxZoom: 5
+        });
+    }
+
     fetch('perpetua.json')
         .then(response => {
             if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -603,6 +615,7 @@
             sites = prepareSites(data);
             generateFilters();
             updateMap();
+            fitToSites();
         })
         .catch(error => {
             console.error('Error loading the data:', error);

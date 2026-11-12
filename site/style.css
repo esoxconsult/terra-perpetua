@@ -34,7 +34,7 @@ a {
 #map {
     height: 100vh;
     height: 100dvh;
-    background: #dfe6e6;
+    background: #c9d5d8;
 }
 
 /* Calmer base map: pins carry the colour, the map stays in the background */
