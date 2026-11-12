@@ -136,8 +136,22 @@
 
     // ---------- Map ----------
 
-    const map = L.map('map', { zoomControl: false, worldCopyJump: true }).setView([35, 10], 3);
-    L.control.zoom({ position: 'topright' }).addTo(map);
+    const map = L.map('map', {
+        zoomControl: false,
+        worldCopyJump: true,
+        minZoom: 2,
+        // no grey bands above the Arctic or below Antarctica
+        maxBounds: [[-85, -540], [85, 540]],
+        maxBoundsViscosity: 1
+    }).setView([35, 10], 3);
+    // On phones people pinch to zoom; the buttons would only cover the map
+    const zoomControl = L.control.zoom({ position: 'topright' });
+    function syncZoomControl() {
+        if (MOBILE_QUERY.matches) zoomControl.remove();
+        else zoomControl.addTo(map);
+    }
+    syncZoomControl();
+    MOBILE_QUERY.addEventListener('change', syncZoomControl);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
@@ -365,6 +379,7 @@
         cluster.clearLayers();
         cluster.addLayers(visible.map(s => s.marker));
         siteCount.textContent = `${visible.length} of ${sites.length} sites shown`;
+        $('toggle-count').textContent = visible.length === sites.length ? `${sites.length}` : `${visible.length}/${sites.length}`;
         searchInfo.textContent = textFilter
             ? (visible.length === 1 ? '1 site found' : `${visible.length} sites found`)
             : '';
@@ -514,10 +529,19 @@
     function setPanelOpen(open) {
         document.body.classList.toggle('panel-open', open);
         panelToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (open) map.closePopup();
     }
 
     panelToggle.addEventListener('click', () => {
         setPanelOpen(!document.body.classList.contains('panel-open'));
+    });
+    $('sheet-close').addEventListener('click', () => {
+        setPanelOpen(false);
+        panelToggle.focus();
+    });
+    // Tapping the map closes the sheet on phones
+    map.on('click', () => {
+        if (MOBILE_QUERY.matches && document.body.classList.contains('panel-open')) setPanelOpen(false);
     });
 
     // ---------- About modal ----------
@@ -596,7 +620,7 @@
                 alt: site.name || 'Site marker',
                 keyboard: true
             });
-            marker.bindPopup(() => buildPopup(site), { maxWidth: 340, autoPanPaddingTopLeft: [20, 70] });
+            marker.bindPopup(() => buildPopup(site), popupOptions());
             marker.on('popupopen', () => {
                 if (location.hash !== '#' + site.id) history.replaceState(null, '', '#' + encodeURIComponent(site.id));
             });
@@ -627,14 +651,28 @@
         return true;
     }
 
+    // Popups fit small screens: limited width, scrollable height, room for the bottom button
+    function popupOptions() {
+        if (!MOBILE_QUERY.matches) {
+            return { maxWidth: 340, autoPanPaddingTopLeft: [20, 70] };
+        }
+        return {
+            maxWidth: Math.min(320, window.innerWidth - 48),
+            minWidth: Math.min(260, window.innerWidth - 64),
+            maxHeight: Math.round(window.innerHeight * 0.55),
+            autoPanPaddingTopLeft: [12, 24],
+            autoPanPaddingBottomRight: [12, 96]
+        };
+    }
+
     // Initial view: all sites, leaving room for the panel on wide screens
     function fitToSites() {
         if (!sites.length) return;
         const bounds = L.latLngBounds(sites.map(s => s.marker.getLatLng()));
         const wide = !MOBILE_QUERY.matches;
         map.fitBounds(bounds, {
-            paddingTopLeft: wide ? [360, 20] : [10, 70],
-            paddingBottomRight: [20, 20],
+            paddingTopLeft: wide ? [360, 20] : [10, 20],
+            paddingBottomRight: wide ? [20, 20] : [10, 80],
             maxZoom: 5
         });
     }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Terra Perpetua | World map of radioactive waste</title>
     <meta name="description" content="Open, source-backed world map of radioactive waste: repositories, interim stores, spent fuel at power plants, reprocessing sites and legacy sites. Independent and non-profit.">
     <meta name="theme-color" content="#1f2d33">
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="vendor/leaflet-1.9.4/leaflet.css">
     <link rel="stylesheet" href="vendor/leaflet.markercluster-1.5.3/MarkerCluster.css">
     <link rel="stylesheet" href="vendor/leaflet.markercluster-1.5.3/MarkerCluster.Default.css">
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
     <h1 class="visually-hidden">Terra Perpetua: world map of radioactive waste</h1>
@@ -39,10 +39,13 @@
     <button type="button" id="panel-toggle" class="panel-toggle" aria-controls="controls" aria-expanded="false">
         <span class="panel-toggle-icon" aria-hidden="true"></span>
         <span>Search &amp; filter</span>
+        <span id="toggle-count" class="toggle-count"></span>
     </button>
 
     <div id="controls" class="controls-container">
         <div class="header-container">
+            <div class="sheet-handle" aria-hidden="true"></div>
+            <button type="button" id="sheet-close" class="sheet-close" aria-label="Close search and filter">&times;</button>
             <div class="brand">
                 <img src="logos/terra-perpetua-mark.svg" alt="" class="logo" width="64" height="64">
                 <div>
@@ -126,6 +129,6 @@
 
     <script src="vendor/leaflet-1.9.4/leaflet.js"></script>
     <script src="vendor/leaflet.markercluster-1.5.3/leaflet.markercluster.js"></script>
-    <script src="script.js?v=6"></script>
+    <script src="script.js?v=8"></script>
 </body>
 </html>

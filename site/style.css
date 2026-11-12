@@ -555,46 +555,125 @@ a {
 
 /* ---------- Mobile (< 768px) ---------- */
 
+/* Bottom-sheet controls only exist on phones */
+.sheet-handle,
+.sheet-close,
+.toggle-count {
+    display: none;
+}
+
+/* ---------- Mobile (< 768px): bottom sheet ---------- */
+
 @media (max-width: 767.98px) {
     .panel-toggle {
         display: flex;
         align-items: center;
         gap: 10px;
         position: fixed;
-        top: 10px;
-        left: 10px;
+        left: 50%;
+        bottom: calc(14px + env(safe-area-inset-bottom));
+        transform: translateX(-50%);
         z-index: 1100;
-        padding: 8px 14px 8px 8px;
+        min-height: 48px;
+        padding: 8px 16px 8px 8px;
         border: none;
         border-radius: 999px;
-        background: #fff;
-        box-shadow: var(--shadow);
+        background: var(--slate);
+        box-shadow: 0 6px 20px rgba(31, 45, 51, 0.35);
         font: inherit;
         font-weight: 700;
         font-size: 0.95em;
-        color: var(--slate);
+        color: #fff;
+        white-space: nowrap;
         cursor: pointer;
     }
 
     .panel-toggle-icon {
         flex: none;
-        width: 30px;
-        height: 30px;
-        background: url(logos/terra-perpetua-favicon.svg) center / contain no-repeat;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: #fff url(logos/terra-perpetua-favicon.svg) center / 28px no-repeat;
+    }
+
+    .toggle-count {
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 999px;
+        background: var(--amber);
+        color: var(--slate);
+        font-size: 0.85em;
+    }
+
+    .toggle-count:empty {
+        display: none;
+    }
+
+    body.panel-open .panel-toggle {
+        visibility: hidden;
     }
 
     .controls-container {
-        display: none;
-        top: 62px;
-        left: 10px;
-        right: 10px;
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
         width: auto;
         max-width: none;
-        max-height: calc(100dvh - 80px);
+        max-height: 82dvh;
+        border-radius: 16px 16px 0 0;
+        padding-bottom: env(safe-area-inset-bottom);
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+        transform: translateY(105%);
+        visibility: hidden;
+        transition: transform 0.25s ease, visibility 0s linear 0.25s;
+        box-shadow: 0 -8px 30px rgba(31, 45, 51, 0.25);
     }
 
     body.panel-open .controls-container {
+        transform: translateY(0);
+        visibility: visible;
+        transition: transform 0.25s ease, visibility 0s;
+    }
+
+    .header-container {
+        position: relative;
+        padding-top: 22px;
+    }
+
+    .sheet-handle {
         display: block;
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        width: 40px;
+        height: 4px;
+        margin-left: -20px;
+        border-radius: 2px;
+        background: #c9c2b4;
+    }
+
+    .sheet-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 44px;
+        height: 44px;
+        border: none;
+        border-radius: 50%;
+        background: transparent;
+        font-size: 1.8em;
+        line-height: 1;
+        color: var(--slate);
+        cursor: pointer;
+    }
+
+    .brand {
+        padding-right: 40px;
     }
 
     .logo {
@@ -602,8 +681,138 @@ a {
         height: 44px;
     }
 
+    .header-links {
+        font-size: 0.9em;
+        gap: 4px 10px;
+    }
+
+    .header-links a,
+    .about-link {
+        display: inline-flex;
+        align-items: center;
+        min-height: 40px;
+    }
+
     /* 16px prevents iOS Safari from zooming into the field */
     #search-input {
         font-size: 16px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    #search-button {
+        width: 52px;
+    }
+
+    .autocomplete-item {
+        padding: 12px 14px;
+    }
+
+    /* Larger touch targets for filters (min. 44px rows) */
+    .filter-section summary {
+        min-height: 44px;
+        padding: 6px 2px;
+    }
+
+    .filter-group {
+        font-size: 1em;
+    }
+
+    .filter-item {
+        min-height: 44px;
+        gap: 10px;
+    }
+
+    .filter-item input {
+        width: 20px;
+        height: 20px;
+    }
+
+    .filter-all {
+        min-height: 40px;
+    }
+
+    /* Popups */
+    .leaflet-popup-content {
+        margin: 14px 16px;
+    }
+
+    .leaflet-popup-content-wrapper {
+        max-width: calc(100vw - 32px);
+    }
+
+    .leaflet-container a.leaflet-popup-close-button {
+        width: 36px;
+        height: 36px;
+        font-size: 22px;
+        line-height: 36px;
+    }
+
+    .site-popup .popup-sources li {
+        margin: 6px 0;
+    }
+
+    /* Attribution stays readable but small, above the home bar */
+    .leaflet-bottom {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .leaflet-control-attribution {
+        font-size: 10px;
+    }
+
+    /* About as a full-screen sheet */
+    .info-box-backdrop {
+        align-items: stretch;
+    }
+
+    .info-box-content {
+        width: 100%;
+        max-width: none;
+        max-height: none;
+        height: 100%;
+        border-radius: 0;
+        padding: calc(20px + env(safe-area-inset-top)) 20px calc(24px + env(safe-area-inset-bottom)) 20px;
+    }
+
+    .close-btn {
+        top: calc(8px + env(safe-area-inset-top));
+        width: 44px;
+        height: 44px;
+    }
+
+    .status-message {
+        bottom: calc(80px + env(safe-area-inset-bottom));
+    }
+}
+
+/* Phones in landscape: little height, so a compact sheet header */
+@media (max-width: 767.98px) and (max-height: 500px), (max-height: 500px) and (pointer: coarse) {
+    .controls-container {
+        max-height: 92dvh;
+    }
+
+    .header-container {
+        padding-top: 18px;
+        padding-bottom: 8px;
+    }
+
+    .claim {
+        display: none;
+    }
+
+    .logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .site-count {
+        margin-top: 6px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .controls-container {
+        transition: none !important;
     }
 }
