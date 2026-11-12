@@ -219,7 +219,8 @@
 
         addRow(root, 'Country', site.country);
         addRow(root, 'Operator', site.operator);
-        addRow(root, 'Waste', (site.waste_types || []).map(w => WASTE_TYPES[w] || w).join(', '));
+        const waste = (site.waste_types || []).map(w => WASTE_TYPES[w] || w).join(', ');
+        addRow(root, 'Waste', waste || 'none stored on site');
 
         const precision = PRECISION_NOTE[site.coord_precision];
         if (precision) root.appendChild(el('p', 'popup-precision', precision));
@@ -338,7 +339,8 @@
         return sites.filter(s =>
             cats.has(s.category) &&
             statuses.has(s.status) &&
-            (s.data.waste_types || []).some(w => wastes.has(w)) &&
+            // sites without waste (research labs) are not affected by the waste filter
+            (!(s.data.waste_types || []).length || s.data.waste_types.some(w => wastes.has(w))) &&
             matchesText(s, textFilter));
     }
 

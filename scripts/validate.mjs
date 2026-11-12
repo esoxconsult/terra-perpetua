@@ -141,6 +141,10 @@ sites.forEach((site, i) => {
         }
     }
 
+    if (Array.isArray(site.waste_types) && site.waste_types.length === 0 && site.facility_type !== 'research_lab') {
+        err(p, 'waste_types may only be empty for research_lab entries');
+    }
+
     ['status_as_of', 'last_updated'].forEach(k => {
         if (site[k] && site[k] > today) err(p, `${k} ${site[k]} is in the future`);
     });
