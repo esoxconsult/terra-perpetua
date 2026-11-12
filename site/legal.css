@@ -1,0 +1,8 @@
+body { font-family: 'Montserrat', sans-serif; max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; color: #222; line-height: 1.6; }
+header { text-align: center; margin-bottom: 24px; }
+header img { max-width: 120px; height: auto; }
+h1 { font-size: 1.6em; }
+h2 { font-size: 1.15em; margin-top: 2em; }
+a { color: #0056b3; }
+.todo { background: #fff3cd; border: 1px dashed #c69500; padding: 0 4px; }
+.back { display: inline-block; margin-top: 2em; }
