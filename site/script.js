@@ -20,6 +20,7 @@ const statusMapping = {
 };
 
 // Object to map the standardized status name to an icon color
+// (key = file name in icons/marker-<key>.svg)
 const statusColors = {
     'under construction': 'orange',
     'planned': 'gold',
@@ -28,6 +29,30 @@ const statusColors = {
     'closed': 'grey',
     'decommissioning': 'black'
 };
+
+// Fill colors of the self-hosted SVG markers, also used for the legend dots
+const markerHex = {
+    orange: '#cb8427',
+    gold: '#ffd326',
+    blue: '#2a81cb',
+    red: '#cb2b3e',
+    grey: '#7b7b7b',
+    black: '#3d3d3d'
+};
+
+// One icon per color, self-hosted (icons/ and vendor/), no external requests
+const markerIcons = {};
+Object.keys(markerHex).forEach(color => {
+    markerIcons[color] = L.icon({
+        iconUrl: `icons/marker-${color}.svg`,
+        shadowUrl: 'vendor/leaflet-1.9.4/images/marker-shadow.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        tooltipAnchor: [16, -28],
+        shadowSize: [41, 41]
+    });
+});
 
 const wasteTypeOrder = [
     'low-level',
@@ -45,7 +70,7 @@ const map = L.map('map').setView([47, 10], 5);
 // 2. Add the base map tiles (OpenStreetMap)
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
 // 3. Load the data and place the markers
@@ -77,7 +102,7 @@ function generateFilters(sites) {
         const markerColor = statusColors[standardizedStatus] || 'blue';
         const colorDot = document.createElement('span');
         colorDot.className = 'color-dot';
-        colorDot.style.backgroundColor = markerColor;
+        colorDot.style.backgroundColor = markerHex[markerColor];
 
         const label = document.createElement('label');
         label.htmlFor = `status-${status.replace(/[^a-zA-Z0-9]/g, '')}`;
@@ -135,16 +160,7 @@ function updateMap() {
         const standardizedStatus = statusMapping[site.status] || site.status;
         const markerColor = statusColors[standardizedStatus] || 'blue';
         
-        const customIcon = L.icon({
-            iconUrl: `https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-${markerColor}.png`,
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-            iconSize: [25, 41],
-            iconAnchor: [12, 41],
-            popupAnchor: [1, -34],
-            shadowSize: [41, 41]
-        });
-
-        const marker = L.marker([site.latitude, site.longitude], {icon: customIcon});
+        const marker = L.marker([site.latitude, site.longitude], {icon: markerIcons[markerColor]});
 
         const popupContent = `
             <h3>${site.repository_name}</h3>

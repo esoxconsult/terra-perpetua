@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terra Perpetua</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/fonts/montserrat/montserrat.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="logos/Terra_Perpetua-180x180.png">
     <link rel="icon" type="image/png" sizes="32x32" href="logos/Terra_Perpetua-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="logos/Terra_Perpetua-16x16.png">
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="vendor/leaflet-1.9.4/leaflet.css">
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
+        }
+
+        .legal-links {
+            text-align: center;
+            font-size: 0.75em;
+            color: #555;
+        }
+
+        .legal-links a {
+            color: #555;
         }
 
         #map { height: 100vh; }
@@ -199,6 +207,7 @@
             <img src="logos/Terra_Perpetua.png" alt="Terra Perpetua Logo" class="logo">
             <div class="claim">making the world safer,<br>one pin at a time</div>
             <div id="about-link" class="about-link">about / more information</div>
+            <div class="legal-links"><a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a></div>
         </div>
 
         <div class="filter-container">
@@ -227,10 +236,11 @@
             <p>The long-term storage of nuclear and high-level waste poses a unique challenge to humanity. With some materials remaining dangerous for millennia, a robust and accessible record is essential for the safety of future generations. We believe a modern, digital platform is the most effective way to address this challenge.</p>
             <p>By gathering data from official sources, we provide a transparent, global overview of the long-term storage of nuclear and other high-risk materials.</p>
             <p>For inquiries, please contact us at: <a href="mailto:terra@terraperpetua.org">terra@terraperpetua.org</a></p>
+            <p class="legal-links"><a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a></p>
         </div>
     </div>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="vendor/leaflet-1.9.4/leaflet.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
