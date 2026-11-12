@@ -245,8 +245,22 @@
             root.appendChild(list);
         }
 
+        const coords = el('p', 'popup-coords');
+        const lat = Number(site.latitude), lon = Number(site.longitude);
+        coords.appendChild(document.createTextNode(`${Math.abs(lat).toFixed(4)}° ${lat >= 0 ? 'N' : 'S'}, ${Math.abs(lon).toFixed(4)}° ${lon >= 0 ? 'E' : 'W'} · `));
+        const osm = el('a', null, 'OpenStreetMap');
+        osm.href = `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=13/${lat}/${lon}`;
+        osm.target = '_blank';
+        osm.rel = 'noopener noreferrer';
+        coords.appendChild(osm);
+        root.appendChild(coords);
+
         const footer = el('p', 'popup-updated');
-        footer.textContent = `ID ${site.id}` + (site.last_updated ? ` · last updated ${formatDate(site.last_updated)}` : '');
+        footer.appendChild(document.createTextNode(`ID ${site.id}` + (site.last_updated ? ` · last updated ${formatDate(site.last_updated)}` : '') + ' · '));
+        const link = el('a', null, 'link to this site');
+        link.href = `#${encodeURIComponent(site.id)}`;
+        link.title = 'Direct link to this site (copy the address)';
+        footer.appendChild(link);
         root.appendChild(footer);
 
         return root;
@@ -583,6 +597,12 @@
                 keyboard: true
             });
             marker.bindPopup(() => buildPopup(site), { maxWidth: 340, autoPanPaddingTopLeft: [20, 70] });
+            marker.on('popupopen', () => {
+                if (location.hash !== '#' + site.id) history.replaceState(null, '', '#' + encodeURIComponent(site.id));
+            });
+            marker.on('popupclose', () => {
+                if (location.hash === '#' + site.id) history.replaceState(null, '', location.pathname + location.search);
+            });
             result.push({
                 data: site,
                 status: status,
@@ -592,6 +612,19 @@
             });
         });
         return result;
+    }
+
+    // Deep links: terraperpetua.org/#DE-002 opens that site
+    function openFromHash() {
+        const id = decodeURIComponent(location.hash.slice(1));
+        if (!id) return false;
+        const site = sites.find(s => s.data.id === id);
+        if (!site) return false;
+        ensureVisible(site);
+        updateMap();
+        map.setView(site.marker.getLatLng(), 9, { animate: false });
+        cluster.zoomToShowLayer(site.marker, () => site.marker.openPopup());
+        return true;
     }
 
     // Initial view: all sites, leaving room for the panel on wide screens
@@ -615,7 +648,8 @@
             sites = prepareSites(data);
             generateFilters();
             updateMap();
-            fitToSites();
+            if (!openFromHash()) fitToSites();
+            window.addEventListener('hashchange', openFromHash);
         })
         .catch(error => {
             console.error('Error loading the data:', error);
