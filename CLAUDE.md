@@ -53,13 +53,18 @@ Felder pro Eintrag:
 
 - `id` (stabil, z. B. `DE-001`), `name`, `country`, `country_code` (ISO 3166-1 alpha-2)
 - `latitude`, `longitude`, `coord_precision` (`facility` | `locality` | `region`)
-- `facility_type`: `deep_geological` | `near_surface` | `interim_storage` | `reprocessing_storage` | `research_lab` | `legacy_site` | `chemical_underground`
-- `status`: `operating` | `commissioning` | `under_construction` | `planned` | `dormant` | `closed` | `decommissioning` | `cancelled`
+- `facility_type`: `deep_geological` | `near_surface` | `interim_storage` (zentral) | `at_reactor_storage` (Lager am Kraftwerk) | `reprocessing_storage` | `military_production` | `research_lab` | `chemical_underground` | `accident_site` | `test_site` | `sea_dumping` | `sunken_vessel` | `uranium_legacy` | `legacy_site`
+- `status`: `operating` | `commissioning` | `under_construction` | `planned` | `dormant` | `closed` | `decommissioning` | `cancelled` | `remediation` | `abandoned`
 - `status_note`, `status_as_of` (ISO-Datum)
 - `waste_types` (Liste): `very-low-level` | `low-level` | `intermediate-level` | `high-level` | `spent-fuel` | `transuranic` | `norm` | `chemical`
 - `operator`
 - `sources` (Liste von `{url, title, accessed}`), konkrete Dokumente statt Startseiten
-- `last_updated`
+- `last_updated`, optional `notes` (öffentliche Hinweise zu Datenqualität)
+- Datei: Objekt `{schema_version: 2, license, attribution, generated, sites: [...]}`; IDs nie umbenennen oder wiederverwenden, `XZ` = internationale Gewässer
+
+Schema: `schema/perpetua.schema.json`. Prüfen: `node scripts/validate.mjs`; CSV erzeugen: `node scripts/to-csv.mjs`.
+
+Entscheidungen (12.11.2026): Kraftwerksstandorte mit Brennelementlagern werden vollständig erfasst (ein Eintrag pro Standort). Zusätzliche Kategorien: Wiederaufarbeitung und militärische Produktion, Unfälle und Testgelände, Meeresversenkung und gesunkene Atom-U-Boote, Uranbergbau-Altlasten. Kraftwerkskoordinaten aus Wikidata (CC0); keine Übernahme aus ODbL- oder CC-BY-SA-Datenbanken (z. B. GeoNuclearData, Wikipedia-Tabellen), weil die Daten unter CC BY 4.0 stehen.
 
 Validierung: JSON-Schema-Datei plus Skript (`scripts/validate.mjs`), das Schema, Koordinatenbereiche, doppelte IDs und Länder-Bounding-Boxes prüft. Als GitHub Action bei jedem Push.
 
