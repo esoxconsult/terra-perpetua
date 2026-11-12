@@ -53,30 +53,57 @@ body {
     margin-bottom: 10px;
 }
 
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 .logo {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 120px;
-    margin: 0 auto 5px auto;
+    flex: none;
+    width: 64px;
+    height: 64px;
+}
+
+.wordmark {
+    font-weight: 700;
+    font-size: 1.15em;
+    letter-spacing: 0.08em;
+    color: #1f2d33;
+    line-height: 1.2;
 }
 
 .claim {
-    text-align: center;
     font-style: italic;
-    font-size: 1em;
+    font-size: 0.85em;
+    color: #6f5740;
+    margin-top: 2px;
+}
+
+.site-count {
+    margin: 12px 0 6px 0;
+    font-size: 0.85em;
+    color: #444;
+}
+
+.header-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8em;
     color: #555;
-    margin-bottom: 25px;
+}
+
+.header-links a {
+    color: #555;
 }
 
 .about-link {
-    display: block;
-    margin: 25px auto;
     padding: 0;
     border: none;
     background: none;
     font: inherit;
-    font-size: 0.8em;
     color: #0056b3;
     text-decoration: underline;
     cursor: pointer;
@@ -183,11 +210,39 @@ body {
 }
 
 .filter-group legend {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
     font-size: 1.1em;
     font-weight: 700;
-    margin: 10px 0 5px 0;
+    margin: 12px 0 5px 0;
     padding: 0;
     color: #333;
+}
+
+.filter-all {
+    border: none;
+    background: none;
+    padding: 0;
+    font: inherit;
+    font-size: 0.75em;
+    font-weight: 400;
+    color: #0056b3;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.filter-swatch {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+}
+
+.filter-swatch svg {
+    display: block;
 }
 
 .filter-item {
@@ -201,12 +256,6 @@ body {
     color: #777;
 }
 
-.horizontal-separator {
-    border-top: 1px solid #ccc;
-    height: 0;
-    margin: 6px 0;
-}
-
 .color-dot {
     flex: none;
     height: 12px;
@@ -215,12 +264,6 @@ body {
     border: 1px solid #999;
 }
 
-.dot-orange { background-color: #cb8427; }
-.dot-gold   { background-color: #ffd326; }
-.dot-blue   { background-color: #2a81cb; }
-.dot-red    { background-color: #cb2b3e; }
-.dot-grey   { background-color: #7b7b7b; }
-.dot-black  { background-color: #3d3d3d; }
 
 /* ---------- Messages ---------- */
 
@@ -239,21 +282,88 @@ body {
     font-size: 0.9em;
 }
 
-/* ---------- Popups ---------- */
+/* ---------- Markers and popups ---------- */
+
+.tp-marker {
+    background: none;
+    border: none;
+}
+
+.tp-marker svg {
+    display: block;
+}
+
+.site-popup {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12.5px;
+    line-height: 1.45;
+}
 
 .site-popup h3 {
-    margin: 0 0 8px 0;
-    font-size: 1.1em;
+    margin: 0 0 6px 0;
+    font-size: 1.2em;
+    line-height: 1.25;
 }
 
 .site-popup p {
     margin: 4px 0;
 }
 
+.site-popup .popup-type {
+    margin: 0 0 2px 0;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6f5740;
+}
+
+.site-popup .popup-status {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-weight: 700;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.site-popup .popup-asof {
+    font-weight: 400;
+    color: #666;
+}
+
+.site-popup .popup-note {
+    margin: 6px 0 8px 0;
+}
+
+.site-popup .popup-precision {
+    font-size: 0.9em;
+    color: #8a5a00;
+}
+
+.site-popup .popup-sources-title {
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+.site-popup .popup-sources {
+    margin: 2px 0 0 0;
+    padding-left: 18px;
+}
+
+.site-popup .popup-sources li {
+    margin: 2px 0;
+}
+
 .site-popup .popup-updated {
     margin-top: 8px;
     font-size: 0.85em;
-    color: #666;
+    color: #777;
 }
 
 /* ---------- About modal ---------- */
@@ -278,12 +388,30 @@ body {
     max-height: 90vh;
     overflow-y: auto;
     position: relative;
-    text-align: justify;
     box-sizing: border-box;
 }
 
-.info-box-content h2 {
+.info-box-content {
     text-align: left;
+    line-height: 1.55;
+}
+
+.info-box-content h2 {
+    margin-top: 0;
+}
+
+.info-box-content h3 {
+    font-size: 1.05em;
+    margin: 1.2em 0 0.4em 0;
+}
+
+.info-box-content ul {
+    padding-left: 20px;
+}
+
+.info-box-content .small {
+    font-size: 0.85em;
+    color: #555;
 }
 
 .close-btn {
@@ -300,9 +428,9 @@ body {
 
 .info-box-logo {
     display: block;
-    max-width: 120px;
-    height: auto;
-    margin: 0 auto 15px auto;
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px auto;
 }
 
 /* ---------- Clusters: calmer colours than the plugin default ---------- */
@@ -379,19 +507,12 @@ body {
     }
 
     .logo {
-        max-width: 64px;
-    }
-
-    .claim {
-        margin-bottom: 10px;
+        width: 48px;
+        height: 48px;
     }
 
     /* 16px prevents iOS Safari from zooming into the field */
     #search-input {
         font-size: 16px;
-    }
-
-    .about-link {
-        margin: 10px auto;
     }
 }

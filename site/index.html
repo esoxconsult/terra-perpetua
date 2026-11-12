@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terra Perpetua | World map of radioactive waste repositories</title>
-    <meta name="description" content="Open, source-backed world map of final repositories and interim storage facilities for radioactive and other high-hazard waste. Independent and non-profit.">
+    <title>Terra Perpetua | World map of radioactive waste</title>
+    <meta name="description" content="Open, source-backed world map of radioactive waste: repositories, interim stores, spent fuel at power plants, reprocessing sites and legacy sites. Independent and non-profit.">
+    <meta name="theme-color" content="#1f2d33">
     <link rel="canonical" href="https://terraperpetua.org/">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Terra Perpetua">
-    <meta property="og:title" content="Terra Perpetua">
-    <meta property="og:description" content="Open, source-backed world map of final repositories and interim storage facilities for radioactive and other high-hazard waste.">
+    <meta property="og:title" content="Terra Perpetua: world map of radioactive waste">
+    <meta property="og:description" content="Open, source-backed world map of radioactive waste: repositories, interim stores, spent fuel at power plants, reprocessing and legacy sites.">
     <meta property="og:url" content="https://terraperpetua.org/">
-    <meta property="og:image" content="https://terraperpetua.org/logos/Terra_Perpetua-180x180.png">
-    <meta property="og:image:width" content="180">
-    <meta property="og:image:height" content="180">
-    <meta property="og:image:alt" content="Terra Perpetua logo">
+    <meta property="og:image" content="https://terraperpetua.org/logos/terra-perpetua-og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Terra Perpetua logo: the Earth in cross-section with rock layers and a repository deep below">
     <meta property="og:locale" content="en_GB">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="logos/Terra_Perpetua-180x180.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="logos/Terra_Perpetua-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="logos/Terra_Perpetua-16x16.png">
+    <link rel="icon" type="image/svg+xml" href="logos/terra-perpetua-mark.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="logos/terra-perpetua-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logos/terra-perpetua-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logos/terra-perpetua-180.png">
 
     <link rel="stylesheet" href="vendor/fonts/montserrat/montserrat.css">
     <link rel="stylesheet" href="vendor/leaflet-1.9.4/leaflet.css">
@@ -30,9 +32,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="visually-hidden">Terra Perpetua: world map of radioactive waste repositories</h1>
+    <h1 class="visually-hidden">Terra Perpetua: world map of radioactive waste</h1>
 
-    <div id="map" role="region" aria-label="Map of waste repositories"></div>
+    <div id="map" role="region" aria-label="Map of radioactive waste sites"></div>
 
     <button type="button" id="panel-toggle" class="panel-toggle" aria-controls="controls" aria-expanded="false">
         <span class="panel-toggle-icon" aria-hidden="true"></span>
@@ -41,27 +43,41 @@
 
     <div id="controls" class="controls-container">
         <div class="header-container">
-            <img src="logos/Terra_Perpetua.png" alt="Terra Perpetua logo" class="logo" width="120" height="120">
-            <div class="claim">making the world safer,<br>one pin at a time</div>
-            <button type="button" id="about-link" class="about-link" aria-haspopup="dialog" aria-controls="info-box">about / more information</button>
-            <div class="legal-links"><a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a></div>
+            <div class="brand">
+                <img src="logos/terra-perpetua-mark.svg" alt="" class="logo" width="64" height="64">
+                <div>
+                    <div class="wordmark">TERRA PERPETUA</div>
+                    <div class="claim">making the world safer, one pin at a time</div>
+                </div>
+            </div>
+            <p id="site-count" class="site-count" aria-live="polite"></p>
+            <div class="header-links">
+                <button type="button" id="about-link" class="about-link" aria-haspopup="dialog" aria-controls="info-box">about &amp; data</button>
+                <span aria-hidden="true">&middot;</span>
+                <a href="impressum.html">Impressum</a>
+                <span aria-hidden="true">&middot;</span>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
         </div>
 
         <div class="filter-container">
             <div class="search-container">
-                <label for="search-input" class="visually-hidden">Search by name or country</label>
-                <input type="search" id="search-input" placeholder="Search by name/country" autocomplete="off"
+                <label for="search-input" class="visually-hidden">Search by name, country or operator</label>
+                <input type="search" id="search-input" placeholder="Search name, country, operator" autocomplete="off"
                        role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="autocomplete-results">
                 <ul id="autocomplete-results" class="autocomplete-results" role="listbox" aria-label="Suggestions" hidden></ul>
                 <button type="button" id="search-button">Search</button>
                 <p id="search-info" class="search-info" aria-live="polite"></p>
             </div>
 
+            <fieldset id="category-filters" class="filter-group">
+                <legend>Category</legend>
+            </fieldset>
             <fieldset id="status-filters" class="filter-group">
                 <legend>Status</legend>
             </fieldset>
             <fieldset id="waste-filters" class="filter-group">
-                <legend>Waste Type</legend>
+                <legend>Waste type</legend>
             </fieldset>
         </div>
     </div>
@@ -71,13 +87,26 @@
     <div id="info-box" class="info-box-backdrop" hidden>
         <div class="info-box-content" role="dialog" aria-modal="true" aria-labelledby="info-box-title">
             <button type="button" class="close-btn" aria-label="Close">&times;</button>
-            <img src="logos/Terra_Perpetua.png" alt="" class="info-box-logo" width="120" height="120">
-            <div class="claim">making the world safer, one pin at a time</div>
+            <img src="logos/terra-perpetua-mark.svg" alt="" class="info-box-logo" width="96" height="96">
             <h2 id="info-box-title">About Terra Perpetua</h2>
-            <p>TerraPerpetua.org is an independent, non-profit project dedicated to mapping the world's most hazardous waste repositories.</p>
-            <p>The long-term storage of nuclear and high-level waste poses a unique challenge to humanity. With some materials remaining dangerous for millennia, a robust and accessible record is essential for the safety of future generations. We believe a modern, digital platform is the most effective way to address this challenge.</p>
-            <p>By gathering data from official sources, we provide a transparent, global overview of the long-term storage of nuclear and other high-risk materials.</p>
-            <p>For inquiries, please contact us at: <a href="mailto:terra@terraperpetua.org">terra@terraperpetua.org</a></p>
+            <p>Terra Perpetua is an independent, non-profit map of the places where humanity keeps, buries or has left behind radioactive waste. Some of this material stays hazardous for hundreds of thousands of years, far longer than any institution has existed. A public, well-sourced record is part of keeping future generations safe.</p>
+
+            <h3>What the map shows</h3>
+            <ul>
+                <li><strong>Repositories</strong>: deep geological and near-surface disposal facilities, planned, operating or closed.</li>
+                <li><strong>Central interim storage</strong> and <strong>spent fuel at power plants</strong>: where used fuel waits, often for decades, for a final solution.</li>
+                <li><strong>Reprocessing and military production</strong>: the sites with the largest inventories of high-level waste.</li>
+                <li><strong>Research labs</strong>: underground laboratories that test disposal concepts.</li>
+                <li><strong>Legacy sites</strong>: accidents, weapons test sites, sea dumping areas, sunken nuclear vessels and uranium mining residues.</li>
+            </ul>
+            <p>Pin colour shows the status, the symbol inside the pin shows the category. Locations marked as approximate are shown at town or region level.</p>
+
+            <h3>Data and sources</h3>
+            <p>Every entry cites its sources: operators, regulators, national waste agencies, IAEA and NEA documents. Status information can change quickly; each entry shows the date on which it was last confirmed. Locations of nuclear power plants are based on <a href="https://www.wikidata.org/" target="_blank" rel="noopener noreferrer">Wikidata</a>. If you find an error, please write to us.</p>
+            <p>Download: <a href="perpetua.json" download>perpetua.json</a> &middot; <a href="perpetua.csv" download>perpetua.csv</a> &middot; <a href="https://github.com/esoxconsult/terra-perpetua" target="_blank" rel="noopener noreferrer">source code on GitHub</a></p>
+            <p class="small">Data: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>, credit "Terra Perpetua contributors, terraperpetua.org". Code: MIT. The name and logo are not covered by these licences. Map tiles &copy; OpenStreetMap contributors.</p>
+
+            <p>Contact: <a href="mailto:terra@terraperpetua.org">terra@terraperpetua.org</a></p>
             <p class="legal-links"><a href="impressum.html">Impressum</a> &middot; <a href="datenschutz.html">Datenschutz</a></p>
         </div>
     </div>

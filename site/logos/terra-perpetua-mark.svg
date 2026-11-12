@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="t">
+  <title id="t">Terra Perpetua</title>
+  <defs>
+    <clipPath id="tp-earth">
+      <circle cx="128" cy="128" r="116"/>
+    </clipPath>
+    <radialGradient id="tp-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd27a" stop-opacity="0.95"/>
+      <stop offset="0.45" stop-color="#f2a93b" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#f2a93b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g clip-path="url(#tp-earth)">
+    <!-- sky -->
+    <rect x="0" y="0" width="256" height="256" fill="#e6f1f1"/>
+    <!-- surface / vegetation -->
+    <path d="M0 78 C 50 70, 96 86, 140 79 S 220 70, 256 76 L256 256 L0 256 Z" fill="#4f8a6b"/>
+    <!-- strata, getting darker with depth -->
+    <path d="M0 96 C 56 88, 104 104, 150 97 S 222 88, 256 95 L256 256 L0 256 Z" fill="#d9c49a"/>
+    <path d="M0 122 C 48 114, 110 130, 156 122 S 226 114, 256 121 L256 256 L0 256 Z" fill="#c2a273"/>
+    <path d="M0 150 C 60 142, 112 158, 160 150 S 224 141, 256 148 L256 256 L0 256 Z" fill="#9c7c55"/>
+    <path d="M0 178 C 52 170, 118 186, 164 178 S 228 170, 256 176 L256 256 L0 256 Z" fill="#6f5740"/>
+    <path d="M0 206 C 58 198, 114 214, 162 206 S 226 198, 256 204 L256 256 L0 256 Z" fill="#45372c"/>
+  </g>
+  <!-- repository, deep in stable rock -->
+  <circle cx="150" cy="192" r="26" fill="url(#tp-glow)"/>
+  <circle cx="150" cy="192" r="8.5" fill="#ffb938" stroke="#fff3d6" stroke-width="2"/>
+  <!-- earth outline -->
+  <circle cx="128" cy="128" r="116" fill="none" stroke="#1f2d33" stroke-width="10"/>
+</svg>
