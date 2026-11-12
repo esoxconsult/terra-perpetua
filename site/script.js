@@ -4,74 +4,139 @@
 
     // ---------- Configuration ----------
 
-    // Raw status values in the data -> standardised status shown in the filter
-    const STATUS_MAPPING = {
-        'under construction / planned commissioning': 'under construction',
-        'under construction': 'under construction',
-        'planned / licensing process underway': 'planned',
-        'planned': 'planned',
-        'in operation (research)': 'in operation',
-        'in operation (temporary storage)': 'in operation',
-        'in operation': 'in operation',
-        'currently dormant': 'currently dormant',
-        'closed (decontamination)': 'closed',
-        'closed (historis)': 'closed',
-        'closed': 'closed',
-        'decommissioning': 'decommissioning',
-        'out of operation (decomissioning)': 'decommissioning'
+    // Status: label and marker colour (order = filter order)
+    const STATUSES = {
+        operating:          { label: 'operating',          color: '#2a81cb' },
+        commissioning:      { label: 'commissioning',      color: '#1b9e9e' },
+        under_construction: { label: 'under construction', color: '#cb8427' },
+        planned:            { label: 'planned',            color: '#e0b400' },
+        dormant:            { label: 'dormant',            color: '#cb2b3e' },
+        decommissioning:    { label: 'decommissioning',    color: '#3d3d3d' },
+        closed:             { label: 'closed',             color: '#7b7b7b' },
+        cancelled:          { label: 'cancelled',          color: '#b9b9b9' },
+        remediation:        { label: 'remediation',        color: '#8e44ad' },
+        abandoned:          { label: 'abandoned',          color: '#7a1f1f' }
+    };
+    const FALLBACK_STATUS = { label: 'unknown', color: '#2a81cb' };
+
+    // Facility types: label and category (order = popup wording)
+    const FACILITY_TYPES = {
+        deep_geological:      { label: 'Deep geological repository',              category: 'repository' },
+        near_surface:         { label: 'Near-surface disposal facility',          category: 'repository' },
+        chemical_underground: { label: 'Underground disposal of chemical waste',  category: 'repository' },
+        interim_storage:      { label: 'Central interim storage',                 category: 'interim' },
+        at_reactor_storage:   { label: 'Spent fuel storage at a power plant',     category: 'reactor' },
+        reprocessing_storage: { label: 'Reprocessing plant and waste stores',     category: 'production' },
+        military_production:  { label: 'Military production complex',            category: 'production' },
+        research_lab:         { label: 'Research laboratory or centre',           category: 'research' },
+        accident_site:        { label: 'Accident site',                           category: 'accident' },
+        test_site:            { label: 'Nuclear weapons test site',               category: 'accident' },
+        legacy_site:          { label: 'Legacy site',                             category: 'accident' },
+        sea_dumping:          { label: 'Sea dumping area',                        category: 'sea' },
+        sunken_vessel:        { label: 'Sunken nuclear vessel',                   category: 'sea' },
+        uranium_legacy:       { label: 'Uranium mining and milling legacy',       category: 'uranium' }
     };
 
-    // Display order of the status filter; unknown statuses are appended
-    const STATUS_ORDER = [
-        'in operation',
-        'under construction',
-        'planned',
-        'currently dormant',
-        'decommissioning',
-        'closed'
-    ];
-
-    // Standardised status -> marker colour (icons/marker-<colour>.svg, CSS .dot-<colour>)
-    const STATUS_COLORS = {
-        'under construction': 'orange',
-        'planned': 'gold',
-        'in operation': 'blue',
-        'currently dormant': 'red',
-        'closed': 'grey',
-        'decommissioning': 'black'
+    // Filter categories with the glyph drawn inside the pin (order = filter order)
+    const CATEGORIES = {
+        repository: { label: 'Repositories (disposal)',            glyph: 'triangleDown' },
+        interim:    { label: 'Central interim storage',            glyph: 'square' },
+        reactor:    { label: 'Spent fuel at power plants',         glyph: 'dot' },
+        production: { label: 'Reprocessing & military production', glyph: 'diamond' },
+        research:   { label: 'Research labs & centres',            glyph: 'ring' },
+        accident:   { label: 'Accidents, tests & other legacy',    glyph: 'cross' },
+        sea:        { label: 'Sea dumping & sunken vessels',       glyph: 'wave' },
+        uranium:    { label: 'Uranium mining legacy',              glyph: 'triangleUp' }
     };
-    const DEFAULT_COLOR = 'blue';
 
-    // Preferred display order of the waste filter. Waste types found in the data
-    // but missing here are appended alphabetically, so no entry ever disappears.
-    const WASTE_ORDER = [
-        'low-level',
-        'low- and intermediate-level',
-        'high-level',
-        'high-level (exploration)',
-        'mixed waste',
-        'research',
-        'transuranic'
-    ];
-    const WASTE_SEPARATOR_AFTER = 'high-level (exploration)';
+    const WASTE_TYPES = {
+        'very-low-level':     'very low-level',
+        'low-level':          'low-level',
+        'intermediate-level': 'intermediate-level',
+        'high-level':         'high-level',
+        'spent-fuel':         'spent fuel',
+        'transuranic':        'transuranic',
+        'norm':               'NORM (mining residues)',
+        'chemical':           'chemical'
+    };
+
+    const PRECISION_NOTE = {
+        facility: null,
+        locality: 'Location approximate (town or area level).',
+        region: 'Location only approximate (region level).'
+    };
 
     const MAX_SUGGESTIONS = 8;
     const MOBILE_QUERY = window.matchMedia('(max-width: 767.98px)');
 
     // ---------- DOM ----------
 
-    const searchInput = document.getElementById('search-input');
-    const searchButton = document.getElementById('search-button');
-    const suggestionList = document.getElementById('autocomplete-results');
-    const searchInfo = document.getElementById('search-info');
-    const statusFilters = document.getElementById('status-filters');
-    const wasteFilters = document.getElementById('waste-filters');
-    const statusMessage = document.getElementById('status-message');
-    const panelToggle = document.getElementById('panel-toggle');
+    const $ = id => document.getElementById(id);
+    const searchInput = $('search-input');
+    const searchButton = $('search-button');
+    const suggestionList = $('autocomplete-results');
+    const searchInfo = $('search-info');
+    const categoryFilters = $('category-filters');
+    const statusFilters = $('status-filters');
+    const wasteFilters = $('waste-filters');
+    const statusMessage = $('status-message');
+    const panelToggle = $('panel-toggle');
+    const siteCount = $('site-count');
+
+    // ---------- Marker graphics (constant SVG, no data inside) ----------
+
+    const GLYPHS = {
+        dot:          '<circle cx="12.5" cy="12.5" r="4.6" fill="#fff"/>',
+        ring:         '<circle cx="12.5" cy="12.5" r="4.2" fill="none" stroke="#fff" stroke-width="2.2"/>',
+        square:       '<rect x="8.4" y="8.4" width="8.2" height="8.2" fill="#fff"/>',
+        diamond:      '<path d="M12.5 6.7 18.3 12.5 12.5 18.3 6.7 12.5Z" fill="#fff"/>',
+        triangleDown: '<path d="M7 9h11l-5.5 9z" fill="#fff"/>',
+        triangleUp:   '<path d="M7 16.5h11l-5.5-9z" fill="#fff"/>',
+        cross:        '<path d="M8.6 8.6l7.8 7.8M16.4 8.6l-7.8 7.8" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>',
+        wave:         '<path d="M7 11.2c1.4-1.6 2.7-1.6 4.1 0s2.7 1.6 4.1 0 2.1-1.2 2.8-.6M7 15.2c1.4-1.6 2.7-1.6 4.1 0s2.7 1.6 4.1 0 2.1-1.2 2.8-.6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>'
+    };
+
+    function shade(hex, factor) {
+        const n = parseInt(hex.slice(1), 16);
+        const c = [n >> 16, (n >> 8) & 255, n & 255].map(v => Math.round(v * factor));
+        return '#' + c.map(v => v.toString(16).padStart(2, '0')).join('');
+    }
+
+    function pinSvg(color, glyph, size) {
+        const w = size || 25;
+        const h = Math.round(w * 41 / 25);
+        return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 25 41" aria-hidden="true" focusable="false">` +
+            `<path d="M12.5.75C6 .75.75 6 .75 12.5c0 2.4.7 4.6 1.9 6.5L12.5 40.2l9.85-21.2c1.2-1.9 1.9-4.1 1.9-6.5C24.25 6 19 .75 12.5.75z" fill="${color}" stroke="${shade(color, 0.72)}" stroke-width="1.5"/>` +
+            GLYPHS[glyph] + '</svg>';
+    }
+
+    // DivIcon with the regular Leaflet shadow (L.DivIcon.createShadow returns null)
+    const PinIcon = L.DivIcon.extend({ createShadow: L.Icon.prototype.createShadow });
+
+    const iconCache = new Map();
+    function iconFor(statusKey, categoryKey) {
+        const key = statusKey + '|' + categoryKey;
+        if (!iconCache.has(key)) {
+            const status = STATUSES[statusKey] || FALLBACK_STATUS;
+            const glyph = (CATEGORIES[categoryKey] || CATEGORIES.repository).glyph;
+            iconCache.set(key, new PinIcon({
+                className: 'tp-marker',
+                html: pinSvg(status.color, glyph),
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                tooltipAnchor: [16, -28],
+                shadowUrl: 'vendor/leaflet-1.9.4/images/marker-shadow.png',
+                shadowSize: [41, 41],
+                shadowAnchor: [12, 41]
+            }));
+        }
+        return iconCache.get(key);
+    }
 
     // ---------- Map ----------
 
-    const map = L.map('map', { zoomControl: false }).setView([47, 10], 5);
+    const map = L.map('map', { zoomControl: false, worldCopyJump: true }).setView([35, 10], 3);
     L.control.zoom({ position: 'topright' }).addTo(map);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -80,46 +145,21 @@
     }).addTo(map);
 
     const cluster = L.markerClusterGroup({
-        maxClusterRadius: 40,
+        maxClusterRadius: 45,
         showCoverageOnHover: false,
-        spiderfyOnMaxZoom: true
+        spiderfyOnMaxZoom: true,
+        chunkedLoading: true
     });
     map.addLayer(cluster);
 
-    const icons = {};
-    Object.values(STATUS_COLORS).concat(DEFAULT_COLOR).forEach(color => {
-        if (icons[color]) return;
-        icons[color] = L.icon({
-            iconUrl: `icons/marker-${color}.svg`,
-            shadowUrl: 'vendor/leaflet-1.9.4/images/marker-shadow.png',
-            iconSize: [25, 41],
-            iconAnchor: [12, 41],
-            popupAnchor: [1, -34],
-            tooltipAnchor: [16, -28],
-            shadowSize: [41, 41]
-        });
-    });
-
     // ---------- State ----------
 
-    let sites = [];          // [{ data, status, marker, searchText }]
-    let textFilter = '';     // applied text filter (after Search / Enter)
-    let suggestions = [];    // current suggestion entries
+    let sites = [];          // [{ data, status, category, marker, searchText }]
+    let textFilter = '';
+    let suggestions = [];
     let activeSuggestion = -1;
 
     // ---------- Helpers ----------
-
-    function normaliseStatus(raw) {
-        return STATUS_MAPPING[raw] || raw || 'unknown';
-    }
-
-    function colorFor(status) {
-        return STATUS_COLORS[status] || DEFAULT_COLOR;
-    }
-
-    function safeId(prefix, value) {
-        return `${prefix}-${String(value).replace(/[^a-zA-Z0-9]/g, '')}`;
-    }
 
     function isHttpUrl(value) {
         try {
@@ -130,126 +170,162 @@
         }
     }
 
+    function el(tag, className, text) {
+        const node = document.createElement(tag);
+        if (className) node.className = className;
+        if (text !== undefined && text !== null) node.textContent = text;
+        return node;
+    }
+
     function showMessage(text) {
         statusMessage.textContent = text;
         statusMessage.hidden = false;
     }
 
-    // ---------- Popups (DOM nodes, never innerHTML from data) ----------
+    function formatDate(iso) {
+        if (!iso) return '';
+        const d = new Date(iso + 'T00:00:00Z');
+        if (Number.isNaN(d.getTime())) return iso;
+        return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+    }
+
+    // ---------- Popups (DOM nodes only, never innerHTML from data) ----------
 
     function addRow(parent, label, value) {
-        const p = document.createElement('p');
-        const strong = document.createElement('strong');
-        strong.textContent = `${label}: `;
-        p.appendChild(strong);
-        p.appendChild(document.createTextNode(value || 'n/a'));
+        if (!value) return;
+        const p = el('p');
+        p.appendChild(el('strong', null, `${label}: `));
+        p.appendChild(document.createTextNode(value));
         parent.appendChild(p);
     }
 
     function buildPopup(site) {
-        const root = document.createElement('div');
-        root.className = 'site-popup';
+        const root = el('div', 'site-popup');
+        const type = FACILITY_TYPES[site.facility_type];
+        const status = STATUSES[site.status] || FALLBACK_STATUS;
 
-        const title = document.createElement('h3');
-        title.textContent = site.repository_name || 'Unnamed site';
-        root.appendChild(title);
+        root.appendChild(el('p', 'popup-type', type ? type.label : site.facility_type));
+        root.appendChild(el('h3', null, site.name || 'Unnamed site'));
+
+        const badge = el('p', 'popup-status');
+        const dot = el('span', 'status-dot');
+        dot.style.backgroundColor = status.color; // CSSOM, allowed under CSP
+        badge.appendChild(dot);
+        badge.appendChild(document.createTextNode(status.label));
+        if (site.status_as_of) badge.appendChild(el('span', 'popup-asof', ` (as of ${formatDate(site.status_as_of)})`));
+        root.appendChild(badge);
+
+        if (site.status_note) root.appendChild(el('p', 'popup-note', site.status_note));
 
         addRow(root, 'Country', site.country);
-        addRow(root, 'Status', site.status);
-        addRow(root, 'Waste Type', site.waste_type);
+        addRow(root, 'Operator', site.operator);
+        const waste = (site.waste_types || []).map(w => WASTE_TYPES[w] || w).join(', ');
+        const noWaste = site.facility_type === 'research_lab' ? 'none stored on site'
+            : site.status === 'planned' ? 'none yet'
+            : 'none known to remain on site';
+        addRow(root, 'Waste', waste || noWaste);
 
-        if (isHttpUrl(site.source)) {
-            const p = document.createElement('p');
-            const strong = document.createElement('strong');
-            strong.textContent = 'Source: ';
-            const a = document.createElement('a');
-            a.href = site.source;
-            a.target = '_blank';
-            a.rel = 'noopener noreferrer';
-            a.textContent = 'Source';
-            p.appendChild(strong);
-            p.appendChild(a);
-            root.appendChild(p);
+        const precision = PRECISION_NOTE[site.coord_precision];
+        if (precision) root.appendChild(el('p', 'popup-precision', precision));
+        if (site.notes) root.appendChild(el('p', 'popup-precision', site.notes));
+
+        const sources = (site.sources || []).filter(s => isHttpUrl(s.url));
+        if (sources.length) {
+            root.appendChild(el('p', 'popup-sources-title', sources.length === 1 ? 'Source' : 'Sources'));
+            const list = el('ul', 'popup-sources');
+            sources.forEach(s => {
+                const li = el('li');
+                const a = el('a', null, s.title || new URL(s.url).hostname);
+                a.href = s.url;
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+                li.appendChild(a);
+                list.appendChild(li);
+            });
+            root.appendChild(list);
         }
 
-        if (site.last_updated) {
-            const p = document.createElement('p');
-            p.className = 'popup-updated';
-            p.textContent = `Last updated: ${site.last_updated}`;
-            root.appendChild(p);
-        }
+        const footer = el('p', 'popup-updated');
+        footer.textContent = `ID ${site.id}` + (site.last_updated ? ` · last updated ${formatDate(site.last_updated)}` : '');
+        root.appendChild(footer);
 
         return root;
     }
 
-    // ---------- Filters (generated from the data) ----------
+    // ---------- Filters ----------
 
-    function countBy(key) {
-        const counts = new Map();
-        sites.forEach(s => counts.set(s[key], (counts.get(s[key]) || 0) + 1));
-        return counts;
-    }
-
-    function ordered(values, preferred) {
-        const known = preferred.filter(v => values.has(v));
-        const rest = [...values.keys()].filter(v => !preferred.includes(v)).sort();
-        return known.concat(rest);
-    }
-
-    function addCheckbox(container, prefix, value, count, color) {
-        const label = document.createElement('label');
-        label.className = 'filter-item';
-        label.htmlFor = safeId(prefix, value);
-
-        const input = document.createElement('input');
+    function addCheckbox(container, prefix, value, label, count, swatchHtml) {
+        const wrapper = el('label', 'filter-item');
+        const input = el('input');
         input.type = 'checkbox';
-        input.id = safeId(prefix, value);
+        input.id = `${prefix}-${value}`;
         input.value = value;
         input.checked = true;
         input.addEventListener('change', updateMap);
-        label.appendChild(input);
+        wrapper.htmlFor = input.id;
+        wrapper.appendChild(input);
 
-        if (color) {
-            const dot = document.createElement('span');
-            dot.className = `color-dot dot-${color}`;
-            dot.setAttribute('aria-hidden', 'true');
-            label.appendChild(dot);
+        if (swatchHtml) {
+            const swatch = el('span', 'filter-swatch');
+            swatch.setAttribute('aria-hidden', 'true');
+            swatch.innerHTML = swatchHtml; // constant markup from this file, not from data
+            wrapper.appendChild(swatch);
         }
+        wrapper.appendChild(document.createTextNode(label + ' '));
+        wrapper.appendChild(el('span', 'filter-count', `(${count})`));
+        container.appendChild(wrapper);
+    }
 
-        label.appendChild(document.createTextNode(value + ' '));
-        const c = document.createElement('span');
-        c.className = 'filter-count';
-        c.textContent = `(${count})`;
-        label.appendChild(c);
-
-        container.appendChild(label);
+    function addGroupToggle(container) {
+        const btn = el('button', 'filter-all', 'select none');
+        btn.type = 'button';
+        btn.addEventListener('click', () => {
+            const boxes = Array.from(container.querySelectorAll('input[type=checkbox]'));
+            const allOn = boxes.every(b => b.checked);
+            boxes.forEach(b => { b.checked = !allOn; });
+            btn.textContent = allOn ? 'select all' : 'select none';
+            updateMap();
+        });
+        container.appendChild(btn);
     }
 
     function generateFilters() {
-        const statusCounts = countBy('status');
-        ordered(statusCounts, STATUS_ORDER).forEach(status => {
-            addCheckbox(statusFilters, 'status', status, statusCounts.get(status), colorFor(status));
+        const count = (fn) => {
+            const m = new Map();
+            sites.forEach(s => [].concat(fn(s)).forEach(v => m.set(v, (m.get(v) || 0) + 1)));
+            return m;
+        };
+
+        const byCategory = count(s => s.category);
+        Object.entries(CATEGORIES).forEach(([key, c]) => {
+            if (byCategory.has(key)) addCheckbox(categoryFilters, 'cat', key, c.label, byCategory.get(key), pinSvg('#3c4f58', c.glyph, 14));
         });
 
-        const wasteCounts = countBy('waste');
-        ordered(wasteCounts, WASTE_ORDER).forEach(waste => {
-            addCheckbox(wasteFilters, 'waste', waste, wasteCounts.get(waste), null);
-            if (waste === WASTE_SEPARATOR_AFTER) {
-                const sep = document.createElement('div');
-                sep.className = 'horizontal-separator';
-                sep.setAttribute('aria-hidden', 'true');
-                wasteFilters.appendChild(sep);
-            }
+        const byStatus = count(s => s.status);
+        Object.entries(STATUSES).forEach(([key, s]) => {
+            if (byStatus.has(key)) addCheckbox(statusFilters, 'status', key, s.label, byStatus.get(key), `<span class="color-dot" data-color="${key}"></span>`);
         });
+        // colour the status dots via CSSOM (no inline style attributes)
+        statusFilters.querySelectorAll('.color-dot').forEach(d => { d.style.backgroundColor = STATUSES[d.dataset.color].color; });
+
+        const byWaste = count(s => s.data.waste_types || []);
+        Object.entries(WASTE_TYPES).forEach(([key, label]) => {
+            if (byWaste.has(key)) addCheckbox(wasteFilters, 'waste', key, label, byWaste.get(key), null);
+        });
+
+        [categoryFilters, statusFilters, wasteFilters].forEach(addGroupToggle);
     }
 
     function checkedValues(container) {
-        return new Set(Array.from(container.querySelectorAll('input:checked')).map(el => el.value));
+        return new Set(Array.from(container.querySelectorAll('input:checked')).map(i => i.value));
     }
 
-    function setChecked(container, prefix, value) {
-        const input = document.getElementById(safeId(prefix, value));
-        if (input && container.contains(input)) input.checked = true;
+    function ensureVisible(site) {
+        [[categoryFilters, 'cat', [site.category]], [statusFilters, 'status', [site.status]], [wasteFilters, 'waste', site.data.waste_types || []]]
+            .forEach(([container, prefix, values]) => {
+                const any = values.some(v => { const i = $(`${prefix}-${v}`); return i && i.checked; });
+                if (!any && values.length) { const i = $(`${prefix}-${values[0]}`); if (i) i.checked = true; }
+            });
     }
 
     // ---------- Map update ----------
@@ -259,23 +335,25 @@
     }
 
     function visibleSites() {
+        const cats = checkedValues(categoryFilters);
         const statuses = checkedValues(statusFilters);
         const wastes = checkedValues(wasteFilters);
-        return sites.filter(s => statuses.has(s.status) && wastes.has(s.waste) && matchesText(s, textFilter));
+        return sites.filter(s =>
+            cats.has(s.category) &&
+            statuses.has(s.status) &&
+            // sites without waste (research labs) are not affected by the waste filter
+            (!(s.data.waste_types || []).length || s.data.waste_types.some(w => wastes.has(w))) &&
+            matchesText(s, textFilter));
     }
 
     function updateMap() {
         const visible = visibleSites();
         cluster.clearLayers();
         cluster.addLayers(visible.map(s => s.marker));
-
-        if (textFilter) {
-            searchInfo.textContent = visible.length === 1
-                ? '1 site found'
-                : `${visible.length} sites found`;
-        } else {
-            searchInfo.textContent = '';
-        }
+        siteCount.textContent = `${visible.length} of ${sites.length} sites shown`;
+        searchInfo.textContent = textFilter
+            ? (visible.length === 1 ? '1 site found' : `${visible.length} sites found`)
+            : '';
         return visible;
     }
 
@@ -315,20 +393,22 @@
             return;
         }
 
-        suggestions = sites.filter(s => matchesText(s, term)).slice(0, MAX_SUGGESTIONS);
+        // Name matches first, then country/operator matches
+        const matches = sites.filter(s => matchesText(s, term));
+        matches.sort((a, b) => {
+            const an = a.data.name.toLowerCase().includes(term) ? 0 : 1;
+            const bn = b.data.name.toLowerCase().includes(term) ? 0 : 1;
+            return an - bn || a.data.name.localeCompare(b.data.name);
+        });
+        suggestions = matches.slice(0, MAX_SUGGESTIONS);
         if (!suggestions.length) return;
 
         suggestions.forEach((site, i) => {
-            const li = document.createElement('li');
+            const li = el('li', 'autocomplete-item', site.data.name + ' ');
             li.id = `suggestion-${i}`;
-            li.className = 'autocomplete-item';
             li.setAttribute('role', 'option');
             li.setAttribute('aria-selected', 'false');
-            li.textContent = site.data.repository_name + ' ';
-            const country = document.createElement('small');
-            country.textContent = `(${site.data.country})`;
-            li.appendChild(country);
-            // mousedown fires before the input loses focus
+            li.appendChild(el('small', null, `(${site.data.country})`));
             li.addEventListener('mousedown', event => {
                 event.preventDefault();
                 selectSite(site);
@@ -345,17 +425,20 @@
     }
 
     function flyToSite(site) {
-        cluster.zoomToShowLayer(site.marker, () => site.marker.openPopup());
+        const target = Math.max(map.getZoom(), 9);
+        const open = () => cluster.zoomToShowLayer(site.marker, () => site.marker.openPopup());
+        if (map.getZoom() >= target && map.getBounds().contains(site.marker.getLatLng())) {
+            open();
+        } else {
+            map.once('moveend', open);
+            map.flyTo(site.marker.getLatLng(), target, { duration: 1.2 });
+        }
     }
 
     function selectSite(site) {
-        searchInput.value = site.data.repository_name;
+        searchInput.value = site.data.name;
         closeSuggestions();
-
-        // Make sure the chosen site is not hidden by the checkbox filters
-        setChecked(statusFilters, 'status', site.status);
-        setChecked(wasteFilters, 'waste', site.waste);
-
+        ensureVisible(site);
         textFilter = '';
         updateMap();
         closePanelOnMobile();
@@ -402,6 +485,7 @@
                 break;
             case 'Escape':
                 if (!suggestionList.hidden) {
+                    event.preventDefault();
                     event.stopPropagation();
                     closeSuggestions();
                 }
@@ -424,8 +508,8 @@
 
     // ---------- About modal ----------
 
-    const infoBox = document.getElementById('info-box');
-    const aboutButton = document.getElementById('about-link');
+    const infoBox = $('info-box');
+    const aboutButton = $('about-link');
     const closeButton = infoBox.querySelector('.close-btn');
     let lastFocused = null;
 
@@ -462,7 +546,6 @@
             event.preventDefault();
             closeModal();
         } else if (event.key === 'Tab') {
-            // keep focus inside the dialog
             const items = focusableIn(infoBox);
             const first = items[0];
             const last = items[items.length - 1];
@@ -479,32 +562,48 @@
     // ---------- Data ----------
 
     function prepareSites(data) {
-        if (!Array.isArray(data)) throw new Error('perpetua.json is not a list');
+        const list = Array.isArray(data) ? data : data && data.sites;
+        if (!Array.isArray(list)) throw new Error('perpetua.json has no site list');
 
         const result = [];
-        data.forEach(site => {
+        list.forEach(site => {
             const lat = Number(site.latitude);
             const lng = Number(site.longitude);
             if (!Number.isFinite(lat) || !Number.isFinite(lng)) {
-                console.warn('Skipping entry without valid coordinates:', site.repository_id);
+                console.warn('Skipping entry without valid coordinates:', site.id);
                 return;
             }
-            const status = normaliseStatus(site.status);
+            const type = FACILITY_TYPES[site.facility_type];
+            const category = type ? type.category : 'accident';
+            const status = STATUSES[site.status] ? site.status : 'operating';
             const marker = L.marker([lat, lng], {
-                icon: icons[colorFor(status)],
-                title: site.repository_name || '',
-                alt: site.repository_name || 'Site marker'
+                icon: iconFor(status, category),
+                title: site.name || '',
+                alt: site.name || 'Site marker',
+                keyboard: true
             });
-            marker.bindPopup(buildPopup(site));
+            marker.bindPopup(() => buildPopup(site), { maxWidth: 340, autoPanPaddingTopLeft: [20, 70] });
             result.push({
                 data: site,
                 status: status,
-                waste: site.waste_type || 'unknown',
+                category: category,
                 marker: marker,
-                searchText: `${site.repository_name || ''} ${site.country || ''}`.toLowerCase()
+                searchText: `${site.name || ''} ${site.country || ''} ${site.operator || ''}`.toLowerCase()
             });
         });
         return result;
+    }
+
+    // Initial view: all sites, leaving room for the panel on wide screens
+    function fitToSites() {
+        if (!sites.length) return;
+        const bounds = L.latLngBounds(sites.map(s => s.marker.getLatLng()));
+        const wide = !MOBILE_QUERY.matches;
+        map.fitBounds(bounds, {
+            paddingTopLeft: wide ? [360, 20] : [10, 70],
+            paddingBottomRight: [20, 20],
+            maxZoom: 5
+        });
     }
 
     fetch('perpetua.json')
@@ -516,6 +615,7 @@
             sites = prepareSites(data);
             generateFilters();
             updateMap();
+            fitToSites();
         })
         .catch(error => {
             console.error('Error loading the data:', error);

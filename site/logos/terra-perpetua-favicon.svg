@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>Terra Perpetua</title>
+  <!-- Simplified mark for small sizes (16-48 px): fewer, thicker layers, larger repository dot -->
+  <defs>
+    <clipPath id="f-earth"><circle cx="32" cy="32" r="28"/></clipPath>
+  </defs>
+  <g clip-path="url(#f-earth)">
+    <rect width="64" height="64" fill="#e6f1f1"/>
+    <rect y="19" width="64" height="7" fill="#4f8a6b"/>
+    <rect y="26" width="64" height="12" fill="#d2b98a"/>
+    <rect y="38" width="64" height="12" fill="#9c7c55"/>
+    <rect y="50" width="64" height="14" fill="#45372c"/>
+  </g>
+  <circle cx="38" cy="46" r="5.5" fill="#ffb938" stroke="#fff3d6" stroke-width="1.5"/>
+  <circle cx="32" cy="32" r="28" fill="none" stroke="#1f2d33" stroke-width="5"/>
+</svg>

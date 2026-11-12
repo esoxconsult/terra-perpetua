@@ -10,7 +10,7 @@ git -C /var/www/sites/terraperpetua.org/repo pull --ff-only
 
 ## nginx
 
-`nginx/terraperpetua.conf` holds security headers and caching rules. It is copied (not symlinked) to `/etc/nginx/snippets/`, so a push to this repository never changes the server configuration on its own:
+`nginx/terraperpetua.conf` holds security headers, compression and caching rules. After it changes in the repository, copy it again (command below). It is copied (not symlinked) to `/etc/nginx/snippets/`, so a push to this repository never changes the server configuration on its own:
 
 ```bash
 install -m 644 /var/www/sites/terraperpetua.org/repo/deploy/nginx/terraperpetua.conf /etc/nginx/snippets/terraperpetua.conf && nginx -t && systemctl reload nginx
