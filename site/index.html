@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="vendor/leaflet-1.9.4/leaflet.css">
     <link rel="stylesheet" href="vendor/leaflet.markercluster-1.5.3/MarkerCluster.css">
     <link rel="stylesheet" href="vendor/leaflet.markercluster-1.5.3/MarkerCluster.Default.css">
-    <link rel="stylesheet" href="style.css?v=8">
+    <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
     <h1 class="visually-hidden">Terra Perpetua: world map of radioactive waste</h1>
@@ -100,6 +100,12 @@
 
     <div id="status-message" class="status-message" role="alert" hidden></div>
 
+    <section id="detail-sheet" class="detail-sheet" aria-label="Site details" hidden>
+        <div class="sheet-handle" aria-hidden="true"></div>
+        <button type="button" id="detail-close" class="sheet-close detail-close" aria-label="Close details">&times;</button>
+        <div id="detail-content"></div>
+    </section>
+
     <div id="info-box" class="info-box-backdrop" hidden>
         <div class="info-box-content" role="dialog" aria-modal="true" aria-labelledby="info-box-title">
             <button type="button" class="close-btn" aria-label="Close">&times;</button>
@@ -129,6 +135,6 @@
 
     <script src="vendor/leaflet-1.9.4/leaflet.js"></script>
     <script src="vendor/leaflet.markercluster-1.5.3/leaflet.markercluster.js"></script>
-    <script src="script.js?v=8"></script>
+    <script src="script.js?v=9"></script>
 </body>
 </html>

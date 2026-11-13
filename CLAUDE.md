@@ -10,6 +10,7 @@ Offene, quellenbelegte Weltkarte von Standorten radioaktiver (und ausgewählter 
 - `impressum.html` und `datenschutz.html` sind nur Weiterleitungen auf die englischen Seiten
 - Leaflet 1.9.4 und Leaflet.markercluster 1.5.3, Montserrat; alles selbst gehostet unter `site/vendor/` (Versionen und Lizenzen in `site/vendor/README.md`). Extern lädt der Browser nur OSM-Kacheln.
 - Kein Build-Schritt, kein Backend, keine Abhängigkeiten. Marker sind Inline-SVG (`L.DivIcon` mit Schatten), Farbe = Status, Symbol = Kategorie.
+- Details: am Desktop ein Leaflet-Popup, auf Phones (unter 768 px) eine Detailkarte von unten (`#detail-sheet`), Pin rückt ins obere Drittel. Keine `maxBounds` setzen: sie blockieren das Auto-Pan von Popups.
 - Bei Änderungen an `style.css` oder `script.js` die Versionsnummer `?v=` in `index.html` erhöhen (Cache).
 - Logo: `site/logos/terra-perpetua-mark.svg` (Hauptmarke), `terra-perpetua-favicon.svg` (vereinfacht für 16-48 px), PNGs 16/32/180/192/512, Vorschaubild `terra-perpetua-og.png` (1200x630). Name und Logo sind von den Lizenzen ausgenommen.
 

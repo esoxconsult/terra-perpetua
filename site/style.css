@@ -786,6 +786,67 @@ a {
     }
 }
 
+/* Site details as a bottom sheet (phones only; desktop uses the Leaflet popup) */
+.detail-sheet {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    .detail-sheet {
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1200;
+        max-height: 62dvh;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+        padding: 26px 20px calc(20px + env(safe-area-inset-bottom)) 20px;
+        background: #fff;
+        border-radius: 16px 16px 0 0;
+        box-shadow: 0 -8px 30px rgba(31, 45, 51, 0.25);
+        transform: translateY(105%);
+        transition: transform 0.25s ease;
+        box-sizing: border-box;
+    }
+
+    body.detail-open .detail-sheet {
+        transform: translateY(0);
+    }
+
+    body.detail-open .panel-toggle {
+        visibility: hidden;
+    }
+
+    .detail-sheet .sheet-handle {
+        display: block;
+    }
+
+    .detail-close {
+        display: flex;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .detail-sheet .site-popup {
+        font-size: 15px;
+        padding-right: 28px;
+    }
+
+    .detail-sheet .site-popup h3 {
+        font-size: 1.15em;
+    }
+
+    .detail-sheet .popup-sources li {
+        margin: 8px 0;
+    }
+}
+
 /* Phones in landscape: little height, so a compact sheet header */
 @media (max-width: 767.98px) and (max-height: 500px), (max-height: 500px) and (pointer: coarse) {
     .controls-container {
@@ -812,7 +873,8 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .controls-container {
+    .controls-container,
+    .detail-sheet {
         transition: none !important;
     }
 }
