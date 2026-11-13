@@ -139,10 +139,7 @@
     const map = L.map('map', {
         zoomControl: false,
         worldCopyJump: true,
-        minZoom: 2,
-        // no grey bands above the Arctic or below Antarctica
-        maxBounds: [[-85, -540], [85, 540]],
-        maxBoundsViscosity: 1
+        minZoom: 2
     }).setView([35, 10], 3);
     // On phones people pinch to zoom; the buttons would only cover the map
     const zoomControl = L.control.zoom({ position: 'topright' });
@@ -455,7 +452,7 @@
 
     function flyToSite(site) {
         const target = Math.max(map.getZoom(), 9);
-        const open = () => cluster.zoomToShowLayer(site.marker, () => site.marker.openPopup());
+        const open = () => cluster.zoomToShowLayer(site.marker, () => openSite(site));
         if (map.getZoom() >= target && map.getBounds().contains(site.marker.getLatLng())) {
             open();
         } else {
@@ -529,7 +526,10 @@
     function setPanelOpen(open) {
         document.body.classList.toggle('panel-open', open);
         panelToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-        if (open) map.closePopup();
+        if (open) {
+            map.closePopup();
+            closeDetail();
+        }
     }
 
     panelToggle.addEventListener('click', () => {
@@ -539,9 +539,87 @@
         setPanelOpen(false);
         panelToggle.focus();
     });
-    // Tapping the map closes the sheet on phones
+    // Tapping the map closes the sheets on phones
     map.on('click', () => {
-        if (MOBILE_QUERY.matches && document.body.classList.contains('panel-open')) setPanelOpen(false);
+        if (!MOBILE_QUERY.matches) return;
+        if (document.body.classList.contains('panel-open')) setPanelOpen(false);
+        closeDetail();
+    });
+
+    // ---------- Site details: popup on desktop, bottom sheet on phones ----------
+
+    const detailSheet = $('detail-sheet');
+    const detailContent = $('detail-content');
+    const detailClose = $('detail-close');
+    let currentSite = null;
+
+    const desktopPopup = L.popup({
+        maxWidth: 340,
+        offset: [1, -34],
+        autoPanPaddingTopLeft: [20, 70],
+        autoPanPaddingBottomRight: [20, 20]
+    });
+
+    function setHash(site) {
+        if (site) {
+            if (location.hash !== '#' + site.data.id) history.replaceState(null, '', '#' + encodeURIComponent(site.data.id));
+        } else if (location.hash) {
+            history.replaceState(null, '', location.pathname + location.search);
+        }
+    }
+
+    map.on('popupopen', () => setHash(currentSite));
+    map.on('popupclose', () => {
+        if (!document.body.classList.contains('detail-open')) {
+            currentSite = null;
+            setHash(null);
+        }
+    });
+
+    // Moves the selected pin into the upper part of the screen, above the sheet
+    function revealAboveSheet(latlng) {
+        const size = map.getSize();
+        const point = map.latLngToContainerPoint(latlng);
+        const target = L.point(size.x / 2, Math.max(90, size.y * 0.24));
+        map.panBy(point.subtract(target), { animate: true, duration: 0.35 });
+    }
+
+    function showDetail(site) {
+        map.closePopup();
+        if (document.body.classList.contains('panel-open')) setPanelOpen(false);
+        currentSite = site;
+        detailContent.replaceChildren(buildPopup(site.data));
+        detailSheet.scrollTop = 0;
+        detailSheet.hidden = false;
+        // next frame, so the slide-in transition runs
+        requestAnimationFrame(() => document.body.classList.add('detail-open'));
+        setHash(site);
+        revealAboveSheet(site.marker.getLatLng());
+    }
+
+    function closeDetail() {
+        if (!document.body.classList.contains('detail-open')) return;
+        document.body.classList.remove('detail-open');
+        currentSite = null;
+        setHash(null);
+        setTimeout(() => {
+            if (!document.body.classList.contains('detail-open')) detailSheet.hidden = true;
+        }, 300);
+    }
+
+    function openSite(site) {
+        if (MOBILE_QUERY.matches) {
+            showDetail(site);
+        } else {
+            currentSite = site;
+            desktopPopup.setLatLng(site.marker.getLatLng()).setContent(buildPopup(site.data)).openOn(map);
+        }
+    }
+
+    detailClose.addEventListener('click', closeDetail);
+    MOBILE_QUERY.addEventListener('change', () => {
+        closeDetail();
+        map.closePopup();
     });
 
     // ---------- About modal ----------
@@ -574,7 +652,9 @@
 
     document.addEventListener('keydown', event => {
         if (infoBox.hidden) {
-            if (event.key === 'Escape' && MOBILE_QUERY.matches && document.body.classList.contains('panel-open')) {
+            if (event.key === 'Escape' && document.body.classList.contains('detail-open')) {
+                closeDetail();
+            } else if (event.key === 'Escape' && MOBILE_QUERY.matches && document.body.classList.contains('panel-open')) {
                 setPanelOpen(false);
                 panelToggle.focus();
             }
@@ -620,20 +700,18 @@
                 alt: site.name || 'Site marker',
                 keyboard: true
             });
-            marker.bindPopup(() => buildPopup(site), popupOptions());
-            marker.on('popupopen', () => {
-                if (location.hash !== '#' + site.id) history.replaceState(null, '', '#' + encodeURIComponent(site.id));
-            });
-            marker.on('popupclose', () => {
-                if (location.hash === '#' + site.id) history.replaceState(null, '', location.pathname + location.search);
-            });
-            result.push({
+            const entry = {
                 data: site,
                 status: status,
                 category: category,
                 marker: marker,
                 searchText: `${site.name || ''} ${site.country || ''} ${site.operator || ''}`.toLowerCase()
+            };
+            marker.on('click', () => openSite(entry));
+            marker.on('keypress', event => {
+                if (event.originalEvent && event.originalEvent.key === 'Enter') openSite(entry);
             });
+            result.push(entry);
         });
         return result;
     }
@@ -647,22 +725,8 @@
         ensureVisible(site);
         updateMap();
         map.setView(site.marker.getLatLng(), 9, { animate: false });
-        cluster.zoomToShowLayer(site.marker, () => site.marker.openPopup());
+        cluster.zoomToShowLayer(site.marker, () => openSite(site));
         return true;
-    }
-
-    // Popups fit small screens: limited width, scrollable height, room for the bottom button
-    function popupOptions() {
-        if (!MOBILE_QUERY.matches) {
-            return { maxWidth: 340, autoPanPaddingTopLeft: [20, 70] };
-        }
-        return {
-            maxWidth: Math.min(320, window.innerWidth - 48),
-            minWidth: Math.min(260, window.innerWidth - 64),
-            maxHeight: Math.round(window.innerHeight * 0.55),
-            autoPanPaddingTopLeft: [12, 24],
-            autoPanPaddingBottomRight: [12, 96]
-        };
     }
 
     // Initial view: all sites, leaving room for the panel on wide screens
